@@ -127,6 +127,20 @@
   .shadow-hard {
     box-shadow: 4px 4px 0px 0px rgba(20, 23, 26, 1);
   }
+  
+  /* Snaxx-style Red Mode Utilities */
+  .bg-brand-red {
+    background-color: var(--primary);
+    color: white;
+  }
+  
+  .text-on-red {
+    color: white;
+  }
+  
+  .border-on-red {
+    border-color: white;
+  }
 }
 
 body {

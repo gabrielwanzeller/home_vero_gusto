@@ -187,6 +187,133 @@ export default function StyleguidePage() {
             </AccordionItem>
         </Accordion>
       </section>
+
+      {/* Button Strategy */ }
+      <section id="button-strategy" className="space-y-6">
+        <h2 className="text-3xl font-display font-bold uppercase border-b border-border pb-2">Button Strategy</h2>
+        <div className="grid md:grid-cols-2 gap-6">
+            <div className="bg-white p-8 rounded-xl border border-border space-y-4">
+                <h3 className="font-bold text-lg text-gray-500 uppercase tracking-widest">White Background</h3>
+                <p className="text-sm text-gray-400">Use <span className="text-primary font-bold">Primary Red</span> buttons.</p>
+                <div className="h-24 flex items-center justify-center bg-white rounded-lg border border-dashed border-gray-200">
+                    <Button size="lg" className="rounded-full shadow-hard font-display uppercase">Primary Action</Button>
+                </div>
+            </div>
+             <div className="bg-brand-red p-8 rounded-xl space-y-4">
+                <h3 className="font-bold text-lg text-white/70 uppercase tracking-widest">Red Background</h3>
+                <p className="text-sm text-white/50">Use <span className="text-white font-bold">White</span> buttons.</p>
+                <div className="h-24 flex items-center justify-center bg-brand-red rounded-lg border border-dashed border-white/20">
+                    <Button variant="white" size="lg" className="rounded-full shadow-hard font-display uppercase text-red-600">Primary Action</Button>
+                </div>
+            </div>
+        </div>
+      </section>
+
+      {/* Red Mode */ }
+      <section id = "red-mode" className = "space-y-6" >
+        <h2 className="text-3xl font-display font-bold uppercase border-b border-border pb-2">Red Mode (Snaxx Style)</h2>
+        <div className="bg-brand-red p-12 rounded-xl text-on-red space-y-12">
+            
+            {/* Header Example */}
+            <div className="text-center space-y-4">
+                <h3 className="text-6xl font-display font-bold uppercase tracking-tight">Feed Your Feed</h3>
+                <p className="text-xl max-w-lg mx-auto opacity-90">
+                    Get 15% off your first order. Be the first to know and receive in-depth articles about Vero Gusto.
+                </p>
+                 <div className="flex max-w-md mx-auto gap-2">
+                    <Input placeholder="Enter Your Email..." className="bg-white text-black placeholder:text-gray-400 border-transparent h-12" />
+                    <Button variant="white" className="h-12 px-8 rounded-full font-bold uppercase tracking-wider text-red-600">Subscribe</Button>
+                </div>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+                {/* Add to Cart Example */}
+                <div className="border-2 border-white rounded-xl p-8 space-y-6">
+                     <h4 className="text-3xl font-display font-bold uppercase">12 Pack</h4>
+                     <div className="flex gap-4 h-16">
+                        <div className="w-24 h-full border-2 border-white rounded-lg flex items-center justify-center text-3xl font-bold">
+                            1
+                        </div>
+                        <Button variant="white" className="flex-1 h-full text-2xl font-display font-bold uppercase text-red-600 hover:bg-white/90">
+                            Add to Cart
+                        </Button>
+                     </div>
+                </div>
+
+                {/* Values List Example */}
+                <div className="space-y-0 divide-y divide-white/30">
+                    <div className="py-6 flex gap-6 items-start">
+                        <span className="text-2xl font-bold opacity-60">/01</span>
+                        <div className="space-y-2">
+                            <h4 className="text-2xl font-display font-bold uppercase">Bold by Default</h4>
+                            <p className="opacity-90">Flavor comes first. We don't believe bold flavor should be optional.</p>
+                        </div>
+                    </div>
+                     <div className="py-6 flex gap-6 items-start">
+                        <span className="text-2xl font-bold opacity-60">/02</span>
+                        <div className="space-y-2">
+                            <h4 className="text-2xl font-display font-bold uppercase">Keep It Simple</h4>
+                            <p className="opacity-90">No overthinking required. Snacking should feel easy.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+      </section>
+
+      {/* White Mode */ }
+      <section id = "white-mode" className = "space-y-6" >
+        <h2 className="text-3xl font-display font-bold uppercase border-b border-border pb-2">White Mode (Content)</h2>
+        <div className="bg-white p-12 rounded-xl border border-gray-100 shadow-sm text-foreground space-y-12">
+            
+            {/* Header Example */}
+            <div className="text-center space-y-4">
+                <h3 className="text-6xl font-display font-bold uppercase tracking-tight text-primary">Feed Your Feed</h3>
+                <p className="text-xl max-w-lg mx-auto text-muted-foreground">
+                    Get 15% off your first order. Be the first to know and receive in-depth articles about Vero Gusto.
+                </p>
+                 <div className="flex max-w-md mx-auto gap-2">
+                    <Input placeholder="Enter Your Email..." className="h-12" />
+                    <Button size="lg" className="h-12 px-8 rounded-full font-bold uppercase tracking-wider shadow-hard">Subscribe</Button>
+                </div>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+                {/* Add to Cart Example */}
+                <div className="border border-border rounded-xl p-8 space-y-6 bg-gray-50/50">
+                     <h4 className="text-3xl font-display font-bold uppercase text-primary">12 Pack</h4>
+                     <div className="flex gap-4 h-16">
+                        <div className="w-24 h-full border border-border bg-white rounded-lg flex items-center justify-center text-3xl font-bold text-foreground">
+                            1
+                        </div>
+                        <Button className="flex-1 h-full text-2xl font-display font-bold uppercase shadow-hard hover:translate-y-1 hover:shadow-none transition-all">
+                            Add to Cart
+                        </Button>
+                     </div>
+                </div>
+
+                {/* Values List Example */}
+                <div className="space-y-0 divide-y divide-border">
+                    <div className="py-6 flex gap-6 items-start">
+                        <span className="text-2xl font-bold text-primary opacity-80">/01</span>
+                        <div className="space-y-2">
+                            <h4 className="text-2xl font-display font-bold uppercase text-foreground">Bold by Default</h4>
+                            <p className="text-muted-foreground">Flavor comes first. We don't believe bold flavor should be optional.</p>
+                        </div>
+                    </div>
+                     <div className="py-6 flex gap-6 items-start">
+                        <span className="text-2xl font-bold text-primary opacity-80">/02</span>
+                        <div className="space-y-2">
+                            <h4 className="text-2xl font-display font-bold uppercase text-foreground">Keep It Simple</h4>
+                            <p className="text-muted-foreground">No overthinking required. Snacking should feel easy.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+      </section>
     </div>
   )
 }
