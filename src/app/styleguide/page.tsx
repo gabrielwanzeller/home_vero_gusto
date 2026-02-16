@@ -63,10 +63,10 @@ export default function StyleguidePage() {
       <section id="buttons" className="space-y-6">
         <h2 className="text-3xl font-display font-bold uppercase border-b border-border pb-2">Buttons</h2>
         <div className="flex flex-wrap gap-4 items-end">
-          <Button size="lg" className="rounded-full font-display text-lg px-8 shadow-hard hover:translate-y-1 hover:shadow-none transition-all">
+          <Button variant="primary" size="lg" className="rounded-full font-display text-lg px-8 shadow-hard hover:translate-y-1 hover:shadow-none transition-all">
             Order Now
           </Button>
-          <Button size="default" className="rounded-full font-display shadow-hard">
+          <Button variant="primary" size="default" className="rounded-full font-display shadow-hard">
             Default Button
           </Button>
           <Button variant="secondary" className="rounded-full font-display">
@@ -78,8 +78,8 @@ export default function StyleguidePage() {
           <Button variant="ghost" className="font-display">
             Ghost
           </Button>
-          <Button variant="destructive" className="rounded-full font-display shadow-hard">
-            Destructive
+          <Button variant="primary" className="rounded-full font-display shadow-hard bg-red-800 border-red-900">
+            Destructive (Custom)
           </Button>
         </div>
       </section>
@@ -111,11 +111,11 @@ export default function StyleguidePage() {
       <section id="badges" className="space-y-6">
         <h2 className="text-3xl font-display font-bold uppercase border-b border-border pb-2">Badges</h2>
         <div className="flex flex-wrap gap-2">
-          <Badge className="bg-primary text-primary-foreground hover:bg-primary/90">Primary</Badge>
-          <Badge className="bg-brand-green text-brand-green-foreground hover:bg-brand-green/90">Brand Green</Badge>
-          <Badge variant="secondary">Secondary</Badge>
+          <Badge variant="primary">Primary</Badge>
+          <Badge mode="white" variant="primary" className="bg-brand-green border-brand-green text-white">Brand Green</Badge>
+          <Badge variant="outline">Secondary</Badge>
           <Badge variant="outline">Outline</Badge>
-          <Badge variant="destructive">Destructive</Badge>
+          <Badge variant="primary" className="bg-destructive text-white border-destructive">Destructive</Badge>
         </div>
       </section>
 
@@ -203,7 +203,7 @@ export default function StyleguidePage() {
                 <h3 className="font-bold text-lg text-white/70 uppercase tracking-widest">Red Background</h3>
                 <p className="text-sm text-white/50">Use <span className="text-white font-bold">White</span> buttons.</p>
                 <div className="h-24 flex items-center justify-center bg-brand-red rounded-lg border border-dashed border-white/20">
-                    <Button variant="white" size="lg" className="rounded-full shadow-hard font-display uppercase text-red-600">Primary Action</Button>
+                    <Button mode="red" size="lg" className="rounded-full shadow-hard font-display uppercase text-red-600">Primary Action</Button>
                 </div>
             </div>
         </div>
@@ -222,7 +222,7 @@ export default function StyleguidePage() {
                 </p>
                  <div className="flex max-w-md mx-auto gap-2">
                     <Input placeholder="Enter Your Email..." className="bg-white text-black placeholder:text-gray-400 border-transparent h-12" />
-                    <Button variant="white" className="h-12 px-8 rounded-full font-bold uppercase tracking-wider text-red-600">Subscribe</Button>
+                    <Button mode="red" className="h-12 px-8 rounded-full font-bold uppercase tracking-wider text-red-600">Subscribe</Button>
                 </div>
             </div>
 
@@ -234,7 +234,7 @@ export default function StyleguidePage() {
                         <div className="w-24 h-full border-2 border-white rounded-lg flex items-center justify-center text-3xl font-bold">
                             1
                         </div>
-                        <Button variant="white" className="flex-1 h-full text-2xl font-display font-bold uppercase text-red-600 hover:bg-white/90">
+                        <Button mode="red" className="flex-1 h-full text-2xl font-display font-bold uppercase text-red-600 hover:bg-white/90">
                             Add to Cart
                         </Button>
                      </div>

@@ -18,12 +18,15 @@ export const navigation: NavSection[] = [
   {
     title: "Components",
     items: [
-      { name: "Button", href: "/styleguide#buttons" },
-      { name: "Card", href: "/styleguide#cards" },
-      { name: "Badge", href: "/styleguide#badges" },
-      { name: "Alert", href: "/styleguide#alerts" },
-      { name: "Inputs", href: "/styleguide#inputs" },
-      { name: "Accordion", href: "/styleguide#accordion" },
+      { name: "Button", href: "/styleguide/components/button" },
+      { name: "Input & Label", href: "/styleguide/components/input" },
+      { name: "Card", href: "/styleguide/components/card" },
+      { name: "Button Strategy", href: "/styleguide#button-strategy" },
+      { name: "Badge", href: "/styleguide/components/badge" },
+      { name: "Alert", href: "/styleguide/components/alert" },
+      { name: "Accordion", href: "/styleguide/components/accordion" },
+      { name: "Radio Group", href: "/styleguide/components/radio-group" },
+      { name: "Button Strategy", href: "/styleguide#button-strategy" },
     ]
   }
 ]
