@@ -1,34 +1,23 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+import { Inter, Oswald } from 'next/font/google'
+import './globals.css'
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+const fontBody = Inter({ 
+  subsets: ['latin'],
+  variable: '--font-body',
+})
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+const fontHeading = Oswald({ 
+  subsets: ['latin'],
+  variable: '--font-heading',
+  weight: ['600', '700']
+})
 
-export const metadata: Metadata = {
-  title: "Vero Gusto | Rodízio de Pizza para Eventos",
-  description: "Rodízio de pizza artesanal para eventos em Brasília. Forno a 400°C, massa de fermentação natural.",
-};
-
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="pt-br">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+    <html lang="pt-BR">
+      <body className={`${fontBody.variable} ${fontHeading.variable} font-sans antialiased`}>
         {children}
       </body>
     </html>
-  );
+  )
 }
