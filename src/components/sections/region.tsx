@@ -1,0 +1,51 @@
+import { Button } from "@/components/ui/button"
+import { MapPin } from "lucide-react"
+
+export function Region() {
+  return (
+    <section id="regiao" className="py-20 md:py-32 bg-secondary">
+      <div className="container mx-auto px-4 md:px-6">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+          
+          {/* Left Column: Copy */}
+          <div className="space-y-8">
+            <h2 className="font-display text-4xl md:text-5xl font-bold uppercase leading-[0.9] text-foreground">
+              Atendemos toda <span className="text-primary">Brasília</span> e região
+            </h2>
+            
+            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
+              Plano Piloto, Lago Sul, Lago Norte, Águas Claras, Guará, Taguatinga e demais regiões do DF. Levamos nossa estrutura completa até você.
+            </p>
+            
+            <div className="inline-block bg-orange-100 text-orange-700 font-bold px-4 py-3 rounded-md border-2 border-foreground shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+              Agenda limitada, principalmente em finais de semana.
+            </div>
+
+            <div className="pt-4">
+              <Button 
+                size="lg"
+                className="h-16 px-8 text-lg font-bold rounded-full shadow-hard hover:translate-y-1 hover:shadow-none transition-all bg-primary text-white uppercase tracking-wide"
+              >
+                Consultar agenda para minha região
+              </Button>
+            </div>
+          </div>
+
+          {/* Right Column: Map Placeholder */}
+          <div className="relative">
+            <div className="relative aspect-video bg-white rounded-2xl border-4 border-foreground shadow-hard flex items-center justify-center overflow-hidden">
+               {/* Map graphic placeholder */}
+               <div className="absolute inset-0 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px] opacity-50" />
+               
+               <div className="relative z-10 flex flex-col items-center animate-bounce">
+                  <MapPin className="w-16 h-16 text-primary fill-current drop-shadow-md" />
+                  <div className="w-4 h-1.5 bg-black/20 rounded-full blur-[2px] mt-1" />
+               </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  )
+}

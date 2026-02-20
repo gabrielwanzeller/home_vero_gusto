@@ -1,14 +1,40 @@
-import { ArrowRight } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Header } from "@/components/layout/header"
+import { Footer } from "@/components/layout/footer"
+import { Hero } from "@/components/sections/hero"
+import { IdealFor } from "@/components/sections/ideal-for"
+import { WhyUs } from "@/components/sections/why-us"
+import { ProblemSolution } from "@/components/sections/problem-solution"
+import { HowItWorks } from "@/components/sections/how-it-works"
+import { Authority } from "@/components/sections/authority"
+import { Testimonials } from "@/components/sections/testimonials"
+import { Menu } from "@/components/sections/menu"
+import { Investment } from "@/components/sections/investment"
+import { Gallery } from "@/components/sections/gallery"
+import { Region } from "@/components/sections/region"
+import { FAQ } from "@/components/sections/faq"
+import { FinalCTA } from "@/components/sections/final-cta"
 
 export default function Home() {
   return (
-    <div>
-      <Button variant="primary" size="lg" className="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive bg-primary text-primary-foreground hover:bg-primary/90 h-10 has-[>svg]:px-4 rounded-full font-display text-lg px-8 shadow-hard hover:translate-y-1 hover:shadow-none transition-all">Click me</Button>
-      <Button variant="outline">Click me</Button>
-      <Button variant="secondary">Click me</Button>
-      <Button variant="ghost">Click me</Button>
-      <Button variant="ghost">Click me</Button>
+    <div className="min-h-screen bg-background font-sans antialiased flex flex-col">
+      <Header />
+      <main className="flex-1">
+        <Hero />
+        <IdealFor />
+        <WhyUs />
+        <ProblemSolution />
+        <HowItWorks />
+        <Authority />
+        <Testimonials />
+        <Menu />
+        <Investment />
+        <Gallery />
+        <Region />
+        <FAQ />
+        <FinalCTA />
+      </main>
+      <Footer />
     </div>
-  );
+  )
 }
+

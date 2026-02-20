@@ -1,0 +1,109 @@
+import { Button } from "@/components/ui/button"
+import { Leaf, Flame, Candy } from "lucide-react"
+
+export function Menu() {
+  return (
+    <section id="cardapio" className="py-20 md:py-32 bg-background">
+      <div className="container mx-auto px-4 md:px-6">
+        
+        {/* Header */}
+        <div className="text-center mb-16 space-y-4 max-w-3xl mx-auto">
+          <h2 className="font-display text-5xl md:text-6xl font-bold uppercase leading-none text-primary">
+            Sabores que encantam
+          </h2>
+          <p className="text-xl text-muted-foreground leading-relaxed">
+            O cardápio é ajustado junto com você, conforme perfil do evento e preferências dos convidados.
+          </p>
+        </div>
+
+        {/* Menu Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-16">
+          
+          {/* Card 1: Entradas */}
+          <div className="bg-white border-2 border-foreground rounded-xl p-8 shadow-hard hover:-translate-y-1 transition-transform overflow-hidden relative">
+            <div className="flex items-center gap-3 border-b-2 border-border pb-4 mb-6">
+               <div className="w-10 h-10 rounded-full bg-brand-green/10 flex items-center justify-center border-2 border-brand-green">
+                 <Leaf className="w-5 h-5 text-brand-green" />
+               </div>
+               <h3 className="font-display text-3xl uppercase font-bold text-foreground">Entradas</h3>
+            </div>
+            
+            <ul className="space-y-3">
+              {[
+                "Cestinha de pastel com patê",
+                "Rotolino de calabresa",
+                "Rotolino de queijo com geleia",
+                "Rotolino de queijo com pesto",
+                "Rotolino de frango com catupiry"
+              ].map((item, i) => (
+                <li key={i} className="text-lg font-medium text-muted-foreground flex items-start gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-brand-green mt-2 shrink-0" />
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Card 2: Pizzas Salgadas */}
+          <div className="bg-white border-2 border-foreground rounded-xl p-8 shadow-hard hover:-translate-y-1 transition-transform overflow-hidden relative">
+            <div className="flex items-center gap-3 border-b-2 border-border pb-4 mb-6">
+               <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center border-2 border-primary">
+                 <Flame className="w-5 h-5 text-primary" />
+               </div>
+               <h3 className="font-display text-3xl uppercase font-bold text-foreground">Salgadas</h3>
+            </div>
+            
+            <ul className="space-y-3">
+              {[
+                "Marguerita", "Calabresa tradicional", "Frango com catupiry", 
+                "Portuguesa", "Quatro queijos", "Diavoletta", 
+                "Carne seca com catupiry", "Abobrinha com gorgonzola", "Milho com bacon"
+              ].map((item, i) => (
+                <li key={i} className="text-lg font-medium text-muted-foreground flex items-start gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 shrink-0" />
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Card 3: Pizzas Doces */}
+          <div className="bg-white border-2 border-foreground rounded-xl p-8 shadow-hard hover:-translate-y-1 transition-transform overflow-hidden relative">
+            <div className="flex items-center gap-3 border-b-2 border-border pb-4 mb-6">
+               <div className="w-10 h-10 rounded-full bg-orange-100 flex items-center justify-center border-2 border-orange-500">
+                 <Candy className="w-5 h-5 text-orange-500" />
+               </div>
+               <h3 className="font-display text-3xl uppercase font-bold text-foreground">Doces</h3>
+            </div>
+            
+            <ul className="space-y-3">
+              {[
+                "Banana caramelizada", 
+                "Banana com chocolate", 
+                "Chocolate com morango", 
+                "Romeu e Julieta"
+              ].map((item, i) => (
+                <li key={i} className="text-lg font-medium text-muted-foreground flex items-start gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-orange-500 mt-2 shrink-0" />
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+        </div>
+
+        {/* Footer CTA */}
+        <div className="text-center">
+            <Button 
+              size="lg" 
+              className="h-20 px-10 text-xl md:text-2xl rounded-full font-display uppercase tracking-wide shadow-hard hover:translate-y-1 hover:shadow-none transition-all bg-primary text-white"
+            >
+              Montar meu cardápio personalizado
+            </Button>
+        </div>
+
+      </div>
+    </section>
+  )
+}
