@@ -44,7 +44,7 @@ export function Hero() {
 
                {/* Overlay Badge */}
               <div className="absolute bottom-6 -right-2 bg-white border-2 border-black px-4 py-2 rounded-lg shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] z-10 rotate-2">
-                  <span className="font-bold text-sm uppercase flex items-center gap-2">
+                  <span className="font-bold text-sm uppercase flex items-center gap-2 text-red-500">
                     <span className="w-2 h-2 bg-red-500 rounded-full animate-pulse"/>
                     Veja como funciona
                   </span>

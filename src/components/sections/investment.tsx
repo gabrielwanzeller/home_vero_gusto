@@ -18,7 +18,7 @@ export function Investment() {
            </p>
 
            <div className="inline-block bg-primary/10 text-primary border-2 border-primary/20 rounded-lg px-6 py-3 mb-8">
-             <span className="text-xl font-bold uppercase tracking-wide">Eventos a partir de 12 pessoas</span>
+             <span className="text-xl font-bold uppercase tracking-wide">Eventos a partir de 15 pessoas</span>
            </div>
 
            <p className="text-lg text-foreground/80 mb-10">

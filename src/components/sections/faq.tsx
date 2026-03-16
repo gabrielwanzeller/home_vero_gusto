@@ -10,15 +10,21 @@ export function FAQ() {
   const faqs = [
     {
       question: "Qual o número mínimo de pessoas?",
-      answer: "Atendemos eventos a partir de 12 pessoas pagantes."
+      answer: "Atendemos eventos a partir de 15 pessoas pagantes. O valor por pessoa pode variar conforme a quantidade de convidados."
     },
     {
       question: "O que preciso fornecer de estrutura?",
-      answer: "Apenas um ponto de energia 110v ou 220v. Levamos o forno, mesas de apoio, toalhas para nossa estação e todo o material de serviço."
+      answer: (
+        <>
+          Precisamos apenas de uma pia com água. Levamos o forno, mesas de apoio e todo o material necessário para o serviço.
+          <br />
+          Caso não seja permitido o uso de botijão de gás no local, será necessário disponibilizar um ponto de energia 220V com tomada de 20A para o funcionamento do forno elétrico.
+        </>
+      )
     },
     {
       question: "Vocês atendem em apartamento?",
-      answer: "Sim! Nosso forno é elétrico, compacto e não gera fumaça, sendo perfeito para áreas gourmet, varandas e salões de festas."
+      answer: "Sim! Temos forno elétrico, compacto e não gera fumaça, sendo perfeito para áreas gourmet, varandas e salões de festas."
     },
     {
       question: "Quanto tempo dura o rodízio?",
@@ -26,16 +32,23 @@ export function FAQ() {
     },
     {
       question: "Vocês fornecem pratos e talheres?",
-      answer: "Levamos guardanapos descartáveis premium. Pratos e talheres não estão inclusos no pacote padrão, pois a proposta é 'finger food' (comer com a mão), mas podemos incluir como opcional.",
+      answer: "Sim. Pratos e talheres estão inclusos no pacote padrão do rodízio. Copos para bebidas não estão inclusos.",
       highlight: true
     },
     {
       question: "Crianças pagam?",
-      answer: "Crianças até 5 anos não pagam. De 6 a 10 anos pagam metade. A partir de 11 anos, valor integral."
+      answer: "Crianças até 6 anos não pagam. De 7 a 10 anos pagam metade. A partir de 11 anos, valor integral."
     },
     {
       question: "Quais são os sabores inclusos?",
-      answer: "No pacote padrão, incluímos 5 sabores de pizzas salgadas e 2 doces, à sua escolha dentre nossas opções no cardápio."
+      answer: (
+        <>
+          No pacote padrão incluímos <strong>6 entradas, 12 sabores de pizzas salgadas e 4 sabores de pizzas doces</strong>, à sua escolha dentre as opções disponíveis em nosso cardápio.
+          <br /><br />
+          Esse é o pacote padrão para eventos <strong>acima de 35 pessoas</strong>. Para eventos menores, o cardápio pode sofrer algumas adaptações.
+        </>
+      ),
+      highlight: true
     },
     {
       question: "Vocês lavam a louça?",
@@ -44,7 +57,7 @@ export function FAQ() {
     },
     {
       question: "Qual a forma de pagamento?",
-      answer: "Solicitamos 30% de sinal para reserva da data e o restante até 2 dias antes do evento."
+      answer: "Para reservar a data, solicitamos uma entrada. Para eventos acima de 50 pessoas, a entrada é de 35% do valor total. Para eventos de até 49 pessoas, a entrada é de 50% do valor total. O restante é pago no final do evento."
     },
     {
       question: "Atendem fora de Brasília?",
