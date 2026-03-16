@@ -34,7 +34,8 @@ export function Menu() {
                 "Rotolino de calabresa",
                 "Rotolino de queijo com geleia",
                 "Rotolino de queijo com pesto",
-                "Rotolino de frango com catupiry"
+                "Rotolino de frango com catupiry",
+                "Rotolino "
               ].map((item, i) => (
                 <li key={i} className="text-lg font-medium text-muted-foreground flex items-start gap-2">
                   <span className="w-1.5 h-1.5 rounded-full bg-brand-green mt-2 shrink-0" />
@@ -55,9 +56,9 @@ export function Menu() {
             
             <ul className="space-y-3">
               {[
-                "Marguerita", "Calabresa tradicional", "Frango com catupiry", 
-                "Portuguesa", "Quatro queijos", "Diavoletta", 
-                "Carne seca com catupiry", "Abobrinha com gorgonzola", "Milho com bacon"
+                "Marguerita com pesto", "Calabresa tradicional", "Frango com catupiry", 
+                "Portuguesa", "Quatro queijos", "Diavoletta", "Calabresa com geleia de pimenta",
+                "Carne seca com catupiry", "Abobrinha com gorgonzola", "Milho com bacon e catupiry", "Carne seca com banana da terra e mel"
               ].map((item, i) => (
                 <li key={i} className="text-lg font-medium text-muted-foreground flex items-start gap-2">
                   <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 shrink-0" />
@@ -78,10 +79,12 @@ export function Menu() {
             
             <ul className="space-y-3">
               {[
-                "Banana caramelizada", 
+                "Banana com canela", 
+                "Banana com doce de leite",
                 "Banana com chocolate", 
                 "Chocolate com morango", 
-                "Romeu e Julieta"
+                "Romeu e Julieta",
+                "Chocolate com chocolate branco"                
               ].map((item, i) => (
                 <li key={i} className="text-lg font-medium text-muted-foreground flex items-start gap-2">
                   <span className="w-1.5 h-1.5 rounded-full bg-orange-500 mt-2 shrink-0" />
