@@ -26,7 +26,7 @@ export function IdealFor() {
         
         {/* Section Header */}
         <div className="text-center space-y-4 mb-16 max-w-3xl mx-auto">
-          <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold uppercase text-foreground leading-[1] tracking-tight">
+          <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold uppercase text-foreground leading-none tracking-tight">
             Esse rodízio é ideal para quem…
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground font-medium">
