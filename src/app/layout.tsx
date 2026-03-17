@@ -1,5 +1,6 @@
 import { Inter, Oswald } from 'next/font/google'
 import './globals.css'
+import { FloatingWhatsApp } from '@/components/layout/floating-whatsapp'
 
 const fontBody = Inter({ 
   subsets: ['latin'],
@@ -17,6 +18,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="pt-BR">
       <body className={`${fontBody.variable} ${fontHeading.variable} font-sans antialiased`}>
         {children}
+        <FloatingWhatsApp />
       </body>
     </html>
   )

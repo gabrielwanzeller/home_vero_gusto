@@ -51,7 +51,7 @@ export function Investment() {
                 "Organização da área utilizada pela equipe ao final do evento"
               ].map((item, idx) => (
                 <li key={idx} className="flex gap-4 items-start">
-                  <div className="bg-foreground text-background rounded-full p-1 shrink-0 mt-1">
+                  <div className="bg-brand-green text-background rounded-full p-1 shrink-0 mt-1">
                     <Check className="w-5 h-5" strokeWidth={3} />
                   </div>
                   <span className="text-lg md:text-xl font-medium text-foreground leading-snug">

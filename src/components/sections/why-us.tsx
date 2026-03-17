@@ -11,7 +11,7 @@ export function WhyUs() {
     },
     {
       icon: Wheat,
-      title: "Fermentação natural (48h)",
+      title: "Fermentação natural (Até 48h)",
       description: "Massa leve, digestão mais confortável e sabor mais profundo.",
       colSpan: "md:col-span-1 lg:col-span-2"
     },
