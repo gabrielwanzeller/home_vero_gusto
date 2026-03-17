@@ -1,8 +1,32 @@
+"use client"
+
+import { useState } from "react"
 import { Button } from "@/components/ui/button"
-import { PlayCircle, Star } from "lucide-react"
+import { Play, Star } from "lucide-react"
 
 export function Testimonials() {
-  const videos = [1, 2, 3]
+  const [activeVideo, setActiveVideo] = useState<string | null>(null)
+
+  const videos = [
+    {
+      id: "romulo",
+      name: "Rômulo",
+      thumb: "/videos/autority/Romulo/thumb-romulo.png",
+      video: "/videos/autority/Romulo/video-romulo.MOV"
+    },
+    {
+      id: "clau",
+      name: "Clau",
+      thumb: "/videos/autority/Clau/thumb-clau.png",
+      video: "/videos/autority/Clau/video-clau.MOV"
+    },
+    {
+      id: "andre",
+      name: "André",
+      thumb: "/videos/autority/André/thumb-andre.png",
+      video: "/videos/autority/André/video-andre.MOV"
+    }
+  ]
   
   const reviews = [
     {
@@ -32,15 +56,47 @@ export function Testimonials() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-5xl mx-auto mb-16">
           {videos.map((item) => (
             <div 
-              key={item}
-              className="relative aspect-[9/16] bg-black/5 rounded-xl border-2 border-foreground shadow-hard overflow-hidden group cursor-pointer hover:-translate-y-1 transition-transform"
+              key={item.id}
+              className="relative aspect-[9/16] bg-black/5 rounded-xl border-2 border-foreground shadow-hard overflow-hidden group hover:-translate-y-1 transition-transform"
             >
-               <div className="absolute inset-0 flex items-center justify-center bg-black/10 group-hover:bg-black/20 transition-colors">
-                 <PlayCircle className="w-16 h-16 text-white drop-shadow-lg opacity-90 group-hover:scale-110 transition-transform" />
-               </div>
-               <div className="absolute bottom-4 left-4 right-4 text-white text-sm font-bold drop-shadow-md">
-                 Depoimento em Vídeo {item}
-               </div>
+               {activeVideo === item.id ? (
+                 <video 
+                   src={item.video}
+                   poster={item.thumb}
+                   controls
+                   autoPlay
+                   playsInline
+                   className="w-full h-full object-cover"
+                 />
+               ) : (
+                 <div 
+                   className="absolute inset-0 cursor-pointer"
+                   onClick={() => setActiveVideo(item.id)}
+                 >
+                   {/* Thumbnail */}
+                   <img 
+                     src={item.thumb} 
+                     alt={`Depoimento ${item.name}`} 
+                     className="w-full h-full object-cover"
+                   />
+                   
+                   {/* Play Button Overlay */}
+                   <div className="absolute inset-0 flex items-center justify-center bg-black/10 group-hover:bg-black/20 transition-colors">
+                     <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-lg border-2 border-black transition-transform group-hover:scale-110">
+                       <Play className="w-6 h-6 text-primary fill-current ml-1" />
+                     </div>
+                   </div>
+                 </div>
+               )}
+
+               {/* Name Badge */}
+               {activeVideo !== item.id && (
+                 <div className="absolute top-4 left-4 right-4 pointer-events-none">
+                   <span className="bg-black/70 text-white text-xs md:text-sm font-bold px-4 py-2 rounded-full drop-shadow-md backdrop-blur-md">
+                     {item.name}
+                   </span>
+                 </div>
+               )}
             </div>
           ))}
         </div>

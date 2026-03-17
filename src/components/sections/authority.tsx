@@ -25,7 +25,7 @@ export function Authority() {
 
           {/* Right Column: Image Placeholder */}
           <div className="relative order-1 lg:order-2 flex justify-center lg:justify-end">
-            <div className="relative w-full max-w-md aspect-[4/5] bg-muted rounded-2xl border-4 border-foreground shadow-hard rotate-3 hover:rotate-0 transition-transform duration-500 group overflow-hidden">
+            <div className="relative w-full max-w-md aspect-4/5 bg-muted rounded-2xl border-4 border-foreground shadow-hard rotate-3 hover:rotate-0 transition-transform duration-500 group overflow-hidden">
                {/* Fallback pattern/content */}
                <div className="absolute inset-0 bg-neutral-200 flex items-center justify-center">
                   <span className="font-display text-3xl uppercase text-foreground/20 text-center px-4">
