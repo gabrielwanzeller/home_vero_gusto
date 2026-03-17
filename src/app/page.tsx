@@ -13,6 +13,7 @@ import { Gallery } from "@/components/sections/gallery"
 import { Region } from "@/components/sections/region"
 import { FAQ } from "@/components/sections/faq"
 import { FinalCTA } from "@/components/sections/final-cta"
+import { TestimonialsSecond } from "@/components/sections/testimonials-second"
 
 export default function Home() {
   return (
@@ -31,6 +32,7 @@ export default function Home() {
         <Gallery />
         <Region />
         <FAQ />
+        <TestimonialsSecond />
         <FinalCTA />
       </main>
       <Footer />

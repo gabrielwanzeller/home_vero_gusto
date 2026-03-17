@@ -4,40 +4,21 @@ import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Play, Star } from "lucide-react"
 
-export function Testimonials() {
+export function TestimonialsSecond() {
   const [activeVideo, setActiveVideo] = useState<string | null>(null)
 
   const videos = [
     {
-      id: "romulo",
-      name: "Rômulo",
-      thumb: "/videos/testimonials/Romulo/thumb-romulo.png",
-      video: "/videos/testimonials/Romulo/video-romulo.MOV"
+      id: "kelly",  
+      name: "Kelly",
+      thumb: "/videos/testimonials/Kelly/thumb-kelly.png",
+      video: "/videos/testimonials/Kelly/video-kelly.mp4"
     },
     {
-      id: "clau",
-      name: "Clau",
-      thumb: "/videos/testimonials/Clau/thumb-clau.png",
-      video: "/videos/testimonials/Clau/video-clau.MOV"
-    },
-    {
-      id: "andre",
-      name: "André",
-      thumb: "/videos/testimonials/André/thumb-andre.png",
-      video: "/videos/testimonials/André/video-andre.MOV"
-    }
-  ]
-  
-  const reviews = [
-    {
-      quote: "A massa é incrível, leve e saborosa. Todo mundo comentou. Foi sucesso total.",
-      author: "Fernanda M.",
-      detail: "Asa Sul | Evento familiar"
-    },
-    {
-      quote: "Pizza incrível. Atendimento impecável. Profissionalismo do início ao fim.",
-      author: "Carlos A.",
-      detail: "Lago Sul | Evento corporativo"
+      id: "thiago",
+      name: "Thiago",
+      thumb: "/videos/testimonials/Thiago/thumb-thiago.png",
+      video: "/videos/testimonials/Thiago/video-thiago.MOV"
     }
   ]
 
@@ -48,12 +29,12 @@ export function Testimonials() {
         {/* Header */}
         <div className="text-center mb-16 space-y-4">
           <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold uppercase text-foreground leading-tight">
-            O que nossos clientes dizem
+            Mais dos nossos clientes
           </h2>
         </div>
 
         {/* Video Block */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-5xl mx-auto mb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8 max-w-3xl mx-auto mb-16">
           {videos.map((item) => (
             <div 
               key={item.id}
@@ -97,32 +78,6 @@ export function Testimonials() {
                    </span>
                  </div>
                )}
-            </div>
-          ))}
-        </div>
-
-        {/* Text Reviews */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-16">
-          {reviews.map((review, index) => (
-            <div 
-              key={index}
-              className="bg-white border-2 border-foreground rounded-xl p-8 shadow-hard flex flex-col justify-between"
-            >
-              <div className="space-y-4">
-                 <div className="flex gap-1">
-                   {[1, 2, 3, 4, 5].map((star) => (
-                     <Star key={star} className="w-5 h-5 fill-primary text-primary" />
-                   ))}
-                 </div>
-                 <p className="text-lg font-medium italic text-foreground leading-relaxed">
-                   "{review.quote}"
-                 </p>
-              </div>
-              
-              <div className="mt-6 pt-6 border-t border-border">
-                <p className="font-bold text-foreground">{review.author}</p>
-                <p className="text-sm text-muted-foreground">{review.detail}</p>
-              </div>
             </div>
           ))}
         </div>
