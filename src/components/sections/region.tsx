@@ -9,7 +9,7 @@ export function Region() {
           
           {/* Left Column: Copy */}
           <div className="space-y-8">
-            <h2 className="font-display text-4xl md:text-5xl font-bold uppercase leading-[0.9] text-foreground">
+            <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold uppercase text-foreground leading-tight">
               Atendemos toda <span className="text-primary">Brasília</span> e região
             </h2>
             
@@ -23,8 +23,8 @@ export function Region() {
 
             <div className="pt-4">
               <Button 
-                size="lg"
-                className="h-16 px-8 text-lg font-bold rounded-full shadow-hard hover:translate-y-1 hover:shadow-none transition-all bg-primary text-white uppercase tracking-wide"
+                size="lg" 
+                className="h-20 px-10 md:px-14 text-xl md:text-2xl rounded-full font-display uppercase tracking-wider"
               >
                 Consultar agenda para minha região
               </Button>

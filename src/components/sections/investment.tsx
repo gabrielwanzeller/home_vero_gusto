@@ -11,7 +11,7 @@ export function Investment() {
           
           {/* Left Column: Price Logic */}
           <div className="space-y-6 flex flex-col justify-center">
-            <h2 className="font-display text-4xl md:text-5xl font-bold uppercase text-foreground leading-tight">
+            <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold uppercase text-foreground leading-tight">
               Como funciona o valor do rodízio
             </h2>
             <p className="text-xl text-muted-foreground font-medium">
@@ -72,7 +72,7 @@ export function Investment() {
 
            <Button 
              size="lg" 
-             className="w-full md:w-auto h-20 px-10 md:px-16 text-xl md:text-2xl rounded-full font-display uppercase tracking-wider shadow-[6px_6px_0px_0px_rgba(20,23,26,1)] hover:translate-y-1 hover:shadow-[4px_4px_0px_0px_rgba(20,23,26,1)] transition-all"
+             className="w-full md:w-auto h-20 px-10 md:px-14 text-xl md:text-2xl rounded-full font-display uppercase tracking-wider"
              variant="primary"
            >
              Receber proposta personalizada

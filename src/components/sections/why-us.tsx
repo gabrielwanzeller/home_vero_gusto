@@ -41,7 +41,7 @@ export function WhyUs() {
         
         {/* Header */}
         <div className="max-w-3xl mx-auto text-center space-y-6 mb-16 md:mb-24">
-          <h2 className="text-4xl md:text-6xl font-display font-bold uppercase leading-[0.9] text-foreground">
+          <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold uppercase text-foreground leading-tight">
             Por que nosso rodízio está transformando eventos em <span className="text-primary">Brasília</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
@@ -78,7 +78,7 @@ export function WhyUs() {
         <div className="text-center">
             <Button 
               size="lg" 
-              className="h-20 px-12 text-2xl rounded-full font-display uppercase tracking-wide shadow-hard hover:translate-y-1 hover:shadow-none transition-all"
+              className="h-20 px-10 md:px-14 text-xl md:text-2xl rounded-full font-display uppercase tracking-wider"
             >
               Garantir minha data
             </Button>

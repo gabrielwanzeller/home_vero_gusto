@@ -25,7 +25,7 @@ export function HowItWorks() {
         
         {/* Header */}
         <div className="max-w-3xl mx-auto text-center space-y-6 mb-16 md:mb-24">
-          <h2 className="text-5xl md:text-6xl font-display font-bold uppercase leading-none text-foreground">
+          <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold uppercase text-foreground leading-tight">
             Como funciona?
           </h2>
           <p className="text-xl text-muted-foreground">
@@ -67,7 +67,7 @@ export function HowItWorks() {
         <div className="text-center">
             <Button 
               size="lg" 
-              className="h-20 px-12 text-xl md:text-2xl rounded-full font-display uppercase tracking-wide shadow-hard hover:translate-y-1 hover:shadow-none transition-all"
+              className="h-20 px-10 md:px-14 text-xl md:text-2xl rounded-full font-display uppercase tracking-wider"
             >
               Solicitar proposta personalizada
             </Button>

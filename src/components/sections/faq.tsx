@@ -70,7 +70,7 @@ export function FAQ() {
       <div className="container mx-auto px-4 md:px-6">
         
         <div className="text-center mb-16">
-          <h2 className="font-display text-5xl md:text-6xl font-bold uppercase leading-none text-foreground">
+          <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold uppercase text-foreground leading-tight">
             Perguntas Frequentes
           </h2>
         </div>
@@ -100,7 +100,7 @@ export function FAQ() {
         <div className="text-center mt-16">
              <Button 
                size="lg" 
-               className="h-20 px-12 text-xl md:text-2xl rounded-full font-display uppercase tracking-wide shadow-hard hover:translate-y-1 hover:shadow-none transition-all"
+               className="h-20 px-10 md:px-14 text-xl md:text-2xl rounded-full font-display uppercase tracking-wider"
                variant="primary"
              >
                Fale com a equipe e garanta sua data

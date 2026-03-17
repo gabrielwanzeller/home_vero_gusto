@@ -8,7 +8,7 @@ export function Menu() {
         
         {/* Header */}
         <div className="text-center mb-16 space-y-4 max-w-3xl mx-auto">
-          <h2 className="font-display text-5xl md:text-6xl font-bold uppercase leading-none text-primary">
+          <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold uppercase text-primary leading-tight">
             Sabores que encantam
           </h2>
           <p className="text-xl text-muted-foreground leading-relaxed">
@@ -100,7 +100,7 @@ export function Menu() {
         <div className="text-center">
             <Button 
               size="lg" 
-              className="h-20 px-10 text-xl md:text-2xl rounded-full font-display uppercase tracking-wide shadow-hard hover:translate-y-1 hover:shadow-none transition-all bg-primary text-white"
+              className="h-20 px-10 md:px-14 text-xl md:text-2xl rounded-full font-display uppercase tracking-wider"
             >
               Montar meu cardápio personalizado
             </Button>

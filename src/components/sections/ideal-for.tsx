@@ -26,7 +26,7 @@ export function IdealFor() {
         
         {/* Section Header */}
         <div className="text-center space-y-4 mb-16 max-w-3xl mx-auto">
-          <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold uppercase text-foreground leading-none tracking-tight">
+          <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold uppercase text-foreground leading-tight">
             Esse rodízio é ideal para quem…
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground font-medium">
@@ -63,7 +63,7 @@ export function IdealFor() {
         <div className="text-center">
           <Button 
             size="lg" 
-            className="h-20 px-12 text-xl md:text-2xl rounded-full font-display uppercase tracking-wide shadow-[6px_6px_0px_0px_rgba(20,23,26,1)] hover:translate-y-1 hover:shadow-[4px_4px_0px_0px_rgba(20,23,26,1)] transition-all bg-primary text-white"
+            className="h-20 px-10 md:px-14 text-xl md:text-2xl rounded-full font-display uppercase tracking-wider"
           >
             Quero um orçamento
           </Button>

@@ -5,7 +5,7 @@ export function FinalCTA() {
     <section className="py-24 md:py-32 bg-primary text-primary-foreground text-center">
       <div className="container mx-auto px-4 md:px-6">
         <div className="max-w-4xl mx-auto space-y-10">
-           <h2 className="font-display font-bold uppercase text-5xl md:text-7xl leading-none text-white drop-shadow-md">
+           <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold uppercase text-white leading-tight drop-shadow-md">
              Seu evento merece ser lembrado
            </h2>
            
@@ -15,8 +15,9 @@ export function FinalCTA() {
            </p>
 
            <Button 
-             size="lg"
-             className="h-24 px-12 text-2xl md:text-3xl rounded-full font-display uppercase tracking-wide bg-white text-primary border-0 shadow-[6px_6px_0px_0px_rgba(20,23,26,1)] hover:scale-105 hover:shadow-[8px_8px_0px_0px_rgba(20,23,26,1)] transition-all"
+             size="lg" 
+             mode="red"
+             className="h-20 px-10 md:px-14 text-xl md:text-2xl rounded-full font-display uppercase tracking-wider border-0"
            >
              Ver disponibilidade para minha data
            </Button>

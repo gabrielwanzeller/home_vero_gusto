@@ -8,7 +8,7 @@ export function Authority() {
           
           {/* Left Column: Copy */}
           <div className="space-y-8 order-2 lg:order-1">
-            <h2 className="font-display text-4xl md:text-5xl font-bold uppercase leading-[0.9] text-foreground">
+            <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold uppercase text-foreground leading-tight">
               Quem está por trás da <span className="text-primary">Vero Gusto</span>
             </h2>
             

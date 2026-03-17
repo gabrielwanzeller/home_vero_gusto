@@ -23,7 +23,7 @@ export function Testimonials() {
         
         {/* Header */}
         <div className="text-center mb-16 space-y-4">
-          <h2 className="font-display text-5xl md:text-6xl font-bold uppercase leading-none text-foreground">
+          <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold uppercase text-foreground leading-tight">
             O que nossos clientes dizem
           </h2>
         </div>
@@ -75,7 +75,7 @@ export function Testimonials() {
         <div className="text-center">
             <Button 
               size="lg" 
-              className="h-24 px-12 text-2xl md:text-3xl rounded-full font-display uppercase tracking-wide shadow-hard hover:scale-105 transition-transform bg-primary text-white"
+              className="h-20 px-10 md:px-14 text-xl md:text-2xl rounded-full font-display uppercase tracking-wider"
             >
               Quero no meu evento
             </Button>
