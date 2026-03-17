@@ -3,7 +3,7 @@ import { MapPin } from "lucide-react"
 
 export function Region() {
   return (
-    <section id="regiao" className="py-20 md:py-32 bg-secondary">
+    <section id="regiao" className="py-20 md:py-32 bg-background">
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           
@@ -24,7 +24,7 @@ export function Region() {
             <div className="pt-4">
               <Button 
                 size="lg" 
-                className="h-20 px-10 md:px-14 text-xl md:text-2xl rounded-full font-display uppercase tracking-wider"
+                className="w-full max-w-full md:w-auto h-auto min-h-20 py-4 px-6 md:px-14 text-lg md:text-2xl whitespace-normal break-words rounded-full font-display uppercase tracking-wider"
               >
                 Consultar agenda para minha região
               </Button>

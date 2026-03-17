@@ -17,7 +17,7 @@ import { TestimonialsSecond } from "@/components/sections/testimonials-second"
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-background font-sans antialiased flex flex-col">
+    <div className="min-h-screen bg-background font-sans antialiased flex flex-col overflow-x-hidden max-w-full">
       <Header />
       <main className="flex-1">
         <Hero />

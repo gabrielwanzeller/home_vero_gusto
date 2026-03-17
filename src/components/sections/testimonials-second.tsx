@@ -23,7 +23,7 @@ export function TestimonialsSecond() {
   ]
 
   return (
-    <section id="depoimentos" className="py-20 md:py-32 bg-secondary/50">
+    <section id="depoimentos" className="py-20 md:py-32 bg-background">
       <div className="container mx-auto px-4 md:px-6">
         
         {/* Header */}
@@ -86,7 +86,7 @@ export function TestimonialsSecond() {
         <div className="text-center">
             <Button 
               size="lg" 
-              className="h-20 px-10 md:px-14 text-xl md:text-2xl rounded-full font-display uppercase tracking-wider"
+              className="w-full max-w-full md:w-auto h-auto min-h-20 py-4 px-6 md:px-14 text-lg md:text-2xl whitespace-normal break-words rounded-full font-display uppercase tracking-wider"
             >
               Quero no meu evento
             </Button>
