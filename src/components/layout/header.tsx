@@ -22,20 +22,20 @@ export function Header() {
   }, [])
 
   const navLinks = [
-    { name: "Por que nós", href: "#why-us" },
-    { name: "Como funciona", href: "#how-it-works" },
-    { name: "Depoimentos", href: "#testimonials" },
-    { name: "Cardápio", href: "#menu" },
-    { name: "Região", href: "#region" },
-    { name: "Perguntas", href: "#faq" },
+    { name: "Por que nós", href: "#porque-nos" },
+    { name: "Como funciona", href: "#como-funciona" },
+    { name: "Depoimentos", href: "#depoimentos" },
+    { name: "Cardápio", href: "#cardapio" },
+    { name: "Região", href: "#regiao" },
+    { name: "Perguntas", href: "#perguntas" },
   ]
 
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled 
-         ? "bg-white/84 backdrop-blur-md shadow-sm py-3" 
-         : "bg-transparent py-6"
+        ? "bg-white/84 backdrop-blur-md shadow-sm py-3" 
+        : "bg-transparent py-6"
       }`}
     >
       <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
@@ -56,9 +56,9 @@ export function Header() {
               key={link.name}
               href={link.href}
               className={`text-sm font-bold uppercase tracking-wide transition-colors ${
-                 isScrolled 
-                 ? "text-foreground hover:text-primary" 
-                 : "text-white/90 hover:text-white"
+                isScrolled 
+                ? "text-foreground hover:text-primary" 
+                : "text-white/90 hover:text-white"
               }`}
             >
               {link.name}
