@@ -5,6 +5,11 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Menu, MessageCircle } from "lucide-react"
 
+
+const whatsappNumber = "5561983202467" // Use actual number if available or generic link
+const message = encodeURIComponent("Olá! Vim pelo site da Vero Gusto e quero consultar disponibilidade para meu evento")
+const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${message}`
+
 export function Header() {
   const [isScrolled, setIsScrolled] = React.useState(false)
 
@@ -70,9 +75,12 @@ export function Header() {
                 : "bg-white text-primary border-0"
             }`}
             size="lg"
+            asChild
           >
-            <MessageCircle className="w-4 h-4 mr-2" />
-            Falar no WhatsApp
+            <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
+              <MessageCircle className="w-4 h-4 mr-2" />
+              Falar no WhatsApp
+            </a>
           </Button>
           
           <Button 
@@ -81,9 +89,12 @@ export function Header() {
             }`}
             variant="ghost"
             size="icon"
+            asChild
           >
-            <Menu className="w-6 h-6" />
-            <span className="sr-only">Menu</span>
+            <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
+              <Menu className="w-6 h-6" />
+              <span className="sr-only">Menu</span>
+            </a>
           </Button>
         </div>
       </div>

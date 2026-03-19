@@ -15,6 +15,9 @@ export function Footer() {
              <p className="text-zinc-400 text-sm max-w-xs mx-auto md:mx-0">
                Rodízio de pizza artesanal para eventos em Brasília – DF.
              </p>
+             <p className="text-zinc-400 text-sm max-w-xs mx-auto md:mx-0">
+               CNPJ: 55.461.568/0001-00
+             </p>
            </div>
 
            {/* Contact */}
@@ -24,10 +27,10 @@ export function Footer() {
               </h3>
               <div className="space-y-2">
                  <p className="font-bold text-lg hover:text-primary transition-colors cursor-pointer">
-                   (61) 98449-4617
+                  <a href="https://wa.me/5561983202467" target="_blank" rel="noopener noreferrer">+55 (61) 98320-2467</a>
                  </p>
                  <p className="text-zinc-400 hover:text-white transition-colors cursor-pointer">
-                   contato@verogusto.com.br
+                   <a href="mailto:[EMAIL_ADDRESS]">contato@verogusto.com.br</a>
                  </p>
               </div>
            </div>
@@ -38,7 +41,7 @@ export function Footer() {
                 Redes Sociais
               </h3>
               <Link 
-                href="#" 
+                href="https://www.instagram.com/verogusto.eventos/" 
                 className="flex items-center gap-2 text-zinc-400 hover:text-white transition-colors group"
               >
                 <Instagram className="w-5 h-5 group-hover:scale-110 transition-transform" />

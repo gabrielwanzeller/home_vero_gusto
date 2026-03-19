@@ -11,20 +11,20 @@ export function Testimonials() {
     {
       id: "romulo",
       name: "Rômulo",
-      thumb: "/videos/testimonials/Romulo/thumb-romulo.png",
-      video: "/videos/testimonials/Romulo/video-romulo.MOV"
+      thumb: "/videos/testimonials/Romulo/thumb-romulo-medium.jpeg",
+      video: "/videos/testimonials/Romulo/video-romulo.MP4"
     },
     {
       id: "clau",
       name: "Clau",
-      thumb: "/videos/testimonials/Clau/thumb-clau.png",
-      video: "/videos/testimonials/Clau/video-clau.MOV"
+      thumb: "/videos/testimonials/Clau/thumb-clau-medium.jpeg",
+      video: "/videos/testimonials/Clau/video-clau.MP4"
     },
     {
       id: "andre",
       name: "André",
-      thumb: "/videos/testimonials/André/thumb-andre.png",
-      video: "/videos/testimonials/André/video-andre.MOV"
+      thumb: "/videos/testimonials/André/thumb-andre-medium.jpeg",
+      video: "/videos/testimonials/André/video-andre.MP4"
     }
   ]
   

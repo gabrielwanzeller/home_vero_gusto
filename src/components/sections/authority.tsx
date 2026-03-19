@@ -14,7 +14,7 @@ export function Authority() {
             </h2>
             
             <p className="text-lg text-muted-foreground leading-relaxed">
-              A Vero Gusto nasceu com a missão de levar pizza napolitana de verdade para eventos em Brasília. Cada massa passa por <span className="font-bold text-foreground">48 horas de fermentação natural</span>. Cada evento é tratado como <span className="font-bold text-foreground">único</span>, com foco em qualidade, organização e experiência completa.
+              A Vero Gusto nasceu com a missão de levar pizza no estilo napolitana de verdade para eventos em Brasília. Cada massa passa por até <span className="font-bold text-foreground">48 horas de fermentação natural</span>. Cada evento é tratado como <span className="font-bold text-foreground">único</span>, com foco em qualidade, organização e experiência completa.
             </p>
             
             <div className="border-l-4 border-primary pl-6 py-2 mt-6">
@@ -26,14 +26,20 @@ export function Authority() {
 
           {/* Right Column: Image Placeholder */}
           <div className="relative order-1 lg:order-2 flex justify-center lg:justify-end">
-            <div className="relative w-full max-w-md aspect-4/5 bg-muted rounded-2xl border-4 border-foreground shadow-hard rotate-3 hover:rotate-0 transition-transform duration-500 group overflow-hidden">
+            <div className="relative w-full max-w-md aspect-4/5 bg-muted rounded-2xl border-4 border-foreground shadow-hard rotate-2 hover:rotate-0 transition-transform duration-500 group overflow-hidden">
               <Image 
-                src="/images/authority/fotos-equipe.jpg"
+                src="/images/authority/fotos-equipe-large.jpeg"
                 alt="Equipe Vero Gusto preparando pizza napolitana"
                 fill
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
                 sizes="(max-width: 768px) 100vw, 400px"
               />
+               {/* Overlay Badge */}
+              <div className="absolute bottom-10 -right-2 bg-white border border-black px-4 py-2 rounded-lg shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] z-10 rotate-1">
+                  <span className="font-bold text-sm uppercase flex items-center gap-2 text-red-500">
+                    Uma parte da nossa equipe
+                  </span>
+              </div>
             </div>
             
             {/* Decoration */}

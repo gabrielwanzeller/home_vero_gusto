@@ -3,8 +3,8 @@
 import { MessageCircle } from "lucide-react"
 
 export function FloatingWhatsApp() {
-  const whatsappNumber = "5561999999999" // Use actual number if available or generic link
-  const message = encodeURIComponent("Olá! Gostaria de falar com a equipe da Vero Gusto.")
+  const whatsappNumber = "5561983202467" // Use actual number if available or generic link
+  const message = encodeURIComponent("Olá! Vim pelo site da Vero Gusto e quero consultar disponibilidade para meu evento")
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${message}`
 
   return (

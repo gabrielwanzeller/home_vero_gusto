@@ -11,14 +11,14 @@ export function TestimonialsSecond() {
     {
       id: "kelly",  
       name: "Kelly",
-      thumb: "/videos/testimonials/Kelly/thumb-kelly.png",
+      thumb: "/videos/testimonials/Kelly/thumb-kelly-medium.jpeg",
       video: "/videos/testimonials/Kelly/video-kelly.mp4"
     },
     {
       id: "thiago",
       name: "Thiago",
-      thumb: "/videos/testimonials/Thiago/thumb-thiago.png",
-      video: "/videos/testimonials/Thiago/video-thiago.MOV"
+      thumb: "/videos/testimonials/Thiago/thumb-thiago-medium.jpeg",
+      video: "/videos/testimonials/Thiago/video-thiago.MP4"
     }
   ]
 
