@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { Button } from "@/components/ui/button"
+import { WhatsAppCtaButton } from "@/components/ui/whatsapp-cta-button"
 import { Play, Star } from "lucide-react"
 
 export function TestimonialsSecond() {
@@ -84,12 +84,12 @@ export function TestimonialsSecond() {
 
         {/* Footer CTA */}
         <div className="text-center">
-            <Button 
+            <WhatsAppCtaButton 
               size="lg" 
               className="w-full max-w-full md:w-auto h-auto min-h-20 py-4 px-6 md:px-14 text-lg md:text-2xl whitespace-normal break-words rounded-full font-display uppercase tracking-wider"
             >
               Quero no meu evento
-            </Button>
+            </WhatsAppCtaButton>
         </div>
 
       </div>

@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button"
+import { WhatsAppCtaButton } from "@/components/ui/whatsapp-cta-button"
 import { X, Check } from "lucide-react"
 
 export function ProblemSolution() {
@@ -80,12 +80,12 @@ export function ProblemSolution() {
              Você curte o momento. A gente cuida do resto.
            </p>
 
-           <Button 
+           <WhatsAppCtaButton 
              size="lg" 
              className="w-full max-w-full md:w-auto h-auto min-h-20 py-4 px-6 md:px-14 text-lg md:text-2xl whitespace-normal break-words rounded-full font-display uppercase tracking-wider"
            >
              Quero um evento sem preocupações
-           </Button>
+           </WhatsAppCtaButton>
         </div>
 
       </div>

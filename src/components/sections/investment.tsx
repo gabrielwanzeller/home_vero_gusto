@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button"
+import { WhatsAppCtaButton } from "@/components/ui/whatsapp-cta-button"
 import { Check } from "lucide-react"
 
 export function Investment() {
@@ -70,13 +70,13 @@ export function Investment() {
              Eventos a partir de 15 pessoas. Sem taxas escondidas. Sem surpresas.
            </p>
 
-           <Button 
+           <WhatsAppCtaButton 
              size="lg" 
              className="w-full max-w-full md:w-auto h-auto min-h-20 py-4 px-6 md:px-14 text-lg md:text-2xl whitespace-normal break-words rounded-full font-display uppercase tracking-wider"
              variant="primary"
            >
              Receber proposta personalizada
-           </Button>
+           </WhatsAppCtaButton>
         </div>
 
       </div>

@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button"
+import { WhatsAppCtaButton } from "@/components/ui/whatsapp-cta-button"
 import { CheckCircle, Clock, Play } from "lucide-react"
 
 export function Hero() {
@@ -59,13 +59,13 @@ export function Hero() {
           {/* CTAs */}
           <div className="flex flex-col md:flex-row items-center gap-4 w-full md:w-auto">
             
-            <Button 
+            <WhatsAppCtaButton 
               variant="outline"
               size="lg" 
               className="w-full md:w-auto h-16 px-10 text-xl rounded-full font-display uppercase tracking-wide border-2 border-white text-white hover:bg-white hover:text-primary transition-colors bg-transparent"
             >
               Ver disponibilidade para minha data
-            </Button>
+            </WhatsAppCtaButton>
           </div>
 
           {/* Micro-proofs (Pill Style) */}

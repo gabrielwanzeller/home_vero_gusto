@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button"
+import { WhatsAppCtaButton } from "@/components/ui/whatsapp-cta-button"
 import { PartyPopper, Flame, Clock } from "lucide-react"
 
 export function IdealFor() {
@@ -61,12 +61,12 @@ export function IdealFor() {
 
         {/* CTA Button */}
         <div className="text-center">
-          <Button 
+          <WhatsAppCtaButton 
             size="lg" 
             className="w-full max-w-full md:w-auto h-auto min-h-20 py-4 px-6 md:px-14 text-lg md:text-2xl whitespace-normal break-words rounded-full font-display uppercase tracking-wider"
           >
             Quero um orçamento
-          </Button>
+          </WhatsAppCtaButton>
         </div>
 
       </div>

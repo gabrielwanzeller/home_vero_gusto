@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button"
+import { WhatsAppCtaButton } from "@/components/ui/whatsapp-cta-button"
 import { MapPin } from "lucide-react"
 
 export function Region() {
@@ -22,12 +22,12 @@ export function Region() {
             </div>
 
             <div className="pt-4">
-              <Button 
+              <WhatsAppCtaButton 
                 size="lg" 
                 className="w-full max-w-full md:w-auto h-auto min-h-20 py-4 px-6 md:px-14 text-lg md:text-2xl whitespace-normal break-words rounded-full font-display uppercase tracking-wider"
               >
                 Consultar agenda para minha região
-              </Button>
+              </WhatsAppCtaButton>
             </div>
           </div>
 

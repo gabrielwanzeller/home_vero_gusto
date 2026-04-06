@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button"
+import { WhatsAppCtaButton } from "@/components/ui/whatsapp-cta-button"
 import { Flame, Wheat, ChefHat, Pizza, Star } from "lucide-react"
 
 export function WhyUs() {
@@ -76,12 +76,12 @@ export function WhyUs() {
 
         {/* Footer CTA */}
         <div className="text-center">
-            <Button 
+            <WhatsAppCtaButton 
               size="lg" 
               className="w-full max-w-full md:w-auto h-auto min-h-20 py-4 px-6 md:px-14 text-lg md:text-2xl whitespace-normal break-words rounded-full font-display uppercase tracking-wider"
             >
               Garantir minha data
-            </Button>
+            </WhatsAppCtaButton>
         </div>
 
       </div>

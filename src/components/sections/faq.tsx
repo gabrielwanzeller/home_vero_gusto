@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button"
+import { WhatsAppCtaButton } from "@/components/ui/whatsapp-cta-button"
 import {
   Accordion,
   AccordionContent,
@@ -98,13 +98,13 @@ export function FAQ() {
         </div>
 
         <div className="text-center mt-16">
-             <Button 
+             <WhatsAppCtaButton 
                size="lg" 
                className="w-full max-w-full md:w-auto h-auto min-h-20 py-4 px-6 md:px-14 text-lg md:text-2xl whitespace-normal break-words rounded-full font-display uppercase tracking-wider"
                variant="primary"
              >
                Fale com a equipe e garanta sua data
-             </Button>
+             </WhatsAppCtaButton>
         </div>
 
       </div>
