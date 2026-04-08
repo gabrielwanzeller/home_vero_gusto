@@ -9,6 +9,12 @@ export function TestimonialsSecond() {
 
   const videos = [
     {
+      id: "keyla",
+      name: "Keyla",
+      thumb: "/videos/testimonials/Keyla/keyla-thumb Medium.jpeg",
+      video: "/videos/testimonials/Keyla/Keyla.mp4"
+    },
+    {
       id: "kelly",  
       name: "Kelly",
       thumb: "/videos/testimonials/Kelly/thumb-kelly-medium.jpeg",
@@ -34,7 +40,7 @@ export function TestimonialsSecond() {
         </div>
 
         {/* Video Block */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8 max-w-3xl mx-auto mb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-5xl mx-auto mb-16">
           {videos.map((item) => (
             <div 
               key={item.id}

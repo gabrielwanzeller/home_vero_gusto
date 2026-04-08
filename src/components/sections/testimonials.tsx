@@ -9,6 +9,12 @@ export function Testimonials() {
 
   const videos = [
     {
+      id: "tatiana",
+      name: "Tatiana",
+      thumb: "/videos/testimonials/Tatiana/tatiana-thumb Medium.jpeg",
+      video: "/videos/testimonials/Tatiana/Tatiana.mp4"
+    },
+    {
       id: "romulo",
       name: "Rômulo",
       thumb: "/videos/testimonials/Romulo/thumb-romulo-medium.jpeg",
@@ -54,10 +60,12 @@ export function Testimonials() {
 
         {/* Video Block */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-5xl mx-auto mb-16">
-          {videos.map((item) => (
+          {videos.map((item, index) => (
             <div 
               key={item.id}
-              className="relative aspect-[9/16] bg-black/5 rounded-xl border-2 border-foreground shadow-hard overflow-hidden group hover:-translate-y-1 transition-transform"
+              className={`relative aspect-[9/16] bg-black/5 rounded-xl border-2 border-foreground shadow-hard overflow-hidden group hover:-translate-y-1 transition-transform ${
+                videos.length === 4 && index === 3 ? "lg:col-start-2" : ""
+              }`}
             >
                {activeVideo === item.id ? (
                  <video 
