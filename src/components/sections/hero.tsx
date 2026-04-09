@@ -61,6 +61,7 @@ export function Hero() {
             
             <WhatsAppCtaButton 
               variant="outline"
+              data-gtm="generate_form"
               size="lg" 
               className="w-full md:w-auto h-16 px-10 text-xl rounded-full font-display uppercase tracking-wide border-2 border-white text-white hover:bg-white hover:text-primary transition-colors bg-transparent"
             >

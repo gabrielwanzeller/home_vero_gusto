@@ -129,6 +129,7 @@ export function WhatsAppModalProvider({ children }: { children: React.ReactNode 
               <div className="pt-2 sm:pt-4">
                 <button
                   type="submit"
+                  data-gtm="click_whatsapp"
                   disabled={isLoading}
                   className="w-full h-14 sm:h-16 rounded-full bg-primary text-white font-display font-bold text-lg sm:text-xl uppercase tracking-wider hover:bg-primary/90 transition-colors shadow-[4px_4px_0px_0px_rgba(20,23,26,1)] hover:translate-y-1 hover:shadow-none hover:cursor-pointer duration-200 flex items-center justify-center disabled:opacity-70 disabled:cursor-not-allowed disabled:hover:translate-y-0 disabled:hover:shadow-[4px_4px_0px_0px_rgba(20,23,26,1)]"
                 >

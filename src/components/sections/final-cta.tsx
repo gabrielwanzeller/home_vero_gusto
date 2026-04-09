@@ -15,6 +15,7 @@ export function FinalCTA() {
            </p>
 
            <WhatsAppCtaButton 
+             data-gtm="generate_form"
              size="lg" 
              mode="red"
              className="w-full max-w-full md:w-auto h-auto min-h-20 py-4 px-6 md:px-14 text-lg md:text-2xl whitespace-normal break-words rounded-full font-display uppercase tracking-wider border-0"
