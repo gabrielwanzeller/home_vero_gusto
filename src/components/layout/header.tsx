@@ -43,14 +43,26 @@ export function Header() {
         {/* Logo */}
         <Link 
           href="/" 
-          className="inline-block transition-opacity hover:opacity-90"
+          className="relative inline-block h-12 md:h-16 w-36 md:w-48 transition-opacity hover:opacity-90"
         >
           <Image 
-            src={isScrolled ? "/images/logo-vero-gusto/logo-red.png" : "/images/logo-vero-gusto/logo-white.png"}
-            alt="Vero Gusto Logo"
-            width={180}
-            height={60}
-            className="h-12 md:h-16 w-auto object-contain"
+            src="/images/logo-vero-gusto/logo-red.png"
+            alt="Vero Gusto Logo Vermelha"
+            fill
+            sizes="(max-width: 768px) 144px, 192px"
+            className={`object-contain object-left transition-opacity duration-300 ${
+              isScrolled ? "opacity-100" : "opacity-0"
+            }`}
+            priority
+          />
+          <Image 
+            src="/images/logo-vero-gusto/logo-white.png"
+            alt="Vero Gusto Logo Branca"
+            fill
+            sizes="(max-width: 768px) 144px, 192px"
+            className={`object-contain object-left transition-opacity duration-300 ${
+              isScrolled ? "opacity-0" : "opacity-100"
+            }`}
             priority
           />
         </Link>
