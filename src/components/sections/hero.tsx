@@ -25,25 +25,18 @@ export function Hero() {
               Levamos toda a estrutura, você só aproveita.
             </p>
 
-            {/* Video Placeholder */}
-            <div className="relative w-full max-w-md mx-auto aspect-[4/5] bg-muted rounded-2xl shadow-hard overflow-hidden group cursor-pointer border-2 border-black rotate-1 hover:rotate-0 transition-all duration-300">
-              {/* Fallback Image / Background */}
-              <div className="absolute inset-0 bg-neutral-200 flex items-center justify-center">
-                <div className="text-center opacity-20">
-                    <span className="block font-display text-4xl uppercase mb-2">Video Placeholder</span>
-                    <span className="text-sm">Pizza em forno a lenha</span>
-                </div>
-              </div>
-              
-              {/* Play Button Overlay */}
-              <div className="absolute inset-0 flex items-center justify-center bg-black/10 group-hover:bg-black/20 transition-colors">
-                <div className="w-20 h-20 bg-white rounded-full flex items-center justify-center shadow-lg border-2 border-black transition-transform group-hover:scale-110">
-                  <Play className="w-8 h-8 text-primary fill-current ml-1" />
-                </div>
-              </div>
+            {/* Video Player */}
+            <div className="relative w-full max-w-md mx-auto aspect-[4/5] bg-muted rounded-2xl shadow-hard overflow-hidden border-2 border-black rotate-1 hover:rotate-0 transition-all duration-300">
+              <iframe 
+                src="https://player.mediadelivery.net/embed/634467/d1a03a65-083a-446e-8090-29743e176301?autoplay=true&loop=false&muted=false&preload=false&responsive=false" 
+                loading="lazy" 
+                style={{ border: 0, position: "absolute", top: 0, height: "100%", width: "100%" }} 
+                allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;" 
+                allowFullScreen={true}
+              />
 
                {/* Overlay Badge */}
-              <div className="absolute bottom-6 -right-2 bg-white border-2 border-black px-4 py-2 rounded-lg shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] z-10 rotate-2">
+              <div className="absolute bottom-6 -right-2 bg-white border-2 border-black px-4 py-2 rounded-lg shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] z-10 rotate-2 pointer-events-none">
                   <span className="font-bold text-sm uppercase flex items-center gap-2 text-red-500">
                     <span className="w-2 h-2 bg-red-500 rounded-full animate-pulse"/>
                     Veja como funciona

@@ -1,36 +1,34 @@
 "use client"
 
-import { useState } from "react"
 import { WhatsAppCtaButton } from "@/components/ui/whatsapp-cta-button"
-import { Play, Star } from "lucide-react"
+import { Star } from "lucide-react"
 
 export function Testimonials() {
-  const [activeVideo, setActiveVideo] = useState<string | null>(null)
 
   const videos = [
     {
       id: "tatiana",
       name: "Tatiana",
       thumb: "/videos/testimonials/Tatiana/tatiana-thumb Medium.jpeg",
-      video: "/videos/testimonials/Tatiana/Tatiana.mp4"
+      iframeUrl: "https://player.mediadelivery.net/embed/634467/b9d586e6-c016-479f-a609-43eef0d66fea?autoplay=true&loop=false&muted=false&preload=false&responsive=false"
     },
     {
       id: "romulo",
       name: "Rômulo",
       thumb: "/videos/testimonials/Romulo/thumb-romulo-medium.jpeg",
-      video: "/videos/testimonials/Romulo/video-romulo.MP4"
+      iframeUrl: "https://player.mediadelivery.net/embed/634467/22834627-c5c2-44ef-ad37-035f3916c12d?autoplay=true&loop=false&muted=false&preload=false&responsive=false"
     },
     {
       id: "clau",
       name: "Clau",
       thumb: "/videos/testimonials/Clau/thumb-clau-medium.jpeg",
-      video: "/videos/testimonials/Clau/video-clau.MP4"
+      iframeUrl: "https://player.mediadelivery.net/embed/634467/18b8a698-435a-4653-adae-6a985270f3f2?autoplay=true&loop=false&muted=false&preload=false&responsive=false"
     },
     {
       id: "andre",
       name: "André",
       thumb: "/videos/testimonials/André/thumb-andre-medium.jpeg",
-      video: "/videos/testimonials/André/video-andre.MP4"
+      iframeUrl: "https://player.mediadelivery.net/embed/634467/95d6dac0-ffac-4854-a8d2-29e20cb7b095?autoplay=true&loop=false&muted=false&preload=false&responsive=false"
     }
   ]
   
@@ -67,44 +65,13 @@ export function Testimonials() {
                 videos.length === 4 && index === 3 ? "lg:col-start-2" : ""
               }`}
             >
-               {activeVideo === item.id ? (
-                 <video 
-                   src={item.video}
-                   poster={item.thumb}
-                   controls
-                   autoPlay
-                   playsInline
-                   className="w-full h-full object-cover"
-                 />
-               ) : (
-                 <div 
-                   className="absolute inset-0 cursor-pointer"
-                   onClick={() => setActiveVideo(item.id)}
-                 >
-                   {/* Thumbnail */}
-                   <img 
-                     src={item.thumb} 
-                     alt={`Depoimento ${item.name}`} 
-                     className="w-full h-full object-cover"
-                   />
-                   
-                   {/* Play Button Overlay */}
-                   <div className="absolute inset-0 flex items-center justify-center bg-black/10 group-hover:bg-black/20 transition-colors">
-                     <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-lg border-2 border-black transition-transform group-hover:scale-110">
-                       <Play className="w-6 h-6 text-primary fill-current ml-1" />
-                     </div>
-                   </div>
-                 </div>
-               )}
-
-               {/* Name Badge */}
-               {activeVideo !== item.id && (
-                 <div className="absolute top-4 left-4 right-4 pointer-events-none">
-                   <span className="bg-black/70 text-white text-xs md:text-sm font-bold px-4 py-2 rounded-full drop-shadow-md backdrop-blur-md">
-                     {item.name}
-                   </span>
-                 </div>
-               )}
+               <iframe 
+                 src={item.iframeUrl}
+                 loading="lazy"
+                 className="absolute top-0 left-0 w-full h-full border-0"
+                 allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;"
+                 allowFullScreen
+               />
             </div>
           ))}
         </div>

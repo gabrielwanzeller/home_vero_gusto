@@ -1,30 +1,27 @@
 "use client"
 
-import { useState } from "react"
 import { WhatsAppCtaButton } from "@/components/ui/whatsapp-cta-button"
-import { Play, Star } from "lucide-react"
 
 export function TestimonialsSecond() {
-  const [activeVideo, setActiveVideo] = useState<string | null>(null)
 
   const videos = [
     {
       id: "keyla",
       name: "Keyla",
       thumb: "/videos/testimonials/Keyla/keyla-thumb Medium.jpeg",
-      video: "/videos/testimonials/Keyla/Keyla.mp4"
+      iframeUrl: "https://player.mediadelivery.net/embed/634467/114be906-48de-4485-a7c7-4a223100899b?autoplay=true&loop=false&muted=false&preload=false&responsive=false"
     },
     {
       id: "kelly",  
       name: "Kelly",
       thumb: "/videos/testimonials/Kelly/thumb-kelly-medium.jpeg",
-      video: "/videos/testimonials/Kelly/video-kelly.mp4"
+      iframeUrl: "https://player.mediadelivery.net/embed/634467/c0ca109b-7cc9-40c1-b0c4-509f66490837?autoplay=true&loop=false&muted=false&preload=false&responsive=false"
     },
     {
       id: "thiago",
       name: "Thiago",
       thumb: "/videos/testimonials/Thiago/thumb-thiago-medium.jpeg",
-      video: "/videos/testimonials/Thiago/video-thiago.MP4"
+      iframeUrl: "https://player.mediadelivery.net/embed/634467/4d2677a0-7e67-4c55-afb7-eab6604345f9?autoplay=true&loop=false&muted=false&preload=false&responsive=false"
     }
   ]
 
@@ -46,44 +43,13 @@ export function TestimonialsSecond() {
               key={item.id}
               className="relative aspect-[9/16] bg-black/5 rounded-xl border-2 border-foreground shadow-hard overflow-hidden group hover:-translate-y-1 transition-transform"
             >
-               {activeVideo === item.id ? (
-                 <video 
-                   src={item.video}
-                   poster={item.thumb}
-                   controls
-                   autoPlay
-                   playsInline
-                   className="w-full h-full object-cover"
-                 />
-               ) : (
-                 <div 
-                   className="absolute inset-0 cursor-pointer"
-                   onClick={() => setActiveVideo(item.id)}
-                 >
-                   {/* Thumbnail */}
-                   <img 
-                     src={item.thumb} 
-                     alt={`Depoimento ${item.name}`} 
-                     className="w-full h-full object-cover"
-                   />
-                   
-                   {/* Play Button Overlay */}
-                   <div className="absolute inset-0 flex items-center justify-center bg-black/10 group-hover:bg-black/20 transition-colors">
-                     <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-lg border-2 border-black transition-transform group-hover:scale-110">
-                       <Play className="w-6 h-6 text-primary fill-current ml-1" />
-                     </div>
-                   </div>
-                 </div>
-               )}
-
-               {/* Name Badge */}
-               {activeVideo !== item.id && (
-                 <div className="absolute top-4 left-4 right-4 pointer-events-none">
-                   <span className="bg-black/70 text-white text-xs md:text-sm font-bold px-4 py-2 rounded-full drop-shadow-md backdrop-blur-md">
-                     {item.name}
-                   </span>
-                 </div>
-               )}
+               <iframe 
+                 src={item.iframeUrl}
+                 loading="lazy"
+                 className="absolute top-0 left-0 w-full h-full border-0"
+                 allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;"
+                 allowFullScreen
+               />
             </div>
           ))}
         </div>

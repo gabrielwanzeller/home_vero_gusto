@@ -1,30 +1,27 @@
 "use client"
 
-import { useState } from "react"
 import { WhatsAppCtaButton } from "@/components/ui/whatsapp-cta-button"
-import { Play } from "lucide-react"
 
 export function Gallery() {
-  const [activeVideo, setActiveVideo] = useState<string | null>(null)
 
   const galleryItems = [
     {
       id: "video01",
       caption: "Aniversário — Park Way",
       thumb: "/videos/gallery/video01/thumb01-medium.jpeg",
-      video: "/videos/gallery/video01/video01.MP4"
+      iframeUrl: "https://player.mediadelivery.net/embed/634467/bd510645-2c30-4da1-9b63-bf23d76c2178?autoplay=true&loop=false&muted=false&preload=false&responsive=false"
     },
     {
       id: "video02",
       caption: "Aniversário — Jardim Botânico",
       thumb: "/videos/gallery/video02/thumb02-large.jpeg",
-      video: "/videos/gallery/video02/video02.MP4"
+      iframeUrl: "https://player.mediadelivery.net/embed/634467/cddb3e39-0854-45db-ba3e-2ed45640909f?autoplay=true&loop=false&muted=false&preload=false&responsive=false"
     },
     {
       id: "video03",
       caption: "Encontro de amigos — Setor Park Sul",
       thumb: "/videos/gallery/video03/thumb03-large.jpeg",
-      video: "/videos/gallery/video03/video03.MP4"
+      iframeUrl: "https://player.mediadelivery.net/embed/634467/21712349-92b0-4f82-8cf8-2f0b2bed5e4b?autoplay=true&loop=false&muted=false&preload=false&responsive=false"
     }
   ]
 
@@ -46,42 +43,20 @@ export function Gallery() {
               key={item.id}
               className="relative aspect-[9/16] bg-black/5 rounded-xl border-2 border-foreground shadow-hard overflow-hidden group hover:-translate-y-1 transition-transform"
             >
-               {activeVideo === item.id ? (
-                 <video 
-                   src={item.video}
-                   poster={item.thumb}
-                   controls
-                   autoPlay
-                   playsInline
-                   className="w-full h-full object-cover"
-                 />
-               ) : (
-                 <div 
-                   className="absolute inset-0 cursor-pointer"
-                   onClick={() => setActiveVideo(item.id)}
-                 >
-                   {/* Thumbnail */}
-                   <img 
-                     src={item.thumb} 
-                     alt={`Galeria ${item.caption}`} 
-                     className="w-full h-full object-cover"
-                   />
-                   
-                   {/* Play Button Overlay */}
-                   <div className="absolute inset-0 flex items-center justify-center bg-black/10 group-hover:bg-black/20 transition-colors">
-                     <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-lg border-2 border-black transition-transform group-hover:scale-110">
-                       <Play className="w-6 h-6 text-primary fill-current ml-1" />
-                     </div>
-                   </div>
-
-                   {/* Caption Box */}
-                   <div className="absolute bottom-0 left-0 right-0 bg-white border-t-2 border-foreground p-4">
-                     <p className="text-sm font-bold text-foreground text-center uppercase tracking-wide">
-                       {item.caption}
-                     </p>
-                   </div>
-                 </div>
-               )}
+               <iframe 
+                 src={item.iframeUrl}
+                 loading="lazy"
+                 className="absolute top-0 left-0 w-full h-full border-0"
+                 allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;"
+                 allowFullScreen
+               />
+               
+               {/* Caption Box */}
+               <div className="absolute bottom-0 left-0 right-0 bg-white border-t-2 border-foreground p-4 pointer-events-none">
+                 <p className="text-sm font-bold text-foreground text-center uppercase tracking-wide">
+                   {item.caption}
+                 </p>
+               </div>
             </div>
           ))}
         </div>
