@@ -1,5 +1,6 @@
 import { Instagram } from "lucide-react"
 import Link from "next/link"
+import Image from "next/image"
 
 export function Footer() {
   return (
@@ -8,9 +9,15 @@ export function Footer() {
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8 mb-12">
            {/* Brand */}
-           <div className="space-y-4 text-center md:text-left">
-             <Link href="/" className="font-display font-bold text-3xl uppercase tracking-tight text-white block">
-               Vero Gusto
+           <div className="space-y-4 text-center md:text-left flex flex-col items-center md:items-start">
+             <Link href="/" className="inline-block transition-opacity hover:opacity-90">
+               <Image 
+                 src="/images/logo-vero-gusto/logo-white.png"
+                 alt="Vero Gusto Logo"
+                 width={160}
+                 height={40}
+                 className="h-12 md:h-16 w-auto object-contain"
+               />
              </Link>
              <p className="text-zinc-400 text-sm max-w-xs mx-auto md:mx-0">
                Rodízio de pizza artesanal para eventos em Brasília – DF.

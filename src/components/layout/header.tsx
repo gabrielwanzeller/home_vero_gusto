@@ -2,6 +2,7 @@
 
 import * as React from "react"
 import Link from "next/link"
+import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Menu, MessageCircle } from "lucide-react"
 
@@ -42,11 +43,16 @@ export function Header() {
         {/* Logo */}
         <Link 
           href="/" 
-          className={`font-display font-bold text-2xl md:text-3xl tracking-tight uppercase transition-colors ${
-            isScrolled ? "text-primary" : "text-white"
-          }`}
+          className="inline-block transition-opacity hover:opacity-90"
         >
-          Vero Gusto
+          <Image 
+            src={isScrolled ? "/images/logo-vero-gusto/logo-red.png" : "/images/logo-vero-gusto/logo-white.png"}
+            alt="Vero Gusto Logo"
+            width={180}
+            height={60}
+            className="h-12 md:h-16 w-auto object-contain"
+            priority
+          />
         </Link>
 
         {/* Desktop Navigation */}

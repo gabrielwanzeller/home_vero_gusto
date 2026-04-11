@@ -37,7 +37,7 @@ export function Region() {
             <div className="relative aspect-video bg-white rounded-2xl border-4 border-foreground shadow-hard flex items-center justify-center overflow-hidden">
                {/* Map graphic */}
                <iframe 
-                 src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d491623.0465617232!2d-48.110227351562486!3d-15.708494929574561!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd612474a795f353%3A0x365d3e8e1af77c72!2sVero%20Gusto%20Pizzaria%20-%20Rod%C3%ADzio%20em%20Casa%20Bras%C3%ADlia!5e0!3m2!1spt-BR!2sbr!4v1771593475533!5m2!1spt-BR!2sbr" 
+                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d491462.2314588756!2d-48.12676839836883!3d-15.774996780720564!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd612474a795f353%3A0x365d3e8e1af77c72!2sVero%20Gusto%20Pizzaria%20-%20Rod%C3%ADzio%20em%20Casa%20Bras%C3%ADlia!5e0!3m2!1spt-BR!2sbr!4v1775945693656!5m2!1spt-BR!2sbr" 
                  className="absolute inset-0 w-full h-full pointer-events-none"
                  style={{ border: 0 }} 
                  allowFullScreen 

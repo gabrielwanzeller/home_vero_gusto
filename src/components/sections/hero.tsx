@@ -15,11 +15,11 @@ export function Hero() {
                 <span className="w-2 h-2 rounded-full bg-white animate-pulse" />
                 Disponível para Brasília & Entorno
             </div>
-             
+            
             <h1 className="text-6xl md:text-8xl lg:text-7xl font-display font-bold uppercase leading-[0.85] tracking-tighter text-white drop-shadow-xl">
               Pizza <br className="md:hidden" /> napolitana <br className="md:hidden" /> em eventos
             </h1>
-             
+            
             <p className="text-xl md:text-2xl font-medium text-white/90 max-w-2xl mx-auto leading-relaxed">
               O rodízio de pizza artesanal mais autêntico do DF. <br className="hidden md:inline"/> 
               Levamos toda a estrutura, você só aproveita.
