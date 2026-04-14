@@ -33,7 +33,7 @@ export default function LinktreePage() {
           <Button 
             size="lg" 
             className="w-full h-16 mt-8 rounded-full font-display text-xl uppercase tracking-wide bg-white text-primary shadow-[6px_6px_0px_0px_rgba(20,23,26,1)] hover:translate-y-1 hover:shadow-[4px_4px_0px_0px_rgba(20,23,26,1)] transition-all"
-            onClick={() => window.open(`https://wa.me/?text=${encodeURIComponent("Olá! Gostaria de consultar a disponibilidade para um evento da Vero Gusto.")}`, "_blank")}
+            onClick={() => window.open(`https://wa.me/?text=${encodeURIComponent("Olá! Vim do link na bio do instagram e quero consultar disponibilidade para o meu evento.")}`, "_blank")}
           >
             <MessageCircle className="w-6 h-6 mr-2" />
             Consultar disponibilidade
@@ -56,9 +56,9 @@ export default function LinktreePage() {
               className="w-full h-16 rounded-xl border-2 border-white bg-transparent text-white font-bold text-lg justify-start px-6 shadow-[4px_4px_0px_0px_rgba(255,255,255,0.4)] hover:translate-y-1 hover:shadow-[2px_2px_0px_0px_rgba(255,255,255,0.4)] hover:bg-white hover:text-primary transition-all group overflow-hidden relative"
               asChild
             >
-              <a href="#" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.instagram.com/verogusto.eventos/" target="_blank" rel="noopener noreferrer">
                 <Instagram className="w-5 h-5 mr-4 transition-transform group-hover:scale-125 group-hover:text-pink-600" />
-                Seguir a Vero Gusto no Instagram
+                Seguir no Instagram
               </a>
             </Button>
 
@@ -70,19 +70,7 @@ export default function LinktreePage() {
             >
               <a href="/avalie">
                 <Star className="w-5 h-5 mr-4 transition-transform group-hover:scale-125 group-hover:text-yellow-500" />
-                Avaliar nossa experiência
-              </a>
-            </Button>
-
-            <Button 
-              variant="outline"
-              size="lg"
-              className="w-full h-16 rounded-xl border-2 border-white bg-transparent text-white font-bold text-lg justify-start px-6 shadow-[4px_4px_0px_0px_rgba(255,255,255,0.4)] hover:translate-y-1 hover:shadow-[2px_2px_0px_0px_rgba(255,255,255,0.4)] hover:bg-white hover:text-primary transition-all group overflow-hidden relative"
-              asChild
-            >
-              <a href="#orcamento">
-                <Search className="w-5 h-5 mr-4 transition-transform group-hover:scale-125 group-hover:text-primary" />
-                Fazer orçamento para meu evento
+                Avaliar experiência
               </a>
             </Button>
 
@@ -94,7 +82,7 @@ export default function LinktreePage() {
             >
               <a href="/">
                 <MapPin className="w-5 h-5 mr-4 transition-transform group-hover:scale-125 group-hover:text-brand-green" />
-                Conhecer mais sobre a Vero Gusto
+                Sobre a Vero Gusto
               </a>
             </Button>
           </div>
