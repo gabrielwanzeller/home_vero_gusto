@@ -46,8 +46,8 @@ export default function AvaliePage() {
           </div>
         )}
 
-        {/* Condition A: Happy Customer (4-5 Stars) */}
-        {rating >= 4 && (
+        {/* Condition A: Happy Customer (5 Stars) */}
+        {rating === 5 && (
           <div className="space-y-8 animate-in fade-in slide-in-from-bottom-8 duration-500 bg-green-50/50 p-8 rounded-2xl border-2 border-brand-green/20">
             <div className="space-y-2">
               <h2 className="font-display text-3xl text-primary uppercase">
@@ -70,7 +70,7 @@ export default function AvaliePage() {
         )}
 
         {/* Condition B: Needs Improvement (1-3 Stars) */}
-        {rating > 0 && rating <= 3 && !submitted && (
+        {rating > 0 && rating <= 4 && !submitted && (
           <div className="space-y-6 animate-in fade-in slide-in-from-bottom-8 duration-500 bg-neutral-50 p-8 rounded-2xl border-2 border-border">
             <div className="space-y-2">
               <h2 className="font-display text-3xl uppercase">
