@@ -3,6 +3,8 @@ import './globals.css'
 import { FloatingWhatsApp } from '@/components/layout/floating-whatsapp'
 import { WhatsAppModalProvider } from '@/components/ui/whatsapp-modal'
 import Script from 'next/script'
+import type { Metadata } from 'next'
+
 
 const fontBody = Inter({ 
   subsets: ['latin'],
@@ -14,6 +16,14 @@ const fontHeading = Oswald({
   variable: '--font-heading',
   weight: ['600', '700']
 })
+
+export const metadata: Metadata = {
+  title: 'Vero Gusto | Rodízio de Pizza para Eventos',
+  description: 'Pizza artesanal assada ao vivo no seu evento em Brasília',
+  icons: {
+    icon: '/images/favicon/favicon.png',
+  },
+}
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (

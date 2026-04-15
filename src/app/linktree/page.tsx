@@ -32,6 +32,7 @@ export default function LinktreePage() {
 
           <Button 
             size="lg" 
+            data-gtm="click_contact"
             className="w-full h-16 mt-8 rounded-full font-display text-xl uppercase tracking-wide bg-white text-primary shadow-[6px_6px_0px_0px_rgba(20,23,26,1)] hover:translate-y-1 hover:shadow-[4px_4px_0px_0px_rgba(20,23,26,1)] transition-all"
             onClick={() => window.open(`https://wa.me/?text=${encodeURIComponent("Olá! Vim do link na bio do instagram e quero consultar disponibilidade para o meu evento.")}`, "_blank")}
           >
@@ -116,6 +117,7 @@ export default function LinktreePage() {
 
            <Button 
              size="lg" 
+             data-gtm="click_contact"
              className="w-full h-20 rounded-full font-display text-2xl uppercase tracking-wide bg-foreground text-background shadow-[6px_6px_0px_0px_rgba(255,255,255,0.2)] hover:translate-y-1 hover:shadow-none transition-all"
              onClick={() => window.open(`https://wa.me/?text=${encodeURIComponent("Olá! Vim pelo Linktree e quero falar com a equipe.")}`, "_blank")}
            >

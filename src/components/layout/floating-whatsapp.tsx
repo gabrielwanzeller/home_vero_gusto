@@ -11,6 +11,7 @@ export function FloatingWhatsApp() {
     <a
       href={whatsappUrl}
       target="_blank"
+      data-gtm="click_contact"
       rel="noopener noreferrer"
       className="fixed bottom-4 right-4 md:bottom-6 md:right-6 z-50 flex items-center gap-2 bg-brand-green text-white px-4 md:px-5 py-3 rounded-full shadow-[2px_2px_0px_0px_rgba(20,23,26,1)] md:shadow-[4px_4px_0px_0px_rgba(20,23,26,1)] hover:-translate-y-1 hover:shadow-[4px_4px_0px_0px_rgba(20,23,26,1)] md:hover:shadow-[6px_6px_0px_0px_rgba(20,23,26,1)] transition-all duration-300 border-2 border-foreground group animate-in fade-in slide-in-from-bottom-5"
     >
