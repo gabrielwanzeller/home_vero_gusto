@@ -92,6 +92,7 @@ export function Header() {
                 ? "bg-primary text-primary-foreground"
                 : "bg-white text-primary border-0"
             }`}
+            data-gtm="click_contact"
             size="lg"
             asChild
           >
@@ -106,6 +107,7 @@ export function Header() {
                 isScrolled ? "text-foreground" : "text-white"
             }`}
             variant="ghost"
+            data-gtm="click_contact"
             size="icon"
             asChild
           >
