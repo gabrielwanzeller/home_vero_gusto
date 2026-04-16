@@ -22,17 +22,17 @@ export default function Home() {
       <main className="flex-1">
         <Hero />
         <WhyUs />
-        <IdealFor />
         <ProblemSolution />
         <HowItWorks />
-        <Authority />
-        <Testimonials />
         <Menu />
-        <Investment />
+        <Testimonials />
+        <IdealFor />
         <Gallery />
-        <Region />
-        <FAQ />
+        <Investment />
+        <Authority />
         <TestimonialsSecond />
+        <FAQ />
+        <Region />
         <FinalCTA />
       </main>
       <Footer />
