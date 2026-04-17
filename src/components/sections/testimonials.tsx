@@ -2,7 +2,6 @@
 
 import { WhatsAppCtaButton } from "@/components/ui/whatsapp-cta-button"
 import { Star } from "lucide-react"
-import { VideoCard } from "@/components/ui/video-card"
 
 export function Testimonials() {
 
@@ -10,29 +9,25 @@ export function Testimonials() {
     {
       id: "tatiana",
       name: "Tatiana",
-      thumb: "/videos/testimonials/Tatiana/tatiana-thumb-medium.jpeg",
       iframeUrl: "https://player.mediadelivery.net/embed/634467/b9d586e6-c016-479f-a609-43eef0d66fea?autoplay=true&loop=false&muted=false&preload=false&responsive=false"
     },
     {
       id: "romulo",
       name: "Rômulo",
-      thumb: "/videos/testimonials/Romulo/thumb-romulo-medium.jpeg",
       iframeUrl: "https://player.mediadelivery.net/embed/634467/22834627-c5c2-44ef-ad37-035f3916c12d?autoplay=true&loop=false&muted=false&preload=false&responsive=false"
     },
     {
       id: "clau",
       name: "Clau",
-      thumb: "/videos/testimonials/Clau/thumb-clau-medium.jpeg",
       iframeUrl: "https://player.mediadelivery.net/embed/634467/18b8a698-435a-4653-adae-6a985270f3f2?autoplay=true&loop=false&muted=false&preload=false&responsive=false"
     },
     {
       id: "andre",
       name: "André",
-      thumb: "/videos/testimonials/Andre/thumb-andre-medium.jpeg",
       iframeUrl: "https://player.mediadelivery.net/embed/634467/95d6dac0-ffac-4854-a8d2-29e20cb7b095?autoplay=true&loop=false&muted=false&preload=false&responsive=false"
     }
   ]
-  
+
   const reviews = [
     {
       quote: "A massa é incrível, leve e saborosa. Todo mundo comentou. Foi sucesso total.",
@@ -49,7 +44,7 @@ export function Testimonials() {
   return (
     <section id="depoimentos" className="py-20 md:py-32 bg-secondary">
       <div className="container mx-auto px-4 md:px-6">
-        
+
         {/* Header */}
         <div className="text-center mb-16 space-y-4">
           <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold uppercase text-foreground leading-tight">
@@ -62,14 +57,16 @@ export function Testimonials() {
           {videos.map((item, index) => (
             <div
               key={item.id}
-              className={`relative aspect-[9/16] bg-black/5 rounded-xl border-2 border-foreground shadow-hard overflow-hidden group hover:-translate-y-1 transition-transform ${
+              className={`relative aspect-9/16 bg-black/5 rounded-xl border-2 border-foreground shadow-hard overflow-hidden group hover:-translate-y-1 transition-transform ${
                 videos.length === 4 && index === 3 ? "lg:col-start-2" : ""
               }`}
             >
-               <VideoCard
-                 iframeUrl={item.iframeUrl}
-                 thumb={item.thumb}
-                 alt={`Depoimento de ${item.name}`}
+               <iframe
+                 src={item.iframeUrl}
+                 loading="lazy"
+                 className="absolute top-0 left-0 w-full h-full border-0"
+                 allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;"
+                 allowFullScreen
                />
             </div>
           ))}
@@ -78,7 +75,7 @@ export function Testimonials() {
         {/* Text Reviews */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-16">
           {reviews.map((review, index) => (
-            <div 
+            <div
               key={index}
               className="bg-white border-2 border-foreground rounded-xl p-8 shadow-hard flex flex-col justify-between"
             >
@@ -92,7 +89,7 @@ export function Testimonials() {
                    "{review.quote}"
                  </p>
               </div>
-              
+
               <div className="mt-6 pt-6 border-t border-border">
                 <p className="font-bold text-foreground">{review.author}</p>
                 <p className="text-sm text-muted-foreground">{review.detail}</p>
@@ -103,9 +100,9 @@ export function Testimonials() {
 
         {/* Footer CTA */}
         <div className="text-center">
-            <WhatsAppCtaButton 
+            <WhatsAppCtaButton
               data-gtm="generate_form"
-              size="lg" 
+              size="lg"
               className="w-full max-w-full md:w-auto h-auto min-h-20 py-4 px-6 md:px-14 text-lg md:text-2xl whitespace-normal break-words rounded-full font-display uppercase tracking-wider"
             >
               Quero no meu evento

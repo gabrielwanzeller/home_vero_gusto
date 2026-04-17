@@ -1,7 +1,6 @@
 "use client"
 
 import { WhatsAppCtaButton } from "@/components/ui/whatsapp-cta-button"
-import { VideoCard } from "@/components/ui/video-card"
 
 export function Gallery() {
 
@@ -9,19 +8,16 @@ export function Gallery() {
     {
       id: "video01",
       caption: "Aniversário — Park Way",
-      thumb: "/videos/gallery/video01/thumb01-medium.jpeg",
       iframeUrl: "https://player.mediadelivery.net/embed/634467/bd510645-2c30-4da1-9b63-bf23d76c2178?autoplay=true&loop=false&muted=false&preload=false&responsive=false"
     },
     {
       id: "video02",
       caption: "Aniversário — Jardim Botânico",
-      thumb: "/videos/gallery/video02/thumb02-medium.jpeg",
       iframeUrl: "https://player.mediadelivery.net/embed/634467/cddb3e39-0854-45db-ba3e-2ed45640909f?autoplay=true&loop=false&muted=false&preload=false&responsive=false"
     },
     {
       id: "video03",
       caption: "Encontro de amigos — Setor Park Sul",
-      thumb: "/videos/gallery/video03/thumb03-medium.jpeg",
       iframeUrl: "https://player.mediadelivery.net/embed/634467/21712349-92b0-4f82-8cf8-2f0b2bed5e4b?autoplay=true&loop=false&muted=false&preload=false&responsive=false"
     }
   ]
@@ -42,12 +38,14 @@ export function Gallery() {
           {galleryItems.map((item) => (
             <div
               key={item.id}
-              className="relative aspect-[9/16] bg-black/5 rounded-xl border-2 border-foreground shadow-hard overflow-hidden group hover:-translate-y-1 transition-transform"
+              className="relative aspect-9/16 bg-black/5 rounded-xl border-2 border-foreground shadow-hard overflow-hidden group hover:-translate-y-1 transition-transform"
             >
-               <VideoCard
-                 iframeUrl={item.iframeUrl}
-                 thumb={item.thumb}
-                 alt={item.caption}
+               <iframe
+                 src={item.iframeUrl}
+                 loading="lazy"
+                 className="absolute top-0 left-0 w-full h-full border-0"
+                 allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;"
+                 allowFullScreen
                />
 
                {/* Caption Box */}
