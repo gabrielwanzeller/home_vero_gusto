@@ -1,5 +1,3 @@
-"use client"
-
 import { WhatsAppCtaButton } from "@/components/ui/whatsapp-cta-button"
 
 export function Gallery() {
