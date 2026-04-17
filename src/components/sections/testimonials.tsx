@@ -2,6 +2,7 @@
 
 import { WhatsAppCtaButton } from "@/components/ui/whatsapp-cta-button"
 import { Star } from "lucide-react"
+import { VideoCard } from "@/components/ui/video-card"
 
 export function Testimonials() {
 
@@ -9,7 +10,7 @@ export function Testimonials() {
     {
       id: "tatiana",
       name: "Tatiana",
-      thumb: "/videos/testimonials/Tatiana/tatiana-thumb Medium.jpeg",
+      thumb: "/videos/testimonials/Tatiana/tatiana-thumb-medium.jpeg",
       iframeUrl: "https://player.mediadelivery.net/embed/634467/b9d586e6-c016-479f-a609-43eef0d66fea?autoplay=true&loop=false&muted=false&preload=false&responsive=false"
     },
     {
@@ -27,7 +28,7 @@ export function Testimonials() {
     {
       id: "andre",
       name: "André",
-      thumb: "/videos/testimonials/André/thumb-andre-medium.jpeg",
+      thumb: "/videos/testimonials/Andre/thumb-andre-medium.jpeg",
       iframeUrl: "https://player.mediadelivery.net/embed/634467/95d6dac0-ffac-4854-a8d2-29e20cb7b095?autoplay=true&loop=false&muted=false&preload=false&responsive=false"
     }
   ]
@@ -59,18 +60,16 @@ export function Testimonials() {
         {/* Video Block */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-5xl mx-auto mb-16">
           {videos.map((item, index) => (
-            <div 
+            <div
               key={item.id}
               className={`relative aspect-[9/16] bg-black/5 rounded-xl border-2 border-foreground shadow-hard overflow-hidden group hover:-translate-y-1 transition-transform ${
                 videos.length === 4 && index === 3 ? "lg:col-start-2" : ""
               }`}
             >
-               <iframe 
-                 src={item.iframeUrl}
-                 loading="lazy"
-                 className="absolute top-0 left-0 w-full h-full border-0"
-                 allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;"
-                 allowFullScreen
+               <VideoCard
+                 iframeUrl={item.iframeUrl}
+                 thumb={item.thumb}
+                 alt={`Depoimento de ${item.name}`}
                />
             </div>
           ))}

@@ -1,5 +1,5 @@
 import { WhatsAppCtaButton } from "@/components/ui/whatsapp-cta-button"
-import { CheckCircle, Clock, Play } from "lucide-react"
+import { CheckCircle, Clock } from "lucide-react"
 
 export function Hero() {
   return (
@@ -26,7 +26,7 @@ export function Hero() {
             </p>
 
             {/* Video Player */}
-            <div className="relative w-full max-w-md mx-auto aspect-[4/5] bg-muted rounded-2xl shadow-hard overflow-hidden border-2 border-black rotate-1 hover:rotate-0 transition-all duration-300">
+            <div className="relative w-full max-w-md mx-auto aspect-[4/5] bg-muted rounded-2xl shadow-hard overflow-hidden border-2 border-black rotate-1 hover:rotate-0 transition-transform duration-300">
               <iframe 
                 src="https://player.mediadelivery.net/embed/634467/d1a03a65-083a-446e-8090-29743e176301?autoplay=true&loop=false&muted=false&preload=false&responsive=false" 
                 loading="lazy" 

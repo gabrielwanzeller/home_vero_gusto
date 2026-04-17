@@ -1,6 +1,7 @@
 "use client"
 
 import { WhatsAppCtaButton } from "@/components/ui/whatsapp-cta-button"
+import { VideoCard } from "@/components/ui/video-card"
 
 export function TestimonialsSecond() {
 
@@ -8,7 +9,7 @@ export function TestimonialsSecond() {
     {
       id: "keyla",
       name: "Keyla",
-      thumb: "/videos/testimonials/Keyla/keyla-thumb Medium.jpeg",
+      thumb: "/videos/testimonials/Keyla/keyla-thumb-medium.jpeg",
       iframeUrl: "https://player.mediadelivery.net/embed/634467/114be906-48de-4485-a7c7-4a223100899b?autoplay=true&loop=false&muted=false&preload=false&responsive=false"
     },
     {
@@ -39,16 +40,14 @@ export function TestimonialsSecond() {
         {/* Video Block */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-5xl mx-auto mb-16">
           {videos.map((item) => (
-            <div 
+            <div
               key={item.id}
               className="relative aspect-[9/16] bg-black/5 rounded-xl border-2 border-foreground shadow-hard overflow-hidden group hover:-translate-y-1 transition-transform"
             >
-               <iframe 
-                 src={item.iframeUrl}
-                 loading="lazy"
-                 className="absolute top-0 left-0 w-full h-full border-0"
-                 allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;"
-                 allowFullScreen
+               <VideoCard
+                 iframeUrl={item.iframeUrl}
+                 thumb={item.thumb}
+                 alt={`Depoimento de ${item.name}`}
                />
             </div>
           ))}

@@ -6,15 +6,17 @@ import Script from 'next/script'
 import type { Metadata } from 'next'
 
 
-const fontBody = Inter({ 
+const fontBody = Inter({
   subsets: ['latin'],
   variable: '--font-body',
+  display: 'swap',
 })
 
-const fontHeading = Oswald({ 
+const fontHeading = Oswald({
   subsets: ['latin'],
   variable: '--font-heading',
-  weight: ['600', '700']
+  weight: ['600', '700'],
+  display: 'swap',
 })
 
 export const metadata: Metadata = {
@@ -29,6 +31,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="pt-BR">
       <head>
+        <link rel="preconnect" href="https://player.mediadelivery.net" />
+        <link rel="dns-prefetch" href="https://player.mediadelivery.net" />
         <Script id="gtm-script" strategy="afterInteractive">
           {`
             (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':

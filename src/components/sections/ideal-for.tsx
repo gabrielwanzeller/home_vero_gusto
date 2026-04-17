@@ -41,7 +41,7 @@ export function IdealFor() {
             return (
               <div 
                 key={index}
-                className="bg-white p-8 rounded-2xl border-2 border-foreground shadow-[4px_4px_0px_0px_rgba(20,23,26,1)] flex flex-col items-center text-center space-y-6 hover:-translate-y-1 hover:shadow-[6px_6px_0px_0px_rgba(20,23,26,1)] transition-all duration-300"
+                className="bg-white p-8 rounded-2xl border-2 border-foreground shadow-[4px_4px_0px_0px_rgba(20,23,26,1)] flex flex-col items-center text-center space-y-6 hover:-translate-y-1 hover:shadow-[6px_6px_0px_0px_rgba(20,23,26,1)] transition-[transform,box-shadow] duration-300"
               >
                 <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center text-primary">
                   <Icon className="w-8 h-8" />

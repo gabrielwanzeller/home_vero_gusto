@@ -15,11 +15,18 @@ export function Header() {
   const [isScrolled, setIsScrolled] = React.useState(false)
 
   React.useEffect(() => {
+    let rafId: number
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10)
+      cancelAnimationFrame(rafId)
+      rafId = requestAnimationFrame(() => {
+        setIsScrolled(window.scrollY > 10)
+      })
     }
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
+    window.addEventListener("scroll", handleScroll, { passive: true })
+    return () => {
+      window.removeEventListener("scroll", handleScroll)
+      cancelAnimationFrame(rafId)
+    }
   }, [])
 
   const navLinks = [
@@ -33,7 +40,7 @@ export function Header() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-[background-color,backdrop-filter,padding,box-shadow] duration-300 ${
         isScrolled 
         ? "bg-white/84 backdrop-blur-md shadow-sm py-3" 
         : "bg-transparent py-6"
@@ -45,7 +52,7 @@ export function Header() {
           href="/" 
           className="relative inline-block h-12 md:h-16 w-36 md:w-48 transition-opacity hover:opacity-90"
         >
-          <Image 
+          <Image
             src="/images/logo-vero-gusto/logo-red.png"
             alt="Vero Gusto Logo Vermelha"
             fill
@@ -53,7 +60,6 @@ export function Header() {
             className={`object-contain object-left transition-opacity duration-300 ${
               isScrolled ? "opacity-100" : "opacity-0"
             }`}
-            priority
           />
           <Image 
             src="/images/logo-vero-gusto/logo-white.png"
@@ -87,7 +93,7 @@ export function Header() {
         {/* CTA & Mobile Menu */}
         <div className="flex items-center gap-4">
           <Button 
-            className={`rounded-full font-bold shadow-hard hover:translate-y-1 hover:shadow-none transition-all hidden md:flex ${
+            className={`rounded-full font-bold shadow-hard hover:translate-y-1 hover:shadow-none transition-[transform,box-shadow] hidden md:flex ${
                 isScrolled
                 ? "bg-primary text-primary-foreground"
                 : "bg-white text-primary border-0"
