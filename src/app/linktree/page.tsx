@@ -34,7 +34,7 @@ export default function LinktreePage() {
             size="lg" 
             data-gtm="click_contact"
             className="w-full h-16 mt-8 rounded-full font-display text-xl uppercase tracking-wide bg-white text-primary shadow-[6px_6px_0px_0px_rgba(20,23,26,1)] hover:translate-y-1 hover:shadow-[4px_4px_0px_0px_rgba(20,23,26,1)] transition-all"
-            onClick={() => window.open(`https://wa.me/?text=${encodeURIComponent("Olá! Vim do link na bio do instagram e quero consultar disponibilidade para o meu evento.")}`, "_blank")}
+            onClick={() => window.open("https://api.whatsapp.com/send/?phone=5561983202467&text=Ol%C3%A1%21+Vim+pelo+site+da+Vero+Gusto+e+quero+consultar+disponibilidade+para+meu+evento&type=phone_number&app_absent=0", "_blank")}
           >
             <MessageCircle className="w-6 h-6 mr-2" />
             Consultar disponibilidade
@@ -119,7 +119,7 @@ export default function LinktreePage() {
              size="lg" 
              data-gtm="click_contact"
              className="w-full h-20 rounded-full font-display text-2xl uppercase tracking-wide bg-foreground text-background shadow-[6px_6px_0px_0px_rgba(255,255,255,0.2)] hover:translate-y-1 hover:shadow-none transition-all"
-             onClick={() => window.open(`https://wa.me/?text=${encodeURIComponent("Olá! Vim pelo Linktree e quero falar com a equipe.")}`, "_blank")}
+             onClick={() => window.open("https://api.whatsapp.com/send/?phone=5561983202467&text=Ol%C3%A1%21+Vim+pelo+site+da+Vero+Gusto+e+quero+consultar+disponibilidade+para+meu+evento&type=phone_number&app_absent=0", "_blank")}
            >
              <MessageCircle className="w-6 h-6 mr-3 text-green-400" />
              Falar no WhatsApp
