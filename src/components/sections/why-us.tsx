@@ -11,8 +11,8 @@ export function WhyUs() {
     },
     {
       icon: Wheat,
-      title: "Fermentação natural (Até 48h)",
-      description: "Massa leve, digestão mais confortável e sabor mais profundo.",
+      title: "Longa fermentação com biga (até 48h)",
+      description: "Massa preparada com biga e fermentada por até 48 horas.",
       colSpan: "md:col-span-1 lg:col-span-2"
     },
     {

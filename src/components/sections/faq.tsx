@@ -10,15 +10,15 @@ export function FAQ() {
   const faqs = [
     {
       question: "Qual o número mínimo de pessoas?",
-      answer: "Atendemos eventos a partir de 15 pessoas pagantes. O valor por pessoa pode variar conforme a quantidade de convidados."
+      answer: "O mínimo é de 20 adultos pagantes em dias úteis e 25 adultos pagantes nos finais de semana."
     },
     {
       question: "O que preciso fornecer de estrutura?",
       answer: (
         <>
-          Precisamos apenas de uma pia com água. Levamos o forno, mesas de apoio e todo o material necessário para o serviço.
+          Precisamos de uma pia com água e levamos nossa mesa de apoio e a estrutura de produção.
           <br />
-          Caso não seja permitido o uso de botijão de gás no local, será necessário disponibilizar um ponto de energia 220V com tomada de 20A para o funcionamento do forno elétrico.
+          Quando for utilizado o forno elétrico, o local precisa disponibilizar alimentação 220 V e tomada dedicada de 20 A, sem adaptador.
         </>
       )
     },
@@ -28,24 +28,22 @@ export function FAQ() {
     },
     {
       question: "Quanto tempo dura o rodízio?",
-      answer: "O serviço de rodízio tem duração padrão de 4 horas, servindo pizzas salgadas e doces continuamente."
+      answer: "A duração padrão é de 3 horas. Eventos com 4 horas podem ser contratados sob consulta. Nossa equipe chega 2 horas antes do início para montar a operação."
     },
     {
       question: "Vocês fornecem pratos e talheres?",
-      answer: "Sim. Pratos e talheres estão inclusos no pacote padrão do rodízio. Copos para bebidas não estão inclusos.",
+      answer: "Incluímos pratos, talheres, copos descartáveis e garçons para servir as pizzas. Bebidas e garçom exclusivo para bebidas são adicionais. Pratos e talheres para bolo e taças ficam por conta do cliente.",
       highlight: true
     },
     {
       question: "Crianças pagam?",
-      answer: "Crianças até 6 anos não pagam. De 7 a 10 anos pagam metade. A partir de 11 anos, valor integral."
+      answer: "Crianças até 5 anos não pagam. De 6 a 10 anos, o valor depende da proposta. A partir de 11 anos, pagam integral."
     },
     {
       question: "Quais são os sabores inclusos?",
       answer: (
         <>
-          No pacote padrão incluímos <strong>6 entradas, 12 sabores de pizzas salgadas e 4 sabores de pizzas doces</strong>, à sua escolha dentre as opções disponíveis em nosso cardápio.
-          <br /><br />
-          Esse é o pacote padrão para eventos <strong>acima de 35 pessoas</strong>. Para eventos menores, o cardápio pode sofrer algumas adaptações.
+          O cardápio contratado pode variar conforme a quantidade de pessoas e será definido na proposta. As opções publicadas são referências; não prometemos que todas serão servidas em todos os eventos.
         </>
       ),
       highlight: true
@@ -57,11 +55,15 @@ export function FAQ() {
     },
     {
       question: "Qual a forma de pagamento?",
-      answer: "Para reservar a data, solicitamos uma entrada. Para eventos acima de 50 pessoas, a entrada é de 35% do valor total. Para eventos de até 49 pessoas, a entrada é de 50% do valor total. O restante é pago no final do evento."
+      answer: "Após a assinatura do contrato, a entrada é de 50% para eventos de até 50 pessoas e 35% para eventos acima de 50 pessoas. O saldo é pago no evento. Também há Pix parcelado, com quitação antes do evento, e cartão em até 12 vezes, com taxas."
     },
     {
       question: "Atendem fora de Brasília?",
-      answer: "Sim, atendemos entorno e cidades próximas mediante taxa de deslocamento. Consulte nossa equipe."
+      answer: "Sim. Atendemos todas as regiões do Distrito Federal e Entorno, sem taxa de deslocamento."
+    },
+    {
+      question: "Qual é a capacidade de atendimento?",
+      answer: "Atendemos eventos de até 100 pessoas. Para até 110 pessoas, consulte a equipe para avaliarmos a operação."
     }
   ]
 

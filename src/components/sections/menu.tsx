@@ -12,7 +12,7 @@ export function Menu() {
             Sabores que encantam
           </h2>
           <p className="text-xl text-muted-foreground leading-relaxed">
-            O cardápio é ajustado junto com você, conforme perfil do evento e preferências dos convidados.
+            O cardápio contratado varia conforme a quantidade de pessoas e é definido na proposta. As opções abaixo são referências e não representam promessa de que todas serão servidas em todo evento.
           </p>
         </div>
 
@@ -58,7 +58,7 @@ export function Menu() {
               {[
                 "Marguerita com pesto", "Calabresa tradicional", "Frango com catupiry", 
                 "Portuguesa", "Quatro queijos", "Diavoletta", "Calabresa com geleia de pimenta",
-                "Carne seca com catupiry", "Abobrinha com gorgonzola", "Milho com bacon e catupiry", "Carne seca com banana da terra e mel"
+                "Carne seca com catupiry", "Abobrinha com gorgonzola", "Milho com bacon e catupiry"
               ].map((item, i) => (
                 <li key={i} className="text-lg font-medium text-muted-foreground flex items-start gap-2">
                   <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 shrink-0" />

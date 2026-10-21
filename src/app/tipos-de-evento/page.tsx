@@ -1,0 +1,21 @@
+import type { Metadata } from 'next'
+import { Header } from '@/components/layout/header'
+import { Footer } from '@/components/layout/footer'
+import { WhatsAppCtaButton } from '@/components/ui/whatsapp-cta-button'
+
+export const metadata: Metadata = {
+  title: 'Rodízio de pizza para aniversários, casamentos e empresas',
+  description: 'Serviço de pizza no estilo napolitano para aniversários, casamentos, confraternizações e eventos corporativos no DF e Entorno.',
+  alternates: { canonical: '/tipos-de-evento' },
+}
+
+const events = [
+  ['Aniversários', 'Uma operação completa para reunir família e amigos, com pizzas preparadas e servidas no local.'],
+  ['Casamentos e celebrações', 'Uma alternativa descontraída para recepções, encontros e comemorações especiais.'],
+  ['Eventos corporativos', 'Serviço planejado para confraternizações, encontros de equipe e ações de relacionamento.'],
+  ['Eventos em casa e condomínios', 'Atendimento em residências, áreas gourmet e salões de festas, conforme a estrutura disponível.'],
+]
+
+export default function TiposDeEventoPage() {
+  return <div className="min-h-screen bg-background"><Header solid /><main className="pt-32 pb-20"><section className="container mx-auto px-4 md:px-6"><div className="max-w-4xl mx-auto text-center space-y-6 mb-14"><h1 className="font-display text-5xl md:text-7xl font-bold uppercase text-primary">Pizza para diferentes tipos de evento</h1><p className="text-xl text-muted-foreground">A Vero Gusto atende eventos de 20 adultos pagantes em dias úteis ou 25 nos finais de semana, até 100 pessoas — e até 110 sob consulta.</p></div><div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">{events.map(([title, text]) => <article key={title} className="bg-white border-2 border-foreground rounded-xl p-8 shadow-hard"><h2 className="font-display text-3xl font-bold uppercase mb-4">{title}</h2><p className="text-lg text-muted-foreground">{text}</p></article>)}</div><div className="text-center mt-14"><WhatsAppCtaButton size="lg" className="rounded-full min-h-16 px-10 text-lg">Consultar disponibilidade</WhatsAppCtaButton></div></section></main><Footer /></div>
+}

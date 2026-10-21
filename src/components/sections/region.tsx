@@ -10,11 +10,11 @@ export function Region() {
           {/* Left Column: Copy */}
           <div className="space-y-8">
             <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold uppercase text-foreground leading-tight">
-              Atendemos toda <span className="text-primary">Brasília</span> e região
+              Atendemos todo o <span className="text-primary">Distrito Federal</span> e Entorno
             </h2>
             
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
-              Plano Piloto, Lago Sul, Lago Norte, Águas Claras, Guará, Taguatinga e demais regiões do DF. Levamos nossa estrutura completa até você.
+              Sem taxa de deslocamento. Nossa base é usada somente para produção e saída para eventos; não há atendimento ao público no local.
             </p>
             
             <div className="inline-block bg-orange-100 text-orange-700 font-bold px-4 py-3 rounded-md border-2 border-foreground shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">

@@ -4,8 +4,9 @@ import * as React from "react"
 import { StarRating } from "@/components/avaliacao/StarRating"
 import { Button } from "@/components/ui/button"
 import { Textarea } from "@/components/ui/textarea"
-import { Instagram, Send, Star, ExternalLink, MessageCircle } from "lucide-react"
-import { Footer } from "@/components/layout/footer"
+import { Instagram, Send, Star, MessageCircle } from "lucide-react"
+
+const googleReviewUrl = "https://www.google.com/maps/search/?api=1&query=Vero+Gusto+Pizzaria+Rodizio+em+Casa+Brasilia"
 
 export default function AvaliePage() {
   const [rating, setRating] = React.useState(0)
@@ -17,7 +18,8 @@ export default function AvaliePage() {
   }
 
   const handleFeedbackSubmit = () => {
-    console.log("Feedback enviado:", { rating, feedback })
+    const message = encodeURIComponent(`Olá! Quero enviar um feedback sobre meu evento com a Vero Gusto.\n\nNota: ${rating}/5\nFeedback: ${feedback}`)
+    window.open(`https://wa.me/5561983202467?text=${message}`, "_blank", "noopener,noreferrer")
     setSubmitted(true)
   }
 
@@ -46,8 +48,8 @@ export default function AvaliePage() {
           </div>
         )}
 
-        {/* Condition A: Happy Customer (5 Stars) */}
-        {rating === 5 && (
+        {/* O acesso à avaliação pública é oferecido a todos os clientes. */}
+        {rating > 0 && (
           <div className="space-y-8 animate-in fade-in slide-in-from-bottom-8 duration-500 bg-green-50/50 p-8 rounded-2xl border-2 border-brand-green/20">
             <div className="space-y-2">
               <h2 className="font-display text-3xl text-primary uppercase">
@@ -61,7 +63,7 @@ export default function AvaliePage() {
             <Button
               size="lg"
               className="rounded-full shadow-hard h-16 px-8 text-xl font-display uppercase hover:scale-105 transition-transform bg-primary text-white"
-              onClick={() => window.open("#", "_blank")}
+              onClick={() => window.open(googleReviewUrl, "_blank", "noopener,noreferrer")}
             >
               <Star className="w-5 h-5 mr-2 fill-current" />
               Avaliar no Google
@@ -92,6 +94,7 @@ export default function AvaliePage() {
               size="lg"
               className="rounded-full shadow-hard h-14 px-8 text-lg font-bold bg-foreground text-background hover:bg-foreground/90"
               onClick={handleFeedbackSubmit}
+              disabled={!feedback.trim()}
             >
               <Send className="w-4 h-4 mr-2" />
               Enviar feedback
@@ -135,7 +138,7 @@ export default function AvaliePage() {
                   variant="ghost"
                   size="lg"
                   className="rounded-full font-bold h-12 w-full sm:w-auto"
-                  onClick={() => window.open("#", "_blank")}
+                  onClick={() => window.open("https://www.instagram.com/verogusto.eventos/", "_blank", "noopener,noreferrer")}
                 >
                   <Instagram className="w-5 h-5 mr-2" />
                   Abrir Instagram

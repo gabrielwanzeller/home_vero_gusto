@@ -6,17 +6,17 @@ export function Gallery() {
     {
       id: "video01",
       caption: "Aniversário — Park Way",
-      iframeUrl: "https://player.mediadelivery.net/embed/634467/bd510645-2c30-4da1-9b63-bf23d76c2178?autoplay=true&loop=false&muted=false&preload=false&responsive=false"
+      iframeUrl: "https://player.mediadelivery.net/embed/634467/bd510645-2c30-4da1-9b63-bf23d76c2178?autoplay=false&loop=false&muted=false&preload=false&responsive=false"
     },
     {
       id: "video02",
       caption: "Aniversário — Jardim Botânico",
-      iframeUrl: "https://player.mediadelivery.net/embed/634467/cddb3e39-0854-45db-ba3e-2ed45640909f?autoplay=true&loop=false&muted=false&preload=false&responsive=false"
+      iframeUrl: "https://player.mediadelivery.net/embed/634467/cddb3e39-0854-45db-ba3e-2ed45640909f?autoplay=false&loop=false&muted=false&preload=false&responsive=false"
     },
     {
       id: "video03",
       caption: "Encontro de amigos — Setor Park Sul",
-      iframeUrl: "https://player.mediadelivery.net/embed/634467/21712349-92b0-4f82-8cf8-2f0b2bed5e4b?autoplay=true&loop=false&muted=false&preload=false&responsive=false"
+      iframeUrl: "https://player.mediadelivery.net/embed/634467/21712349-92b0-4f82-8cf8-2f0b2bed5e4b?autoplay=false&loop=false&muted=false&preload=false&responsive=false"
     }
   ]
 

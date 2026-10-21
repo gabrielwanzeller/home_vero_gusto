@@ -2,7 +2,8 @@
 
 import * as React from "react"
 import { Button } from "@/components/ui/button"
-import { Star, MessageCircle, Instagram, MapPin, Search } from "lucide-react"
+import { Star, MessageCircle, Instagram, MapPin } from "lucide-react"
+import Link from "next/link"
 
 export default function LinktreePage() {
   return (
@@ -69,10 +70,10 @@ export default function LinktreePage() {
               className="w-full h-16 rounded-xl border-2 border-white bg-transparent text-white font-bold text-lg justify-start px-6 shadow-[4px_4px_0px_0px_rgba(255,255,255,0.4)] hover:translate-y-1 hover:shadow-[2px_2px_0px_0px_rgba(255,255,255,0.4)] hover:bg-white hover:text-primary transition-all group overflow-hidden relative"
               asChild
             >
-              <a href="/avalie">
+              <Link href="/avalie">
                 <Star className="w-5 h-5 mr-4 transition-transform group-hover:scale-125 group-hover:text-yellow-500" />
                 Avaliar experiência
-              </a>
+              </Link>
             </Button>
 
             <Button 
@@ -81,10 +82,10 @@ export default function LinktreePage() {
               className="w-full h-16 rounded-xl border-2 border-white bg-transparent text-white font-bold text-lg justify-start px-6 shadow-[4px_4px_0px_0px_rgba(255,255,255,0.4)] hover:translate-y-1 hover:shadow-[2px_2px_0px_0px_rgba(255,255,255,0.4)] hover:bg-white hover:text-primary transition-all group overflow-hidden relative"
               asChild
             >
-              <a href="/">
+              <Link href="/">
                 <MapPin className="w-5 h-5 mr-4 transition-transform group-hover:scale-125 group-hover:text-brand-green" />
                 Sobre a Vero Gusto
-              </a>
+              </Link>
             </Button>
           </div>
         </div>
@@ -96,7 +97,7 @@ export default function LinktreePage() {
         <div className="bg-white/10 backdrop-blur-sm border-2 border-white/20 rounded-xl p-8 text-center space-y-4">
           <h3 className="font-display text-2xl uppercase drop-shadow-sm">Quem contrata, recomenda</h3>
           <p className="text-lg font-medium text-white/90">
-            Mais de <strong className="text-white font-bold">100 eventos</strong> realizados em Brasília.
+            Mais de <strong className="text-white font-bold">120 eventos</strong> realizados em Brasília.
           </p>
           <div className="flex items-center justify-center gap-2">
             <span className="font-bold text-xl">5.0</span>

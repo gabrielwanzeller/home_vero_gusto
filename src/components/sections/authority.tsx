@@ -1,4 +1,3 @@
-import { Button } from "@/components/ui/button"
 import Image from "next/image"
 
 export function Authority() {
@@ -14,12 +13,12 @@ export function Authority() {
             </h2>
             
             <p className="text-lg text-muted-foreground leading-relaxed">
-              A Vero Gusto nasceu com a missão de levar pizza no estilo napolitana de verdade para eventos em Brasília. Cada massa passa por até <span className="font-bold text-foreground">48 horas de fermentação natural</span>. Cada evento é tratado como <span className="font-bold text-foreground">único</span>, com foco em qualidade, organização e experiência completa.
+              Gabriel é o responsável pela Vero Gusto e coordena uma operação que já realizou <span className="font-bold text-foreground">mais de 120 eventos</span>. A massa é preparada com biga e passa por uma <span className="font-bold text-foreground">longa fermentação de até 48 horas</span>. Cada evento recebe planejamento próprio, com foco em qualidade, organização e serviço.
             </p>
             
             <div className="border-l-4 border-primary pl-6 py-2 mt-6">
               <p className="font-bold text-xl md:text-2xl italic text-foreground">
-                "Mais do que pizza, entregamos tranquilidade e uma experiência que impressiona."
+                &ldquo;Mais do que pizza, entregamos tranquilidade e uma experiência que impressiona.&rdquo;
               </p>
             </div>
           </div>

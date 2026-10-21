@@ -36,9 +36,7 @@ export function Footer() {
                  <p className="font-bold text-lg hover:text-primary transition-colors cursor-pointer">
                   <a href="https://wa.me/5561983202467" target="_blank" rel="noopener noreferrer">+55 (61) 98320-2467</a>
                  </p>
-                 <p className="text-zinc-400 hover:text-white transition-colors cursor-pointer">
-                   <a href="mailto:[EMAIL_ADDRESS]">contato@verogusto.com.br</a>
-                 </p>
+                 <p className="text-zinc-400">Atendimento pelo WhatsApp</p>
               </div>
            </div>
 
@@ -49,6 +47,7 @@ export function Footer() {
               </h3>
               <Link 
                 href="https://www.instagram.com/verogusto.eventos/" 
+                target="_blank" rel="noopener noreferrer"
                 className="flex items-center gap-2 text-zinc-400 hover:text-white transition-colors group"
               >
                 <Instagram className="w-5 h-5 group-hover:scale-110 transition-transform" />

@@ -5,7 +5,7 @@ import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
 import { Input } from "@/components/ui/input"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
-import { Terminal, Pizza, Check, AlertCircle } from "lucide-react"
+import { Terminal, Pizza, AlertCircle } from "lucide-react"
 
 export default function StyleguidePage() {
   return (
@@ -246,7 +246,7 @@ export default function StyleguidePage() {
                         <span className="text-2xl font-bold opacity-60">/01</span>
                         <div className="space-y-2">
                             <h4 className="text-2xl font-display font-bold uppercase">Bold by Default</h4>
-                            <p className="opacity-90">Flavor comes first. We don't believe bold flavor should be optional.</p>
+                            <p className="opacity-90">Flavor comes first. We don&apos;t believe bold flavor should be optional.</p>
                         </div>
                     </div>
                      <div className="py-6 flex gap-6 items-start">
@@ -299,7 +299,7 @@ export default function StyleguidePage() {
                         <span className="text-2xl font-bold text-primary opacity-80">/01</span>
                         <div className="space-y-2">
                             <h4 className="text-2xl font-display font-bold uppercase text-foreground">Bold by Default</h4>
-                            <p className="text-muted-foreground">Flavor comes first. We don't believe bold flavor should be optional.</p>
+                            <p className="text-muted-foreground">Flavor comes first. We don&apos;t believe bold flavor should be optional.</p>
                         </div>
                     </div>
                      <div className="py-6 flex gap-6 items-start">

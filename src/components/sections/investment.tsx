@@ -46,8 +46,8 @@ export function Investment() {
               {[
                 "Forno profissional e estação completa de preparo montada no local.",
                 "Cardápio com entradas e pizzas (salgadas e doces)",
-                "Massa de longa fermentação (até 48h) e ingredientes frescos",
-                "Pizzaiolo profissional e equipe responsável pelo serviço das pizzas",
+                "Massa preparada com biga e longa fermentação de até 48 horas",
+                "Pizzaiolo, garçons para servir as pizzas, pratos, talheres e copos descartáveis",
                 "Organização da área utilizada pela equipe ao final do evento"
               ].map((item, idx) => (
                 <li key={idx} className="flex gap-4 items-start">
@@ -67,7 +67,7 @@ export function Investment() {
         {/* Bottom Area: Footer & CTA */}
         <div className="max-w-3xl mx-auto text-center space-y-8">
            <p className="text-base md:text-lg font-bold uppercase tracking-widest text-muted-foreground">
-             Eventos a partir de 15 pessoas. Sem taxas escondidas. Sem surpresas.
+             Mínimo de 20 adultos pagantes em dias úteis e 25 nos finais de semana. Preços sob consulta.
            </p>
 
            <WhatsAppCtaButton 

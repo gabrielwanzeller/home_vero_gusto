@@ -1,62 +1,24 @@
 import { WhatsAppCtaButton } from "@/components/ui/whatsapp-cta-button"
-import { X, Check } from "lucide-react"
+import { Check } from "lucide-react"
 
 export function ProblemSolution() {
-  const problems = [
-    "Chegam atrasados e colocam o evento em risco",
-    "Massas prontas de baixa qualidade",
-    "Pouca variedade de sabores",
-    "Comida fria ou que acaba rápido",
-    "Anfitrião resolvendo imprevistos o tempo todo",
-    "Desorganização no final"
-  ]
-
   const solutions = [
-    "Pontualidade garantida (chegada com antecedência)",
-    "Serviço farto e contínuo (pizza sempre quente)",
-    "Opções vegetarianas (sob demanda)",
-    "Ingredientes premium (fornecedores selecionados)",
-    "Contrato claro e transparente (validade jurídica)",
-    "Equipe confirmada e comprometida",
-    "Retirada total da estrutura após o evento (organização)"
+    "Equipe no local 2 horas antes do início para a montagem",
+    "Pizza preparada, assada e servida durante 3 horas",
+    "Cardápio e operação definidos na proposta",
+    "Contrato com escopo e condições de pagamento",
+    "Forno, mesa de apoio e equipe para o serviço das pizzas",
+    "Retirada da estrutura e organização da estação de trabalho"
   ]
 
   return (
     <section className="py-20 md:py-32 bg-secondary/50">
       <div className="container mx-auto px-4 md:px-6 flex flex-col items-center">
         
-        {/* Bloco Superior (O Problema) */}
-        <div className="w-full max-w-3xl flex flex-col items-center text-center">
-          <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold uppercase text-foreground leading-tight">
-            O problema dos buffets tradicionais
-          </h2>
-          <p className="text-xl text-muted-foreground italic mt-4 mb-10">
-            Você já viu isso acontecer:
-          </p>
-
-          <div className="w-full max-w-lg">
-            <ul className="space-y-6 text-left">
-              {problems.map((item, index) => (
-                <li key={index} className="flex items-start gap-4 text-lg md:text-xl font-medium text-foreground">
-                  <X className="w-8 h-8 text-red-600 shrink-0 mt-0.5" strokeWidth={2.5} />
-                  <span className="leading-snug pt-1">{item}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <p className="font-bold text-2xl md:text-3xl text-red-600 mt-12">
-            Você paga caro e ainda passa estresse.
-          </p>
-        </div>
-
-        {/* Espaçamento generoso entre blocos */}
-        <div className="w-full h-24 md:h-32" />
-
         {/* Bloco Inferior (A Solução) */}
         <div className="w-full max-w-3xl flex flex-col items-center text-center">
           <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold uppercase text-foreground leading-tight">
-            A solução: tranquilidade total do início ao fim
+            Uma operação planejada do início ao fim
           </h2>
 
           <div className="w-full max-w-lg mt-12">

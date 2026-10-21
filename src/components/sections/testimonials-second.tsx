@@ -5,15 +5,15 @@ export function TestimonialsSecond() {
   const videos = [
     {
       id: "keyla",
-      iframeUrl: "https://player.mediadelivery.net/embed/634467/114be906-48de-4485-a7c7-4a223100899b?autoplay=true&loop=false&muted=false&preload=false&responsive=false"
+      iframeUrl: "https://player.mediadelivery.net/embed/634467/114be906-48de-4485-a7c7-4a223100899b?autoplay=false&loop=false&muted=false&preload=false&responsive=false"
     },
     {
       id: "kelly",
-      iframeUrl: "https://player.mediadelivery.net/embed/634467/c0ca109b-7cc9-40c1-b0c4-509f66490837?autoplay=true&loop=false&muted=false&preload=false&responsive=false"
+      iframeUrl: "https://player.mediadelivery.net/embed/634467/c0ca109b-7cc9-40c1-b0c4-509f66490837?autoplay=false&loop=false&muted=false&preload=false&responsive=false"
     },
     {
       id: "thiago",
-      iframeUrl: "https://player.mediadelivery.net/embed/634467/4d2677a0-7e67-4c55-afb7-eab6604345f9?autoplay=true&loop=false&muted=false&preload=false&responsive=false"
+      iframeUrl: "https://player.mediadelivery.net/embed/634467/4d2677a0-7e67-4c55-afb7-eab6604345f9?autoplay=false&loop=false&muted=false&preload=false&responsive=false"
     }
   ]
 

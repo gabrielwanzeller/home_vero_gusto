@@ -17,23 +17,18 @@ export function Hero() {
             </div>
             
             <h1 className="text-6xl md:text-8xl lg:text-7xl font-display font-bold uppercase leading-[0.85] tracking-tighter text-white drop-shadow-xl">
-              Pizza <br className="md:hidden" /> napolitana <br className="md:hidden" /> em eventos
+              Rodízio de pizza para eventos em Brasília
             </h1>
             
             <p className="text-xl md:text-2xl font-medium text-white/90 max-w-2xl mx-auto leading-relaxed">
-              O rodízio de pizza artesanal mais autêntico do DF. <br className="hidden md:inline"/> 
-              Levamos toda a estrutura, você só aproveita.
+              Pizza no estilo napolitano, preparada e assada no local. Levamos a estrutura e a equipe para você aproveitar.
             </p>
 
             {/* Video Player */}
             <div className="relative w-full max-w-md mx-auto aspect-[4/5] bg-muted rounded-2xl shadow-hard overflow-hidden border-2 border-black rotate-1 hover:rotate-0 transition-transform duration-300">
-              <iframe 
-                src="https://player.mediadelivery.net/embed/634467/d1a03a65-083a-446e-8090-29743e176301?autoplay=true&loop=false&muted=false&preload=false&responsive=false" 
-                loading="lazy" 
-                style={{ border: 0, position: "absolute", top: 0, height: "100%", width: "100%" }} 
-                allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;" 
-                allowFullScreen={true}
-              />
+              <video controls playsInline preload="metadata" className="absolute inset-0 h-full w-full object-cover" aria-label="Vero Gusto preparando pizzas em um evento">
+                <source src="/videos/hero/video-hero.mp4" type="video/mp4" />
+              </video>
 
                {/* Overlay Badge */}
               <div className="absolute bottom-6 -right-2 bg-white border-2 border-black px-4 py-2 rounded-lg shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] z-10 rotate-2 pointer-events-none">
@@ -65,9 +60,9 @@ export function Hero() {
           {/* Micro-proofs (Pill Style) */}
           <div className="flex flex-wrap justify-center gap-3 pt-4">
             {[
-                "+150 Eventos",
-                "Avaliação 5.0 ★",
-                "Longa fermentação"
+                "+120 eventos realizados",
+                "Atendimento em todo o DF e Entorno",
+                "Massa com biga e até 48h"
               ].map((item, index) => (
                 <div key={index} className="flex items-center gap-2 px-5 py-2.5 rounded-full border border-black/5 text-white font-bold text-sm md:text-base shadow-lg">
                   <CheckCircle className="w-4 h-4 fill-primary text-white" />
