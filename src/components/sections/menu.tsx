@@ -1,112 +1,35 @@
-import { WhatsAppCtaButton } from "@/components/ui/whatsapp-cta-button"
-import { Leaf, Flame, Candy } from "lucide-react"
+import Link from 'next/link'
+import { WhatsAppCtaButton } from '@/components/ui/whatsapp-cta-button'
+import { Leaf, Flame, Candy } from 'lucide-react'
+import { business, menuCategories } from '@/lib/business'
 
-export function Menu() {
+export function Menu({ full = false }: { full?: boolean }) {
+  const icons = [Leaf, Flame, Candy]
+  const Heading = full ? 'h1' : 'h2'
+  const CategoryHeading = full ? 'h2' : 'h3'
   return (
-    <section id="cardapio" className="py-20 md:py-32 bg-background">
+    <section id="cardapio" className="py-16 md:py-24 bg-background">
       <div className="container mx-auto px-4 md:px-6">
-        
-        {/* Header */}
-        <div className="text-center mb-16 space-y-4 max-w-3xl mx-auto">
-          <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold uppercase text-primary leading-tight">
-            Sabores que encantam
-          </h2>
-          <p className="text-xl text-muted-foreground leading-relaxed">
-            O cardápio contratado varia conforme a quantidade de pessoas e é definido na proposta. As opções abaixo são referências e não representam promessa de que todas serão servidas em todo evento.
-          </p>
+        <div className="text-center mb-12 space-y-5 max-w-3xl mx-auto">
+          <Heading className="font-display text-4xl md:text-5xl lg:text-6xl font-bold uppercase text-primary leading-tight">{full ? 'Cardápio de pizzas para eventos' : 'Entradas, pizzas salgadas e doces'}</Heading>
+          <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">{business.menuText}</p>
+          {full && <p className="text-lg text-muted-foreground">{business.doughText} Consulte a equipe sobre os ingredientes e as necessidades dos seus convidados antes de contratar.</p>}
         </div>
-
-        {/* Menu Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-16">
-          
-          {/* Card 1: Entradas */}
-          <div className="bg-white border-2 border-foreground rounded-xl p-8 shadow-hard hover:-translate-y-1 transition-transform overflow-hidden relative">
-            <div className="flex items-center gap-3 border-b-2 border-border pb-4 mb-6">
-               <div className="w-10 h-10 rounded-full bg-brand-green/10 flex items-center justify-center border-2 border-brand-green">
-                 <Leaf className="w-5 h-5 text-brand-green" />
-               </div>
-               <h3 className="font-display text-3xl uppercase font-bold text-foreground">Entradas</h3>
-            </div>
-            
-            <ul className="space-y-3">
-              {[
-                "Cestinha de pastel com patê",
-                "Rotolino de calabresa",
-                "Rotolino de queijo com geleia",
-                "Rotolino de queijo com pesto",
-                "Rotolino de frango com catupiry",
-                "Rotolino "
-              ].map((item, i) => (
-                <li key={i} className="text-lg font-medium text-muted-foreground flex items-start gap-2">
-                  <span className="w-1.5 h-1.5 rounded-full bg-brand-green mt-2 shrink-0" />
-                  {item}
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Card 2: Pizzas Salgadas */}
-          <div className="bg-white border-2 border-foreground rounded-xl p-8 shadow-hard hover:-translate-y-1 transition-transform overflow-hidden relative">
-            <div className="flex items-center gap-3 border-b-2 border-border pb-4 mb-6">
-               <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center border-2 border-primary">
-                 <Flame className="w-5 h-5 text-primary" />
-               </div>
-               <h3 className="font-display text-3xl uppercase font-bold text-foreground">Salgadas</h3>
-            </div>
-            
-            <ul className="space-y-3">
-              {[
-                "Marguerita com pesto", "Calabresa tradicional", "Frango com catupiry", 
-                "Portuguesa", "Quatro queijos", "Diavoletta", "Calabresa com geleia de pimenta",
-                "Carne seca com catupiry", "Abobrinha com gorgonzola", "Milho com bacon e catupiry"
-              ].map((item, i) => (
-                <li key={i} className="text-lg font-medium text-muted-foreground flex items-start gap-2">
-                  <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 shrink-0" />
-                  {item}
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Card 3: Pizzas Doces */}
-          <div className="bg-white border-2 border-foreground rounded-xl p-8 shadow-hard hover:-translate-y-1 transition-transform overflow-hidden relative">
-            <div className="flex items-center gap-3 border-b-2 border-border pb-4 mb-6">
-               <div className="w-10 h-10 rounded-full bg-orange-100 flex items-center justify-center border-2 border-orange-500">
-                 <Candy className="w-5 h-5 text-orange-500" />
-               </div>
-               <h3 className="font-display text-3xl uppercase font-bold text-foreground">Doces</h3>
-            </div>
-            
-            <ul className="space-y-3">
-              {[
-                "Banana com canela", 
-                "Banana com doce de leite",
-                "Banana com chocolate", 
-                "Chocolate com morango", 
-                "Romeu e Julieta",
-                "Chocolate com chocolate branco"                
-              ].map((item, i) => (
-                <li key={i} className="text-lg font-medium text-muted-foreground flex items-start gap-2">
-                  <span className="w-1.5 h-1.5 rounded-full bg-orange-500 mt-2 shrink-0" />
-                  {item}
-                </li>
-              ))}
-            </ul>
-          </div>
-
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto mb-12">
+          {menuCategories.map((category, index) => {
+            const Icon = icons[index]
+            return <article key={category.title} className="bg-white border-2 border-foreground rounded-xl p-6 md:p-8 shadow-hard">
+              <div className="flex items-center gap-3 border-b-2 border-border pb-4 mb-6"><Icon className="w-6 h-6 text-primary shrink-0" aria-hidden="true" /><CategoryHeading className="font-display text-3xl uppercase font-bold">{category.title}</CategoryHeading></div>
+              <ul className="space-y-3">{(full ? category.items : category.items.slice(0, 3)).map(item => <li key={item} className="text-lg text-muted-foreground flex gap-2"><span className="text-primary" aria-hidden="true">•</span>{item}</li>)}</ul>
+              {!full && <p className="mt-5 text-sm text-muted-foreground">Veja as demais opções no cardápio completo.</p>}
+            </article>
+          })}
         </div>
-
-        {/* Footer CTA */}
-        <div className="text-center">
-            <WhatsAppCtaButton 
-              data-gtm="generate_form"
-              size="lg" 
-              className="w-full max-w-full md:w-auto h-auto min-h-20 py-4 px-6 md:px-14 text-lg md:text-2xl whitespace-normal break-words rounded-full font-display uppercase tracking-wider"
-            >
-              Montar meu cardápio personalizado
-            </WhatsAppCtaButton>
+        <div className="text-center space-y-6">
+          {!full && <p><Link href="/cardapio" className="font-bold text-primary underline underline-offset-4 text-lg">Ver o cardápio completo</Link></p>}
+          <WhatsAppCtaButton data-gtm="generate_form" size="lg" className="w-full md:w-auto h-auto min-h-16 py-4 px-8 text-lg md:text-xl whitespace-normal rounded-full">Consultar cardápio para meu evento</WhatsAppCtaButton>
+          {full && <p><Link href="/orcamento" className="font-bold text-primary underline underline-offset-4">Veja inclusões, pagamento e orçamento</Link></p>}
         </div>
-
       </div>
     </section>
   )

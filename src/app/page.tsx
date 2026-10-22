@@ -3,6 +3,10 @@ import { Header } from "@/components/layout/header"
 import { Footer } from "@/components/layout/footer"
 import { Hero } from "@/components/sections/hero"
 import { WhyUs } from "@/components/sections/why-us"
+import { pageMetadata } from "@/lib/seo"
+import { SeoPage } from "@/components/seo-page"
+
+export const metadata = pageMetadata('/', 'Rodízio de pizza para eventos em Brasília', 'Rodízio de pizza em domicílio no estilo napolitano. Forno, equipe e pizzas assadas ao vivo em Brasília, no Distrito Federal e Entorno. Peça uma proposta.')
 
 // Seções abaixo do fold — carregadas de forma assíncrona
 const ProblemSolution   = dynamic(() => import("@/components/sections/problem-solution").then(m => ({ default: m.ProblemSolution })))
@@ -22,7 +26,8 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-background font-sans antialiased flex flex-col overflow-x-hidden max-w-full">
       <Header />
-      <main className="flex-1">
+      <main id="conteudo" className="flex-1">
+        <SeoPage path="/" name="Rodízio de pizza para eventos em Brasília" />
         <Hero />
         <WhyUs />
         <ProblemSolution />

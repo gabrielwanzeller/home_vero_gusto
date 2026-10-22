@@ -1,3 +1,4 @@
+import { VideoPreview } from "@/components/ui/video-preview"
 import { WhatsAppCtaButton } from "@/components/ui/whatsapp-cta-button"
 
 export function TestimonialsSecond() {
@@ -5,20 +6,26 @@ export function TestimonialsSecond() {
   const videos = [
     {
       id: "keyla",
+      name: "Keyla",
+      poster: "/videos/testimonials/Keyla/keyla-thumb-medium.jpeg",
       iframeUrl: "https://player.mediadelivery.net/embed/634467/114be906-48de-4485-a7c7-4a223100899b?autoplay=false&loop=false&muted=false&preload=false&responsive=false"
     },
     {
       id: "kelly",
+      name: "Kelly",
+      poster: "/videos/testimonials/Kelly/thumb-kelly-medium.jpeg",
       iframeUrl: "https://player.mediadelivery.net/embed/634467/c0ca109b-7cc9-40c1-b0c4-509f66490837?autoplay=false&loop=false&muted=false&preload=false&responsive=false"
     },
     {
       id: "thiago",
+      name: "Thiago",
+      poster: "/videos/testimonials/Thiago/thumb-thiago-medium.jpeg",
       iframeUrl: "https://player.mediadelivery.net/embed/634467/4d2677a0-7e67-4c55-afb7-eab6604345f9?autoplay=false&loop=false&muted=false&preload=false&responsive=false"
     }
   ]
 
   return (
-    <section id="depoimentos" className="py-20 md:py-32 bg-background">
+    <section id="mais-depoimentos" className="py-20 md:py-32 bg-background">
       <div className="container mx-auto px-4 md:px-6">
 
         {/* Header */}
@@ -35,13 +42,7 @@ export function TestimonialsSecond() {
               key={item.id}
               className="relative aspect-9/16 bg-black/5 rounded-xl border-2 border-foreground shadow-hard overflow-hidden group hover:-translate-y-1 transition-transform"
             >
-               <iframe
-                 src={item.iframeUrl}
-                 loading="lazy"
-                 className="absolute top-0 left-0 w-full h-full border-0"
-                 allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;"
-                 allowFullScreen
-               />
+               <VideoPreview src={item.iframeUrl} poster={item.poster} title={`Depoimento de ${item.name}`} />
             </div>
           ))}
         </div>

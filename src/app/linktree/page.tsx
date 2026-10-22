@@ -1,22 +1,24 @@
-"use client"
-
-import * as React from "react"
 import { Button } from "@/components/ui/button"
 import { Star, MessageCircle, Instagram, MapPin } from "lucide-react"
 import Link from "next/link"
+import { pageMetadata } from "@/lib/seo"
+import { SeoPage } from "@/components/seo-page"
+
+export const metadata = pageMetadata('/linktree', 'Links e contato da Vero Gusto', 'Encontre os canais oficiais da Vero Gusto: orçamento pelo WhatsApp, cardápio, Instagram e avaliações.')
 
 export default function LinktreePage() {
   return (
     <div className="min-h-screen bg-primary text-primary-foreground flex flex-col items-center py-12 px-4 selection:bg-white/20 selection:text-white">
       
-      <main className="w-full max-w-lg space-y-12 animate-in fade-in slide-in-from-bottom-8 duration-700">
+      <main id="conteudo" className="w-full max-w-lg space-y-12 animate-in fade-in slide-in-from-bottom-8 duration-700">
         
+        <SeoPage path="/linktree" name="Canais oficiais Vero Gusto" />
         {/* Header Section */}
         <div className="text-center space-y-6">
           
           
           <div className="flex flex-col items-center gap-5">
-            <h1 className="my-4 font-display xl:text-7xl uppercase leading-[0.8] tracking-tighter text-white drop-shadow-lg">
+            <h1 className="my-4 font-display text-5xl md:text-7xl uppercase leading-[0.8] tracking-tighter text-white drop-shadow-lg">
               Vero Gusto
             </h1>
 
@@ -28,17 +30,17 @@ export default function LinktreePage() {
           </div>
           
           <p className="text-lg md:text-xl text-white/90 font-medium max-w-xs mx-auto leading-relaxed">
-            O rodízio de pizza artesanal mais autêntico do DF.
+            Pizza no estilo napolitano para eventos no Distrito Federal e Entorno.
           </p>
 
           <Button 
             size="lg" 
             data-gtm="click_contact"
-            className="w-full h-16 mt-8 rounded-full font-display text-xl uppercase tracking-wide bg-white text-primary shadow-[6px_6px_0px_0px_rgba(20,23,26,1)] hover:translate-y-1 hover:shadow-[4px_4px_0px_0px_rgba(20,23,26,1)] transition-all"
-            onClick={() => window.open("https://api.whatsapp.com/send/?phone=5561983202467&text=Ol%C3%A1%21+Vim+pelo+site+da+Vero+Gusto+e+quero+consultar+disponibilidade+para+meu+evento&type=phone_number&app_absent=0", "_blank")}
+            className="w-full h-auto min-h-16 py-4 whitespace-normal mt-8 rounded-full font-display text-xl uppercase tracking-wide bg-white text-primary shadow-[6px_6px_0px_0px_rgba(20,23,26,1)] hover:translate-y-1 hover:shadow-[4px_4px_0px_0px_rgba(20,23,26,1)] transition-all"
+            asChild
           >
-            <MessageCircle className="w-6 h-6 mr-2" />
-            Consultar disponibilidade
+            <a href="https://wa.me/5561983202467?text=Ol%C3%A1%21%20Quero%20consultar%20disponibilidade%20para%20meu%20evento." target="_blank" rel="noopener noreferrer"><MessageCircle className="w-6 h-6 mr-2" />
+            Consultar disponibilidade</a>
           </Button>
         </div>
 
@@ -99,15 +101,7 @@ export default function LinktreePage() {
           <p className="text-lg font-medium text-white/90">
             Mais de <strong className="text-white font-bold">120 eventos</strong> realizados em Brasília.
           </p>
-          <div className="flex items-center justify-center gap-2">
-            <span className="font-bold text-xl">5.0</span>
-            <div className="flex text-yellow-400">
-               {[1, 2, 3, 4, 5].map((star) => (
-                 <Star key={star} className="w-5 h-5 fill-current" />
-               ))}
-            </div>
-            <span className="text-white/80 font-medium">no Google</span>
-          </div>
+          <p className="text-white/90">Conheça nossos registros reais de eventos e os relatos em vídeo no site.</p>
         </div>
 
         {/* Footer/Urgency Section */}
@@ -120,11 +114,11 @@ export default function LinktreePage() {
              size="lg" 
              data-gtm="click_contact"
              className="w-full h-20 rounded-full font-display text-2xl uppercase tracking-wide bg-foreground text-background shadow-[6px_6px_0px_0px_rgba(255,255,255,0.2)] hover:translate-y-1 hover:shadow-none transition-all"
-             onClick={() => window.open("https://api.whatsapp.com/send/?phone=5561983202467&text=Ol%C3%A1%21+Vim+pelo+site+da+Vero+Gusto+e+quero+consultar+disponibilidade+para+meu+evento&type=phone_number&app_absent=0", "_blank")}
-           >
+             asChild
+           ><a href="https://wa.me/5561983202467?text=Ol%C3%A1%21%20Quero%20consultar%20disponibilidade%20para%20meu%20evento." target="_blank" rel="noopener noreferrer">
              <MessageCircle className="w-6 h-6 mr-3 text-green-400" />
              Falar no WhatsApp
-           </Button>
+           </a></Button>
         </div>
 
       </main>

@@ -1,5 +1,6 @@
 import { WhatsAppCtaButton } from "@/components/ui/whatsapp-cta-button"
 import { Check } from "lucide-react"
+import { business } from "@/lib/business"
 
 export function Investment() {
   return (
@@ -24,15 +25,15 @@ export function Investment() {
               </li>
               <li className="flex items-center gap-3 text-lg md:text-xl font-bold text-foreground">
                 <span className="w-2.5 h-2.5 rounded-full bg-foreground shrink-0" />
-                local do evento
+                data, duração e cardápio contratado
               </li>
               <li className="flex items-center gap-3 text-lg md:text-xl font-bold text-foreground">
                 <span className="w-2.5 h-2.5 rounded-full bg-foreground shrink-0" />
-                formato do rodízio
+                serviços adicionais solicitados
               </li>
             </ul>
             <p className="text-xl text-muted-foreground font-medium pt-6 border-t-2 border-border/50">
-              Assim conseguimos montar uma proposta justa e personalizada para o seu evento.
+              Preços sob consulta. O atendimento em todo o Distrito Federal e Entorno não tem taxa de deslocamento.
             </p>
           </div>
 
@@ -46,8 +47,8 @@ export function Investment() {
               {[
                 "Forno profissional e estação completa de preparo montada no local.",
                 "Cardápio com entradas e pizzas (salgadas e doces)",
-                "Massa preparada com biga e longa fermentação de até 48 horas",
-                "Pizzaiolo, garçons para servir as pizzas, pratos, talheres e copos descartáveis",
+                business.doughText,
+                business.includedText,
                 "Organização da área utilizada pela equipe ao final do evento"
               ].map((item, idx) => (
                 <li key={idx} className="flex gap-4 items-start">
@@ -67,7 +68,7 @@ export function Investment() {
         {/* Bottom Area: Footer & CTA */}
         <div className="max-w-3xl mx-auto text-center space-y-8">
            <p className="text-base md:text-lg font-bold uppercase tracking-widest text-muted-foreground">
-             Mínimo de 20 adultos pagantes em dias úteis e 25 nos finais de semana. Preços sob consulta.
+             {business.minimumText} Preços sob consulta.
            </p>
 
            <WhatsAppCtaButton 

@@ -11,7 +11,7 @@ export function IdealFor() {
     {
       icon: Flame,
       title: "Exige comida de verdade",
-      text: "Nada de salgadinhos frios ou comida sem graça. Servimos pizza napolitana autêntica, assada na hora em forno de alta temperatura, com massa de longa fermentação e ingredientes frescos."
+      text: "Servimos pizza no estilo napolitano, assada na hora em forno de alta temperatura, com massa de longa fermentação e ingredientes frescos."
     },
     {
       icon: Clock,

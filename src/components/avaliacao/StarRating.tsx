@@ -25,7 +25,9 @@ export function StarRating({ onChange, className }: StarRatingProps) {
           <button
             key={star}
             type="button"
-            className="focus:outline-none transition-transform duration-200 hover:scale-110 cursor-pointer"
+            aria-label={`${star} ${star === 1 ? 'estrela' : 'estrelas'}`}
+            aria-pressed={rating === star}
+            className="rounded-md p-1 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary transition-transform duration-200 hover:scale-110 cursor-pointer"
             onClick={() => handleRating(star)}
             onMouseEnter={() => setHover(star)}
             onMouseLeave={() => setHover(0)}

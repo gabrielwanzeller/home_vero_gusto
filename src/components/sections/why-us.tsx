@@ -23,7 +23,7 @@ export function WhyUs() {
     },
     {
       icon: Pizza,
-      title: "Rodízio sem limite",
+      title: "Serviço contínuo",
       description: "Serviço contínuo, pizzas sempre quentes e circulando.",
       colSpan: "md:col-span-1 lg:col-span-2 lg:col-start-2"
     },

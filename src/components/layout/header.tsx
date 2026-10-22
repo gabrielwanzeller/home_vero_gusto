@@ -4,7 +4,7 @@ import * as React from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
-import { MessageCircle } from "lucide-react"
+import { Menu, MessageCircle } from "lucide-react"
 
 
 const whatsappNumber = "5561983202467" // Use actual number if available or generic link
@@ -30,7 +30,7 @@ export function Header({ solid = false }: { solid?: boolean }) {
   }, [])
 
   const navLinks = [
-    { name: "Por que nós", href: "#porque-nos" },
+    { name: "Por que nós", href: "/#porque-nos" },
     { name: "Como funciona", href: "/#como-funciona" },
     { name: "Cardápio", href: "/cardapio" },
     { name: "Eventos", href: "/tipos-de-evento" },
@@ -73,7 +73,7 @@ export function Header({ solid = false }: { solid?: boolean }) {
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center gap-8">
+        <nav aria-label="Navegação principal" className="hidden lg:flex items-center gap-5">
           {navLinks.map((link) => (
             <Link
               key={link.name}
@@ -92,7 +92,7 @@ export function Header({ solid = false }: { solid?: boolean }) {
         {/* CTA & Mobile Menu */}
         <div className="flex items-center gap-4">
           <Button 
-            className={`rounded-full font-bold shadow-hard hover:translate-y-1 hover:shadow-none transition-[transform,box-shadow] hidden md:flex ${
+            className={`rounded-full font-bold shadow-hard hover:translate-y-1 hover:shadow-none transition-[transform,box-shadow] hidden lg:flex ${
                 isScrolled || solid
                 ? "bg-primary text-primary-foreground"
                 : "bg-white text-primary border-0"
@@ -107,20 +107,13 @@ export function Header({ solid = false }: { solid?: boolean }) {
             </a>
           </Button>
           
-          <Button 
-            className={`rounded-full w-10 h-10 p-0 md:hidden transition-colors ${
-                isScrolled || solid ? "text-foreground" : "text-white"
-            }`}
-            variant="ghost"
-            data-gtm="click_contact"
-            size="icon"
-            asChild
-          >
-            <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
-              <MessageCircle className="w-6 h-6" />
-              <span className="sr-only">Falar no WhatsApp</span>
-            </a>
-          </Button>
+          <details className="lg:hidden relative">
+            <summary className="list-none cursor-pointer rounded-full bg-white text-foreground p-3 border-2 border-foreground focus-visible:outline-2 focus-visible:outline-primary" aria-label="Abrir navegação"><Menu className="w-6 h-6" /></summary>
+            <nav aria-label="Navegação móvel" className="absolute right-0 top-16 w-64 max-w-[85vw] bg-white text-foreground border-2 border-foreground rounded-xl p-4 shadow-hard">
+              {navLinks.map(link => <Link key={link.href} href={link.href} className="block py-3 px-2 font-bold hover:text-primary" onClick={event => event.currentTarget.closest('details')?.removeAttribute('open')}>{link.name}</Link>)}
+              <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="block py-3 px-2 font-bold text-brand-green">Falar no WhatsApp</a>
+            </nav>
+          </details>
         </div>
       </div>
     </header>

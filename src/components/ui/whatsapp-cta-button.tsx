@@ -1,19 +1,11 @@
-"use client"
-
-import React from "react"
 import { Button, ButtonProps } from "@/components/ui/button"
-import { useWhatsAppModal } from "./whatsapp-modal"
+import Link from "next/link"
 
-/**
- * A drop-in replacement for the generic Button that automatically
- * opens the WhatsApp Lead Capture Modal when clicked.
- */
+// Link nativo para o formulário, inclusive antes do carregamento do JavaScript.
 export function WhatsAppCtaButton({ children, ...props }: ButtonProps) {
-  const { openModal } = useWhatsAppModal()
-  
   return (
-    <Button onClick={openModal} {...props}>
-      {children}
+    <Button {...props} asChild>
+      <Link href="/orcamento#solicitar">{children}</Link>
     </Button>
   )
 }

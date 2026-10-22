@@ -1,3 +1,4 @@
+import { VideoPreview } from "@/components/ui/video-preview"
 import { WhatsAppCtaButton } from "@/components/ui/whatsapp-cta-button"
 
 export function Gallery() {
@@ -5,16 +6,19 @@ export function Gallery() {
   const galleryItems = [
     {
       id: "video01",
+      poster: "/videos/gallery/video01/thumb01-medium.jpeg",
       caption: "Aniversário — Park Way",
       iframeUrl: "https://player.mediadelivery.net/embed/634467/bd510645-2c30-4da1-9b63-bf23d76c2178?autoplay=false&loop=false&muted=false&preload=false&responsive=false"
     },
     {
       id: "video02",
+      poster: "/videos/gallery/video02/thumb02-medium.jpeg",
       caption: "Aniversário — Jardim Botânico",
       iframeUrl: "https://player.mediadelivery.net/embed/634467/cddb3e39-0854-45db-ba3e-2ed45640909f?autoplay=false&loop=false&muted=false&preload=false&responsive=false"
     },
     {
       id: "video03",
+      poster: "/videos/gallery/video03/thumb03-medium.jpeg",
       caption: "Encontro de amigos — Setor Park Sul",
       iframeUrl: "https://player.mediadelivery.net/embed/634467/21712349-92b0-4f82-8cf8-2f0b2bed5e4b?autoplay=false&loop=false&muted=false&preload=false&responsive=false"
     }
@@ -38,20 +42,9 @@ export function Gallery() {
               key={item.id}
               className="relative aspect-9/16 bg-black/5 rounded-xl border-2 border-foreground shadow-hard overflow-hidden group hover:-translate-y-1 transition-transform"
             >
-               <iframe
-                 src={item.iframeUrl}
-                 loading="lazy"
-                 className="absolute top-0 left-0 w-full h-full border-0"
-                 allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;"
-                 allowFullScreen
-               />
+               <VideoPreview src={item.iframeUrl} poster={item.poster} title={item.caption} />
 
-               {/* Caption Box */}
-               <div className="absolute bottom-0 left-0 right-0 bg-white border-t-2 border-foreground p-4 pointer-events-none">
-                 <p className="text-sm font-bold text-foreground text-center uppercase tracking-wide">
-                   {item.caption}
-                 </p>
-               </div>
+
             </div>
           ))}
         </div>

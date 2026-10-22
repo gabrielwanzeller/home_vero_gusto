@@ -1,9 +1,7 @@
 import type { MetadataRoute } from 'next'
+import { business } from '@/lib/business'
 
 export default function robots(): MetadataRoute.Robots {
-  return {
-    rules: { userAgent: '*', allow: '/', disallow: '/styleguide/' },
-    sitemap: 'https://www.verogusto.com.br/sitemap.xml',
-    host: 'https://www.verogusto.com.br',
-  }
+  // O guia visual precisa continuar rastreável para que o noindex seja lido.
+  return { rules: { userAgent: '*', allow: '/' }, sitemap: `${business.url}/sitemap.xml`, host: business.url }
 }

@@ -16,7 +16,7 @@ export function Hero() {
                 Disponível para Brasília & Entorno
             </div>
             
-            <h1 className="text-6xl md:text-8xl lg:text-7xl font-display font-bold uppercase leading-[0.85] tracking-tighter text-white drop-shadow-xl">
+            <h1 className="text-6xl md:text-8xl lg:text-7xl font-display font-bold uppercase leading-[1.05] tracking-tighter text-white drop-shadow-xl">
               Rodízio de pizza para eventos em Brasília
             </h1>
             
@@ -26,7 +26,7 @@ export function Hero() {
 
             {/* Video Player */}
             <div className="relative w-full max-w-md mx-auto aspect-[4/5] bg-muted rounded-2xl shadow-hard overflow-hidden border-2 border-black rotate-1 hover:rotate-0 transition-transform duration-300">
-              <video controls playsInline preload="metadata" className="absolute inset-0 h-full w-full object-cover" aria-label="Vero Gusto preparando pizzas em um evento">
+              <video controls playsInline preload="none" poster="/videos/hero/poster.jpg" className="absolute inset-0 h-full w-full object-cover" aria-label="Vero Gusto preparando pizzas em um evento">
                 <source src="/videos/hero/video-hero.mp4" type="video/mp4" />
               </video>
 
@@ -51,7 +51,7 @@ export function Hero() {
               variant="outline"
               data-gtm="generate_form"
               size="lg" 
-              className="w-full md:w-auto h-16 px-10 text-xl rounded-full font-display uppercase tracking-wide border-2 border-white text-white hover:bg-white hover:text-primary transition-colors bg-transparent"
+              className="w-full md:w-auto h-auto min-h-16 py-4 px-6 whitespace-normal text-lg md:text-xl rounded-full font-display uppercase tracking-wide border-2 border-white text-white hover:bg-white hover:text-primary transition-colors bg-transparent"
             >
               Ver disponibilidade para minha data
             </WhatsAppCtaButton>
@@ -74,7 +74,7 @@ export function Hero() {
            {/* Scarcity */}
           <div className="text-white/80 text-sm font-medium flex items-center gap-2 px-4 py-2 rounded-lg backdrop-blur-sm">
               <Clock className="w-4 h-4" />
-              <span>Trabalhamos com apenas 1 evento por dia para garantir qualidade total.</span>
+              <span>Dedicamos a operação a um evento por dia. A reserva da data é formalizada em contrato e confirmada com a entrada.</span>
           </div>
           {/* <div className="text-white/80 text-sm font-medium flex items-center gap-2 px-4 py-2 rounded-lg backdrop-blur-sm">
               <Clock className="w-4 h-4" />

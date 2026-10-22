@@ -1,159 +1,20 @@
-"use client"
+import Link from 'next/link'
+import { ReviewForm } from '@/components/avaliacao/review-form'
+import { Footer } from '@/components/layout/footer'
+import { pageMetadata } from '@/lib/seo'
+import { SeoPage } from '@/components/seo-page'
 
-import * as React from "react"
-import { StarRating } from "@/components/avaliacao/StarRating"
-import { Button } from "@/components/ui/button"
-import { Textarea } from "@/components/ui/textarea"
-import { Instagram, Send, Star, MessageCircle } from "lucide-react"
-
-const googleReviewUrl = "https://www.google.com/maps/search/?api=1&query=Vero+Gusto+Pizzaria+Rodizio+em+Casa+Brasilia"
+export const metadata = pageMetadata('/avalie', 'Avalie sua experiência com a Vero Gusto', 'Compartilhe sua experiência em um evento Vero Gusto. Acesse o perfil no Google ou converse diretamente com a equipe pelo WhatsApp.')
 
 export default function AvaliePage() {
-  const [rating, setRating] = React.useState(0)
-  const [feedback, setFeedback] = React.useState("")
-  const [submitted, setSubmitted] = React.useState(false)
-
-  const handleRatingChange = (value: number) => {
-    setRating(value)
-  }
-
-  const handleFeedbackSubmit = () => {
-    const message = encodeURIComponent(`Olá! Quero enviar um feedback sobre meu evento com a Vero Gusto.\n\nNota: ${rating}/5\nFeedback: ${feedback}`)
-    window.open(`https://wa.me/5561983202467?text=${message}`, "_blank", "noopener,noreferrer")
-    setSubmitted(true)
-  }
-
-  return (
-    <div className="min-h-screen bg-background text-foreground flex flex-col items-center py-16 px-4">
-      
-      <main className="w-full max-w-2xl mx-auto space-y-12 text-center flex-1">
-        
-        {/* Header - Always Visible */}
-        <div className="space-y-4 animate-in fade-in slide-in-from-bottom-4 duration-700">
-          <h1 className="font-display text-4xl md:text-5xl uppercase leading-[0.9]">
-            Sua experiência com a <span className="text-primary">Vero Gusto</span>
-          </h1>
-          <p className="text-lg text-muted-foreground max-w-lg mx-auto">
-            Foi um prazer fazer parte do seu evento. Agora queremos ouvir você.
-          </p>
-        </div>
-
-        {/* Rating Block */}
-        {!submitted && (
-          <div className="space-y-4 animate-in fade-in slide-in-from-bottom-8 duration-700 delay-100">
-            <p className="font-bold text-xl">Como foi sua experiência?</p>
-            <div className="flex justify-center">
-              <StarRating onChange={handleRatingChange} />
-            </div>
-          </div>
-        )}
-
-        {/* O acesso à avaliação pública é oferecido a todos os clientes. */}
-        {rating > 0 && (
-          <div className="space-y-8 animate-in fade-in slide-in-from-bottom-8 duration-500 bg-green-50/50 p-8 rounded-2xl border-2 border-brand-green/20">
-            <div className="space-y-2">
-              <h2 className="font-display text-3xl text-primary uppercase">
-                Que bom saber disso!
-              </h2>
-              <p className="text-lg text-muted-foreground">
-                Sua avaliação ajuda outras pessoas a escolherem com segurança e nos permite continuar crescendo. Leva menos de 30 segundos.
-              </p>
-            </div>
-            
-            <Button
-              size="lg"
-              className="rounded-full shadow-hard h-16 px-8 text-xl font-display uppercase hover:scale-105 transition-transform bg-primary text-white"
-              onClick={() => window.open(googleReviewUrl, "_blank", "noopener,noreferrer")}
-            >
-              <Star className="w-5 h-5 mr-2 fill-current" />
-              Avaliar no Google
-            </Button>
-          </div>
-        )}
-
-        {/* Condition B: Needs Improvement (1-3 Stars) */}
-        {rating > 0 && rating <= 4 && !submitted && (
-          <div className="space-y-6 animate-in fade-in slide-in-from-bottom-8 duration-500 bg-neutral-50 p-8 rounded-2xl border-2 border-border">
-            <div className="space-y-2">
-              <h2 className="font-display text-3xl uppercase">
-                Obrigado por nos contar.
-              </h2>
-              <p className="text-lg text-muted-foreground">
-                Queremos melhorar sempre. O que podemos fazer diferente da próxima vez?
-              </p>
-            </div>
-
-            <Textarea 
-              className="resize-none h-32 text-lg"
-              placeholder="Digite seu feedback aqui..."
-              value={feedback}
-              onChange={(e) => setFeedback(e.target.value)}
-            />
-
-            <Button
-              size="lg"
-              className="rounded-full shadow-hard h-14 px-8 text-lg font-bold bg-foreground text-background hover:bg-foreground/90"
-              onClick={handleFeedbackSubmit}
-              disabled={!feedback.trim()}
-            >
-              <Send className="w-4 h-4 mr-2" />
-              Enviar feedback
-            </Button>
-          </div>
-        )}
-
-        {/* Success Message After Submission */}
-        {submitted && (
-          <div className="p-8 bg-green-50 border-2 border-brand-green rounded-xl animate-in zoom-in duration-300">
-             <h3 className="font-display text-2xl text-brand-green uppercase">Obrigado pelo seu feedback!</h3>
-             <p className="text-muted-foreground mt-2">Sua opinião é fundamental para nossa evolução.</p>
-          </div>
-        )}
-
-        {/* Footer / Sharing Block - Visible AFTER rating */}
-        {rating > 0 && (
-          <div className="pt-12 space-y-8 animate-in fade-in delay-200 duration-700">
-            <div className="w-full h-1 bg-border rounded-full" />
-            
-            <div className="space-y-4">
-              <p className="font-bold text-xl px-4">
-                Conhece alguém que também faria um evento com pizza artesanal ao vivo?
-              </p>
-              <p className="text-muted-foreground">
-                Compartilhe nossa página com quem valoriza experiência de verdade.
-              </p>
-              
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-2">
-                <Button
-                  variant="outline"
-                  size="lg"
-                  className="rounded-full border-2 border-foreground font-bold h-12 w-full sm:w-auto hover:bg-foreground hover:text-background transition-colors"
-                  onClick={() => window.open(`https://wa.me/?text=${encodeURIComponent("Conheça a Vero Gusto: Rodízio de pizza artesanal para eventos em Brasília. https://verogusto.com.br")}`, "_blank")}
-                >
-                  <MessageCircle className="w-5 h-5 mr-2" />
-                  Compartilhar no WhatsApp
-                </Button>
-
-                <Button
-                  variant="ghost"
-                  size="lg"
-                  className="rounded-full font-bold h-12 w-full sm:w-auto"
-                  onClick={() => window.open("https://www.instagram.com/verogusto.eventos/", "_blank", "noopener,noreferrer")}
-                >
-                  <Instagram className="w-5 h-5 mr-2" />
-                  Abrir Instagram
-                </Button>
-              </div>
-            </div>
-          </div>
-        )}
-
-      </main>
-
-      <footer className="mt-16 text-sm text-muted-foreground text-center px-4">
-         Vero Gusto — Rodízio de pizza artesanal para eventos em Brasília
-      </footer>
-
-    </div>
-  )
+  return <div className="min-h-screen bg-background">
+    <main id="conteudo" className="max-w-2xl mx-auto px-4 py-14 space-y-10 text-center">
+      <SeoPage path="/avalie" name="Avalie a Vero Gusto" />
+      <Link href="/" className="text-primary font-bold underline underline-offset-4">Vero Gusto — início</Link>
+      <h1 className="font-display text-4xl md:text-5xl font-bold">Sua experiência com a Vero Gusto</h1>
+      <p className="text-lg text-muted-foreground">Foi um prazer fazer parte do seu evento. Agora queremos ouvir você.</p>
+      <ReviewForm />
+    </main>
+    <Footer />
+  </div>
 }

@@ -1,11 +1,6 @@
 import type { MetadataRoute } from 'next'
+import { business } from '@/lib/business'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const routes = ['', '/cardapio', '/orcamento', '/tipos-de-evento', '/avalie', '/linktree']
-  return routes.map((route) => ({
-    url: `https://www.verogusto.com.br${route}`,
-    lastModified: new Date(),
-    changeFrequency: route === '' ? 'weekly' : 'monthly',
-    priority: route === '' ? 1 : 0.7,
-  }))
+  return ['', '/cardapio', '/orcamento', '/tipos-de-evento', '/avalie', '/linktree'].map(route => ({ url: `${business.url}${route}` }))
 }

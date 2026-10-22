@@ -57,6 +57,9 @@ export function Footer() {
         </div>
 
         {/* Bottom Bar */}
+        <nav aria-label="Links do rodapé" className="flex flex-wrap justify-center gap-x-6 gap-y-3 mb-8 text-sm font-bold">
+          <Link href="/cardapio">Cardápio</Link><Link href="/orcamento">Orçamento</Link><Link href="/tipos-de-evento">Tipos de evento</Link><Link href="/avalie">Avalie sua experiência</Link>
+        </nav>
         <div className="border-t border-zinc-800 pt-8 text-center">
           <p className="text-sm text-zinc-500">
             © 2026 Vero Gusto. Todos os direitos reservados.

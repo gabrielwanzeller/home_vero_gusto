@@ -10,6 +10,7 @@ export function FloatingWhatsApp() {
   return (
     <a
       href={whatsappUrl}
+      aria-label="Falar com a Vero Gusto no WhatsApp"
       target="_blank"
       data-gtm="click_contact"
       rel="noopener noreferrer"

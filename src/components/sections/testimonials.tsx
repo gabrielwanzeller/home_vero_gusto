@@ -1,3 +1,4 @@
+import { VideoPreview } from "@/components/ui/video-preview"
 import { WhatsAppCtaButton } from "@/components/ui/whatsapp-cta-button"
 
 export function Testimonials() {
@@ -5,21 +6,25 @@ export function Testimonials() {
   const videos = [
     {
       id: "tatiana",
+      poster: "/videos/testimonials/Tatiana/tatiana-thumb-medium.jpeg",
       name: "Tatiana",
       iframeUrl: "https://player.mediadelivery.net/embed/634467/b9d586e6-c016-479f-a609-43eef0d66fea?autoplay=false&loop=false&muted=false&preload=false&responsive=false"
     },
     {
       id: "romulo",
+      poster: "/videos/testimonials/Romulo/thumb-romulo-medium.jpeg",
       name: "Rômulo",
       iframeUrl: "https://player.mediadelivery.net/embed/634467/22834627-c5c2-44ef-ad37-035f3916c12d?autoplay=false&loop=false&muted=false&preload=false&responsive=false"
     },
     {
       id: "clau",
+      poster: "/videos/testimonials/Clau/thumb-clau-medium.jpeg",
       name: "Clau",
       iframeUrl: "https://player.mediadelivery.net/embed/634467/18b8a698-435a-4653-adae-6a985270f3f2?autoplay=false&loop=false&muted=false&preload=false&responsive=false"
     },
     {
       id: "andre",
+      poster: "/videos/testimonials/Andre/thumb-andre-medium.jpeg",
       name: "André",
       iframeUrl: "https://player.mediadelivery.net/embed/634467/95d6dac0-ffac-4854-a8d2-29e20cb7b095?autoplay=false&loop=false&muted=false&preload=false&responsive=false"
     }
@@ -45,13 +50,7 @@ export function Testimonials() {
                 videos.length === 4 && index === 3 ? "lg:col-start-2" : ""
               }`}
             >
-               <iframe
-                 src={item.iframeUrl}
-                 loading="lazy"
-                 className="absolute top-0 left-0 w-full h-full border-0"
-                 allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;"
-                 allowFullScreen
-               />
+               <VideoPreview src={item.iframeUrl} poster={item.poster} title={`Depoimento de ${item.name}`} />
             </div>
           ))}
         </div>
