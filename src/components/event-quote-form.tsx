@@ -7,7 +7,6 @@ import { trackEvent } from "@/lib/measurement"
 export function EventQuoteForm() {
   const [date, setDate] = useState("")
   const [quantity, setQuantity] = useState("")
-  const [total, setTotal] = useState("")
   const [error, setError] = useState("")
   const [continueUrl, setContinueUrl] = useState("")
   const minimum = date ? minimumAdultsForDate(date) : business.minWeekday
@@ -17,8 +16,7 @@ export function EventQuoteForm() {
     const data = new FormData(event.currentTarget)
     const quote = {
       date: String(data.get("date") || ""),
-      adults: Number(data.get("quantity")),
-      guests: Number(data.get("total")),
+      guests: Number(data.get("quantity")),
       location: String(data.get("location") || ""),
       style: String(data.get("style") || ""),
     }
@@ -45,9 +43,8 @@ export function EventQuoteForm() {
         <form action="https://api.whatsapp.com/send/" method="get" onSubmit={handleSubmit} className="space-y-4">
           <input type="hidden" name="phone" value={business.whatsapp} /><input type="hidden" name="text" value={quoteTemplate} />
           <div><label htmlFor="date" className="font-bold block mb-2">Data do evento</label><input id="date" name="date" type="date" required onInput={event => setDate(event.currentTarget.value)} onChange={event => setDate(event.target.value)} className={inputClass} /></div>
-          <div><label htmlFor="quantity" className="font-bold block mb-2">Adultos pagantes</label><input id="quantity" name="quantity" type="number" inputMode="numeric" required min={minimum} max={business.capacityOnRequest} step="1" value={quantity} onChange={event => setQuantity(event.target.value)} aria-describedby="minimum-description" placeholder="Ex.: 30" className={inputClass} /><p id="minimum-description" className="mt-2 text-sm text-muted-foreground">{business.minimumText}</p></div>
-          <div><label htmlFor="total" className="font-bold block mb-2">Total de convidados</label><input id="total" name="total" type="number" inputMode="numeric" required min={Number(quantity) || minimum} max={business.capacityOnRequest} step="1" value={total} onChange={event => setTotal(event.target.value)} aria-describedby="capacity-description" placeholder="Ex.: 40" className={inputClass} /><p id="capacity-description" className="mt-2 text-sm text-muted-foreground">{business.capacityText}</p>{Number(total) > business.capacity && <p role="status" className="mt-2 font-bold text-primary">Eventos de 101 a 110 pessoas dependem de avaliação da equipe e confirmação na proposta.</p>}</div>
-          <div><label htmlFor="location" className="font-bold block mb-2">Bairro e cidade do evento</label><input id="location" name="location" required maxLength={120} placeholder="Ex.: Águas Claras, Brasília" className={inputClass} /></div>
+          <div><label htmlFor="quantity" className="font-bold block mb-2">Quantidade de convidados</label><input id="quantity" name="quantity" type="number" inputMode="numeric" required min={minimum} max={business.capacityOnRequest} step="1" value={quantity} onChange={event => setQuantity(event.target.value)} aria-describedby="capacity-description" placeholder="Ex.: 40" className={inputClass} /><p id="capacity-description" className="mt-2 text-sm text-muted-foreground">{business.capacityText}</p>{Number(quantity) > business.capacity && <p role="status" className="mt-2 font-bold text-primary">Eventos de 101 a 110 pessoas dependem de avaliação da equipe e confirmação na proposta.</p>}</div>
+          <div><label htmlFor="location" className="font-bold block mb-2">Local do evento</label><input id="location" name="location" required maxLength={120} placeholder="Ex.: Águas Claras, Brasília" className={inputClass} /></div>
           <div><label htmlFor="style" className="font-bold block mb-2">Tipo de evento</label><input id="style" name="style" required maxLength={120} placeholder="Ex.: aniversário ou confraternização" className={inputClass} /></div>
           {error && <p role="alert" className="font-bold text-red-700">{error}</p>}
           <button type="submit" data-gtm="send_form_whatsapp" className="w-full min-h-14 rounded-full bg-primary text-white font-display font-bold text-lg uppercase px-5 py-3 shadow-hard focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary">Continuar no WhatsApp</button>

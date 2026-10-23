@@ -71,7 +71,6 @@ export function minimumAdultsForDate(date: string) {
 
 export interface EventQuote {
   date: string
-  adults: number
   guests: number
   location: string
   style: string
@@ -86,14 +85,11 @@ export function quoteError(quote: EventQuote, today: string): string | null {
     return 'Escolha uma data de hoje em diante.'
   }
   const minimum = minimumAdultsForDate(quote.date)
-  if (!Number.isInteger(quote.adults) || quote.adults < minimum || quote.adults > business.capacityOnRequest) {
-    return `Para essa data, o mínimo é de ${minimum} adultos pagantes. A capacidade máxima sob consulta é de ${business.capacityOnRequest} pessoas.`
-  }
-  if (!Number.isInteger(quote.guests) || quote.guests < quote.adults || quote.guests > business.capacityOnRequest) {
-    return 'O total de convidados deve incluir os adultos informados e não pode ultrapassar 110 pessoas.'
+  if (!Number.isInteger(quote.guests) || quote.guests < minimum || quote.guests > business.capacityOnRequest) {
+    return `Informe entre ${minimum} e ${business.capacityOnRequest} convidados para essa data. A equipe confirmará as condições da proposta.`
   }
   if (!quote.location.trim() || !quote.style.trim()) {
-    return 'Informe o bairro/cidade e o tipo de evento.'
+    return 'Informe o local e o tipo de evento.'
   }
   return null
 }
