@@ -77,6 +77,9 @@ export interface EventQuote {
   style: string
 }
 
+export const quoteGreeting = 'Olá! Quero fazer um orçamento para meu evento.'
+export const quoteTemplate = [quoteGreeting, '', '- Data: ', '- Pessoas: ', '- Local do evento: ', '- Tipo de evento: '].join('\n')
+
 export function quoteError(quote: EventQuote, today: string): string | null {
   const parsed = new Date(`${quote.date}T12:00:00Z`)
   if (!/^[0-9]{4}-[0-9]{2}-[0-9]{2}$/.test(quote.date) || Number.isNaN(parsed.getTime()) || parsed.toISOString().slice(0, 10) !== quote.date || quote.date < today) {
@@ -97,12 +100,10 @@ export function quoteError(quote: EventQuote, today: string): string | null {
 
 export function quoteMessage(quote: EventQuote) {
   const date = quote.date.split('-').reverse().join('/')
-  const lines = [
-    'Olá! Quero consultar um orçamento para meu evento.', '',
-    `- Data: ${date}`, `- Adultos pagantes: ${quote.adults}`,
-    `- Total de convidados: ${quote.guests}`, `- Bairro/cidade: ${quote.location.trim()}`,
+  return [
+    quoteGreeting, '',
+    `- Data: ${date}`, `- Pessoas: ${quote.guests}`,
+    `- Local do evento: ${quote.location.trim()}`,
     `- Tipo de evento: ${quote.style.trim()}`,
-  ]
-  if (quote.guests > business.capacity) lines.push('- Solicito avaliação de capacidade para evento acima de 100 pessoas.')
-  return lines.join('\n')
+  ].join('\n')
 }
