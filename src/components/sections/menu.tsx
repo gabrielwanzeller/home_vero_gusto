@@ -14,6 +14,7 @@ export function Menu({ full = false }: { full?: boolean }) {
           <Heading className="font-display text-4xl md:text-5xl lg:text-6xl font-bold uppercase text-primary leading-tight">{full ? 'Cardápio de pizzas para eventos' : 'Cardápio completo: entradas, pizzas salgadas e doces'}</Heading>
           <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">{business.menuText}</p>
           {full && <p className="text-lg text-muted-foreground">{business.doughText} Consulte a equipe sobre os ingredientes e as necessidades dos seus convidados antes de contratar.</p>}
+          {full && <p className="text-base text-muted-foreground">{business.coverageText} <Link href="/#regiao" className="font-bold text-primary underline underline-offset-4">Veja como atendemos sua região.</Link></p>}
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto mb-12">
           {menuCategories.map((category, index) => {

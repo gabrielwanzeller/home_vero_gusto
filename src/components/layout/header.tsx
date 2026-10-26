@@ -23,6 +23,7 @@ export function Header({ solid = false }: { solid?: boolean }) {
       })
     }
     window.addEventListener("scroll", handleScroll, { passive: true })
+    handleScroll()
     return () => {
       window.removeEventListener("scroll", handleScroll)
       cancelAnimationFrame(rafId)

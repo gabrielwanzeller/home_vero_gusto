@@ -23,7 +23,9 @@ export const business = {
   includedText: 'Pratos para pizza, talheres, copos descartáveis e garçons para servir as pizzas estão incluídos.',
   extrasText: 'Bebidas e garçom exclusivo para bebidas são adicionais. Pratos e talheres para bolo e taças ficam por conta do cliente.',
   setupText: 'Precisamos de uma pia e levamos mesa de apoio. Quando utilizado o forno elétrico, é necessária alimentação 220 V e tomada dedicada de 20 A, sem adaptador.',
+  serviceText: 'Rodízio de pizza preparado no local do evento, com estrutura e equipe.',
   coverageText: 'Atendemos todas as regiões do Distrito Federal e Entorno, sem taxa de deslocamento.',
+  productionBaseText: 'Nossa base serve somente para produção e saída para eventos. Não recebe clientes.',
   doughText: 'Massa de longa fermentação, preparada com biga, com fermentação de até 48 horas.',
 } as const
 
@@ -57,7 +59,7 @@ export const faqs = [
   { question: 'Quais são os sabores inclusos?', answer: business.menuText },
   { question: 'Vocês lavam a louça?', answer: 'Não lavamos pratos ou copos do local. Nossa equipe organiza a própria estação de trabalho e os utensílios da operação; não realizamos serviço de copa ou limpeza do local.' },
   { question: 'Qual a forma de pagamento?', answer: business.paymentText },
-  { question: 'Atendem fora de Brasília?', answer: business.coverageText },
+  { question: 'Quais regiões do DF e Entorno vocês atendem?', answer: `${business.coverageText} Para consultar a disponibilidade, envie a data, a quantidade de convidados, o local do evento (com bairro e cidade) e o tipo de evento. A equipe confirma a agenda e as condições de montagem no espaço informado.` },
 ] as const
 
 export function whatsappUrl(message: string) {
