@@ -35,7 +35,7 @@ export default function LinktreePage() {
 
           <Button 
             size="lg" 
-            data-gtm="click_contact"
+            data-track="click_contact"
             className="w-full h-auto min-h-16 py-4 whitespace-normal mt-8 rounded-full font-display text-xl uppercase tracking-wide bg-white text-primary shadow-[6px_6px_0px_0px_rgba(20,23,26,1)] hover:translate-y-1 hover:shadow-[4px_4px_0px_0px_rgba(20,23,26,1)] transition-all"
             asChild
           >
@@ -112,7 +112,7 @@ export default function LinktreePage() {
 
            <Button 
              size="lg" 
-             data-gtm="click_contact"
+             data-track="click_contact"
              className="w-full h-20 rounded-full font-display text-2xl uppercase tracking-wide bg-foreground text-background shadow-[6px_6px_0px_0px_rgba(255,255,255,0.2)] hover:translate-y-1 hover:shadow-none transition-all"
              asChild
            ><a href="https://wa.me/5561983202467?text=Ol%C3%A1%21%20Quero%20consultar%20disponibilidade%20para%20meu%20evento." target="_blank" rel="noopener noreferrer">

@@ -23,6 +23,10 @@ export function Region() {
             </p>
 
             <p className="text-base md:text-lg leading-relaxed">
+              No Entorno, os exemplos incluem Valparaíso de Goiás, Cidade Ocidental, Luziânia, Novo Gama e Águas Lindas de Goiás.
+            </p>
+
+            <p className="text-base md:text-lg leading-relaxed">
               Esses são exemplos e não limitam a cobertura. {business.coverageText}
             </p>
 
@@ -32,7 +36,7 @@ export function Region() {
 
             <div className="pt-4">
               <WhatsAppCtaButton
-                data-gtm="generate_form"
+                data-track="generate_form"
                 size="lg"
                 className="w-full max-w-full md:w-auto h-auto min-h-20 py-4 px-6 md:px-14 text-lg md:text-2xl whitespace-normal break-words rounded-full font-display uppercase tracking-wider"
               >

@@ -9,13 +9,13 @@ export function FinalCTA() {
              Seu evento merece ser lembrado
            </h2>
            
-           <p className="text-xl md:text-2xl font-medium text-white/90 max-w-3xl mx-auto leading-relaxed">
+           <p className="text-xl md:text-2xl font-medium text-white max-w-3xl mx-auto leading-relaxed">
              Leve uma experiência completa de pizza artesanal para seu evento em Brasília. <br className="hidden md:inline"/>
              Sem estresse. Sem improviso. Com tudo funcionando do início ao fim.
            </p>
 
            <WhatsAppCtaButton 
-             data-gtm="generate_form"
+             data-track="generate_form"
              size="lg" 
              mode="red"
              className="w-full max-w-full md:w-auto h-auto min-h-20 py-4 px-6 md:px-14 text-lg md:text-2xl whitespace-normal break-words rounded-full font-display uppercase tracking-wider border-0"

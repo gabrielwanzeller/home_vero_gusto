@@ -7,6 +7,10 @@ const nextConfig: NextConfig = {
   },
   async headers() {
     return [
+      { source: '/revisao/:path*', headers: [{ key: 'X-Robots-Tag', value: 'noindex, nofollow' }] },
+      ...(process.env.VERCEL_ENV === 'preview' || process.env.VERO_GUSTO_PREVIEW === '1'
+        ? [{ source: '/:path*', headers: [{ key: 'X-Robots-Tag', value: 'noindex, nofollow' }] }]
+        : []),
       {
         source: "/images/(.*)",
         headers: [

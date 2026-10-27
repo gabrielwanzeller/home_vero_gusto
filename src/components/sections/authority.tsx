@@ -35,7 +35,7 @@ export function Authority() {
               />
                {/* Overlay Badge */}
               <div className="absolute bottom-10 -right-2 bg-white border border-black px-4 py-2 rounded-lg shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] z-10 rotate-1">
-                  <span className="font-bold text-sm uppercase flex items-center gap-2 text-red-500">
+                  <span className="font-bold text-sm uppercase flex items-center gap-2 text-primary">
                     Uma parte da nossa equipe
                   </span>
               </div>

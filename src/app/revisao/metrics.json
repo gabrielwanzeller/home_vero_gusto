@@ -1,0 +1,50 @@
+[
+  {
+    "scenario": "Home / celular",
+    "performance": "74 → 89",
+    "accessibility": "96 → 100",
+    "seo": "100 → 100",
+    "practices": "77 → 77",
+    "fcp": "0.907 s → 0.905 s",
+    "lcp": "3.270 s → 2.933 s",
+    "tbt": "591.5 ms → 266.5 ms",
+    "cls": "0 → 0",
+    "si": "0.907 s → 0.905 s"
+  },
+  {
+    "scenario": "Home / desktop",
+    "performance": "100 → 100",
+    "accessibility": "96 → 100",
+    "seo": "100 → 100",
+    "practices": "77 → 77",
+    "fcp": "0.245 s → 0.246 s",
+    "lcp": "0.685 s → 0.644 s",
+    "tbt": "0 ms → 0 ms",
+    "cls": "0 → 0",
+    "si": "0.245 s → 0.246 s"
+  },
+  {
+    "scenario": "Orçamento / celular",
+    "performance": "87 → 91",
+    "accessibility": "96 → 100",
+    "seo": "100 → 100",
+    "practices": "77 → 77",
+    "fcp": "0.756 s → 0.754 s",
+    "lcp": "2.694 s → 2.622 s",
+    "tbt": "387.5 ms → 275.5 ms",
+    "cls": "0 → 0",
+    "si": "0.756 s → 0.754 s"
+  },
+  {
+    "scenario": "Orçamento / desktop",
+    "performance": "100 → 100",
+    "accessibility": "96 → 100",
+    "seo": "100 → 100",
+    "practices": "77 → 77",
+    "fcp": "0.205 s → 0.207 s",
+    "lcp": "0.562 s → 0.566 s",
+    "tbt": "0 ms → 0 ms",
+    "cls": "0 → 0",
+    "si": "0.205 s → 0.207 s"
+  }
+]

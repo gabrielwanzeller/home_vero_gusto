@@ -150,6 +150,14 @@ body {
 }
 
 html { scroll-padding-top: 7rem; }
+html[data-measurement-mode="test"] { scroll-padding-top: 9rem; }
+html[data-measurement-mode="test"] body { padding-top: 2.25rem; }
+html[data-measurement-mode="test"] header { top: 2.25rem; }
+
+a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 4px;
+}
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {

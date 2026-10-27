@@ -26,7 +26,7 @@ export function Menu({ full = false }: { full?: boolean }) {
           })}
         </div>
         <div className="text-center space-y-6">
-          <WhatsAppCtaButton data-gtm="generate_form" size="lg" className="w-full md:w-auto h-auto min-h-16 py-4 px-8 text-lg md:text-xl whitespace-normal rounded-full">Consultar cardápio para meu evento</WhatsAppCtaButton>
+          <WhatsAppCtaButton data-track="generate_form" size="lg" className="w-full md:w-auto h-auto min-h-16 py-4 px-8 text-lg md:text-xl whitespace-normal rounded-full">Consultar cardápio para meu evento</WhatsAppCtaButton>
           {full && <p><Link href="/orcamento" className="font-bold text-primary underline underline-offset-4">Veja inclusões, pagamento e orçamento</Link></p>}
         </div>
       </div>

@@ -76,24 +76,33 @@ export interface EventQuote {
   guests: number
   location: string
   style: string
+  minimumConfirmed: boolean
 }
 
 export const quoteGreeting = 'Olá! Quero fazer um orçamento para meu evento.'
 export const quoteTemplate = [quoteGreeting, '', '- Data: ', '- Pessoas: ', '- Local do evento: ', '- Tipo de evento: '].join('\n')
 
-export function quoteError(quote: EventQuote, today: string): string | null {
+export function quoteIssue(quote: EventQuote, today: string): { field: string; message: string } | null {
   const parsed = new Date(`${quote.date}T12:00:00Z`)
   if (!/^[0-9]{4}-[0-9]{2}-[0-9]{2}$/.test(quote.date) || Number.isNaN(parsed.getTime()) || parsed.toISOString().slice(0, 10) !== quote.date || quote.date < today) {
-    return 'Escolha uma data de hoje em diante.'
+    return { field: 'date', message: 'Escolha uma data válida de hoje em diante.' }
   }
   const minimum = minimumAdultsForDate(quote.date)
   if (!Number.isInteger(quote.guests) || quote.guests < minimum || quote.guests > business.capacityOnRequest) {
-    return `Informe entre ${minimum} e ${business.capacityOnRequest} convidados para essa data. A equipe confirmará as condições da proposta.`
+    return { field: 'quantity', message: `Informe um número inteiro entre ${minimum} e ${business.capacityOnRequest} convidados para essa data. O total inclui todas as pessoas presentes.` }
   }
-  if (!quote.location.trim() || !quote.style.trim()) {
-    return 'Informe o local e o tipo de evento.'
+  if (!quote.minimumConfirmed) {
+    return { field: 'minimumConfirmed', message: `Confirme se o evento terá pelo menos ${minimum} adultos pagantes. Se precisar esclarecer a contagem, converse com a equipe pelo WhatsApp.` }
   }
+  if (!quote.location.trim()) return { field: 'location', message: 'Informe o local do evento.' }
+  if (!quote.style.trim()) return { field: 'style', message: 'Informe o tipo de evento.' }
+  if (quote.location.trim().length > 120) return { field: 'location', message: 'Use até 120 caracteres para informar o local.' }
+  if (quote.style.trim().length > 120) return { field: 'style', message: 'Use até 120 caracteres para informar o tipo de evento.' }
   return null
+}
+
+export function quoteError(quote: EventQuote, today: string): string | null {
+  return quoteIssue(quote, today)?.message || null
 }
 
 export function quoteMessage(quote: EventQuote) {

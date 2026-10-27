@@ -12,7 +12,7 @@ export function FAQ() {
             <p className="text-muted-foreground text-base leading-relaxed pb-5">{faq.answer}</p>
           </details>)}
         </div>
-        <div className="text-center mt-12"><WhatsAppCtaButton data-gtm="generate_form" size="lg" className="w-full md:w-auto h-auto min-h-16 py-4 px-8 text-lg md:text-xl whitespace-normal rounded-full">Falar com a equipe sobre meu evento</WhatsAppCtaButton></div>
+        <div className="text-center mt-12"><WhatsAppCtaButton data-track="generate_form" size="lg" className="w-full md:w-auto h-auto min-h-16 py-4 px-8 text-lg md:text-xl whitespace-normal rounded-full">Falar com a equipe sobre meu evento</WhatsAppCtaButton></div>
       </div>
     </section>
   )

@@ -29,7 +29,7 @@ export function Footer() {
 
            {/* Contact */}
            <div className="space-y-4 text-center">
-              <h3 className="font-display font-bold text-lg uppercase tracking-wider text-zinc-500">
+              <h3 className="font-display font-bold text-lg uppercase tracking-wider text-zinc-400">
                 Contato
               </h3>
               <div className="space-y-2">
@@ -42,7 +42,7 @@ export function Footer() {
 
            {/* Social */}
            <div className="space-y-4 text-center md:text-right flex flex-col items-center md:items-end">
-              <h3 className="font-display font-bold text-lg uppercase tracking-wider text-zinc-500">
+              <h3 className="font-display font-bold text-lg uppercase tracking-wider text-zinc-400">
                 Redes Sociais
               </h3>
               <Link 
@@ -61,7 +61,7 @@ export function Footer() {
           <Link href="/cardapio">Cardápio</Link><Link href="/orcamento">Orçamento</Link><Link href="/tipos-de-evento">Tipos de evento</Link><Link href="/avalie">Avalie sua experiência</Link>
         </nav>
         <div className="border-t border-zinc-800 pt-8 text-center">
-          <p className="text-sm text-zinc-500">
+          <p className="text-sm text-zinc-400">
             © 2026 Vero Gusto. Todos os direitos reservados.
           </p>
         </div>

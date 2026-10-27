@@ -50,11 +50,12 @@ export function Header({ solid = false }: { solid?: boolean }) {
         {/* Logo */}
         <Link 
           href="/" 
+          aria-label="Vero Gusto — página inicial"
           className="relative inline-block h-12 md:h-16 w-36 md:w-48 transition-opacity hover:opacity-90"
         >
           <Image
             src="/images/logo-vero-gusto/logo-red.png"
-            alt="Vero Gusto Logo Vermelha"
+            alt=""
             fill
             sizes="(max-width: 768px) 144px, 192px"
             className={`object-contain object-left transition-opacity duration-300 ${
@@ -63,7 +64,7 @@ export function Header({ solid = false }: { solid?: boolean }) {
           />
           <Image 
             src="/images/logo-vero-gusto/logo-white.png"
-            alt="Vero Gusto Logo Branca"
+            alt=""
             fill
             sizes="(max-width: 768px) 144px, 192px"
             className={`object-contain object-left transition-opacity duration-300 ${
@@ -82,7 +83,7 @@ export function Header({ solid = false }: { solid?: boolean }) {
               className={`text-sm font-bold uppercase tracking-wide transition-colors ${
                 isScrolled || solid
                 ? "text-foreground hover:text-primary" 
-                : "text-white/90 hover:text-white"
+                : "text-white hover:text-white"
               }`}
             >
               {link.name}
@@ -93,18 +94,18 @@ export function Header({ solid = false }: { solid?: boolean }) {
         {/* CTA & Mobile Menu */}
         <div className="flex items-center gap-4">
           <Button 
-            className={`rounded-full font-bold shadow-hard hover:translate-y-1 hover:shadow-none transition-[transform,box-shadow] hidden lg:flex ${
+            className={`rounded-full font-bold shadow-hard hover:translate-y-1 hover:shadow-none transition-[transform,box-shadow] flex size-12 p-0 lg:w-auto lg:h-10 lg:px-6 ${
                 isScrolled || solid
-                ? "bg-primary text-primary-foreground"
-                : "bg-white text-primary border-0"
+                ? "bg-brand-green text-white lg:bg-primary lg:text-primary-foreground"
+                : "bg-brand-green text-white lg:bg-white lg:text-primary border-0"
             }`}
-            data-gtm="click_contact"
+            data-track="click_contact"
             size="lg"
             asChild
           >
             <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
-              <MessageCircle className="w-4 h-4 mr-2" />
-              Falar no WhatsApp
+              <MessageCircle className="w-5 h-5 lg:w-4 lg:h-4 lg:mr-2" aria-hidden="true" />
+              <span className="sr-only lg:not-sr-only">Falar no WhatsApp</span>
             </a>
           </Button>
           

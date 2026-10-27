@@ -1,20 +1,32 @@
 "use client"
 
 import { MessageCircle } from "lucide-react"
+import { useEffect, useState } from 'react'
+import { usePathname } from 'next/navigation'
+import { whatsappUrl } from '@/lib/business'
 
 export function FloatingWhatsApp() {
-  const whatsappNumber = "5561983202467" // Use actual number if available or generic link
-  const message = encodeURIComponent("Olá! Vim pelo site da Vero Gusto e quero consultar disponibilidade para meu evento")
-  const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${message}`
+  const pathname = usePathname()
+  const [formVisible, setFormVisible] = useState(false)
+  useEffect(() => {
+    const form = document.getElementById('solicitar')
+    if (!form) return
+    const observer = new IntersectionObserver(entries => setFormVisible(entries.some(entry => entry.isIntersecting)))
+    observer.observe(form)
+    return () => observer.disconnect()
+  }, [pathname])
+  // Fora da página de orçamento, não há formulário a observar.
+  if (pathname === '/orcamento' && formVisible) return null
 
   return (
     <a
-      href={whatsappUrl}
+      href={whatsappUrl('Olá! Vim pelo site da Vero Gusto e quero consultar disponibilidade para meu evento')}
       aria-label="Falar com a Vero Gusto no WhatsApp"
       target="_blank"
-      data-gtm="click_contact"
+      data-track="click_contact"
+      data-placement="floating"
       rel="noopener noreferrer"
-      className="fixed bottom-4 right-4 md:bottom-6 md:right-6 z-50 flex items-center gap-2 bg-brand-green text-white px-4 md:px-5 py-3 rounded-full shadow-[2px_2px_0px_0px_rgba(20,23,26,1)] md:shadow-[4px_4px_0px_0px_rgba(20,23,26,1)] hover:-translate-y-1 hover:shadow-[4px_4px_0px_0px_rgba(20,23,26,1)] md:hover:shadow-[6px_6px_0px_0px_rgba(20,23,26,1)] transition-[transform,box-shadow] duration-300 border-2 border-foreground group animate-in fade-in slide-in-from-bottom-5"
+      className="fixed bottom-6 right-6 z-50 hidden lg:flex items-center gap-2 bg-brand-green text-white px-5 py-3 rounded-full shadow-hard hover:-translate-y-1 transition-[transform,box-shadow] duration-300 border-2 border-foreground group animate-in fade-in slide-in-from-bottom-5"
     >
       <MessageCircle className="w-6 h-6 fill-current" />
       <span className="font-bold text-sm md:text-base uppercase tracking-wider hidden sm:inline-block">
